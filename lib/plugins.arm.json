@@ -18963,6 +18963,386 @@
                 }
               ],
               "categories": {}
+            },
+            "inbound-nat-pool": {
+              "name": "inbound-nat-pool",
+              "description": "Commands to manage load balancer inbound NAT pools",
+              "fullName": "network lb inbound-nat-pool",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "create",
+                  "description": "Add a load balancing inbound NAT pool to the load balancer",
+                  "fullName": "network lb inbound-nat-pool create",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the inbound NAT pool"
+                    },
+                    {
+                      "flags": "-p, --protocol <protocol>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-p",
+                      "long": "--protocol",
+                      "description": "the pool protocol [tcp,udp]"
+                    },
+                    {
+                      "flags": "-f, --frontend-port-range-start  <frontend-port-range-start>",
+                      "required": -34,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-f",
+                      "long": "--frontend-port-range-start",
+                      "description": "the frontend port range start [0-65535]"
+                    },
+                    {
+                      "flags": "-e, --frontend-port-range-end <frontend-port-range-end>",
+                      "required": -31,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-e",
+                      "long": "--frontend-port-range-end",
+                      "description": "the frontend port range end [0-65535]"
+                    },
+                    {
+                      "flags": "-b, --backend-port <backend-port>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-b",
+                      "long": "--backend-port",
+                      "description": "the backend port"
+                    },
+                    {
+                      "flags": "-i, --frontend-ip <frontend-ip>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-i",
+                      "long": "--frontend-ip",
+                      "description": "the name of the frontend ip configuration"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "set",
+                  "description": "Set a load balancing inbound NAT pool of load balancer",
+                  "fullName": "network lb inbound-nat-pool set",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the inbound NAT pool"
+                    },
+                    {
+                      "flags": "-p, --protocol <protocol>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-p",
+                      "long": "--protocol",
+                      "description": "the pool protocol [tcp,udp]"
+                    },
+                    {
+                      "flags": "-f, --frontend-port-range-start  <frontend-port-range-start>",
+                      "required": -34,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-f",
+                      "long": "--frontend-port-range-start",
+                      "description": "the frontend port range start [0-65535]"
+                    },
+                    {
+                      "flags": "-e, --frontend-port-range-end <frontend-port-range-end>",
+                      "required": -31,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-e",
+                      "long": "--frontend-port-range-end",
+                      "description": "the frontend port range end [0-65535]"
+                    },
+                    {
+                      "flags": "-b, --backend-port <backend-port>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-b",
+                      "long": "--backend-port",
+                      "description": "the backend port"
+                    },
+                    {
+                      "flags": "-i, --frontend-ip <frontend-ip>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-i",
+                      "long": "--frontend-ip",
+                      "description": "the name of the frontend ip configuration"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "list",
+                  "description": "Get all load balancing inbound NAT pools of load balancer",
+                  "fullName": "network lb inbound-nat-pool list",
+                  "usage": "[options] <resource-group> <lb-name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                },
+                {
+                  "name": "delete",
+                  "description": "Delete a load balancing inbound NAT pool from a load balancer",
+                  "fullName": "network lb inbound-nat-pool delete",
+                  "usage": "[options] <resource-group> <lb-name> <name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-l, --lb-name <lb-name>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-l",
+                      "long": "--lb-name",
+                      "description": "the name of the load balancer"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the inbound NAT pool"
+                    },
+                    {
+                      "flags": "-q, --quiet",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-q",
+                      "long": "--quiet",
+                      "description": "quiet mode, do not ask for delete confirmation"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
             }
           }
         },
@@ -26384,7 +26764,7 @@
               "name": "create",
               "description": "create a new role assignment",
               "fullName": "role assignment create",
-              "usage": "[options] [objectId] [upn] [mail] [spn] [role] [scope] [resource-group] [resource-type] [resource-name]",
+              "usage": "[options] [objectId] [signInName] [spn] [roleName] [scope] [resource-group] [resource-type] [resource-name]",
               "filePath": "commands/arm/role/role.assignment._js",
               "options": [
                 {
@@ -26421,20 +26801,12 @@
                   "description": "Object id of an active directory user, group or service principal."
                 },
                 {
-                  "flags": "--upn <upn>",
-                  "required": -7,
+                  "flags": "--signInName <signInName>",
+                  "required": -14,
                   "optional": 0,
                   "bool": true,
-                  "long": "--upn",
-                  "description": "User principal name."
-                },
-                {
-                  "flags": "--mail <mail>",
-                  "required": -8,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--mail",
-                  "description": "Mail of a user or group."
+                  "long": "--signInName",
+                  "description": "Sign-in name of a User."
                 },
                 {
                   "flags": "--spn <spn>",
@@ -26445,13 +26817,13 @@
                   "description": "Service Principal Name."
                 },
                 {
-                  "flags": "-o --role <role>",
-                  "required": -11,
+                  "flags": "-o --roleName <roleName>",
+                  "required": -15,
                   "optional": 0,
                   "bool": true,
                   "short": "-o",
-                  "long": "--role",
-                  "description": "Role to assign the principals with."
+                  "long": "--roleName",
+                  "description": "Role name that the principal is assigned to."
                 },
                 {
                   "flags": "-c --scope <scope>",
@@ -26511,7 +26883,7 @@
               "name": "list",
               "description": "Get role assignment at a given scope",
               "fullName": "role assignment list",
-              "usage": "[options] [objectId] [upn] [mail] [spn] [role] [scope] [resource-group] [resource-type] [resource-name]",
+              "usage": "[options] [objectId] [signInName] [spn] [roleName] [scope] [resource-group] [resource-type] [resource-name]",
               "filePath": "commands/arm/role/role.assignment._js",
               "options": [
                 {
@@ -26548,20 +26920,12 @@
                   "description": "Object id of an active directory user, group or service principal."
                 },
                 {
-                  "flags": "--upn <upn>",
-                  "required": -7,
+                  "flags": "--signInName <signInName>",
+                  "required": -14,
                   "optional": 0,
                   "bool": true,
-                  "long": "--upn",
-                  "description": "User principal name."
-                },
-                {
-                  "flags": "--mail <mail>",
-                  "required": -8,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--mail",
-                  "description": "Mail of a user or group."
+                  "long": "--signInName",
+                  "description": "Sign-in name of a User."
                 },
                 {
                   "flags": "--spn <spn>",
@@ -26572,13 +26936,13 @@
                   "description": "Service Principal Name."
                 },
                 {
-                  "flags": "-o --role <role>",
-                  "required": -11,
+                  "flags": "-o --roleName <roleName>",
+                  "required": -15,
                   "optional": 0,
                   "bool": true,
                   "short": "-o",
-                  "long": "--role",
-                  "description": "Role the principals was assigned to"
+                  "long": "--roleName",
+                  "description": "Role name that the principal is assigned to."
                 },
                 {
                   "flags": "-c --scope <scope>",
@@ -26625,6 +26989,24 @@
                   "description": "Parent resource of the resource the role was assigned to, if there is any."
                 },
                 {
+                  "flags": "-e --expandPrincipalGroups",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-e",
+                  "long": "--expandPrincipalGroups",
+                  "description": "If specified, returns role assignments directly assigned to the principal as well as assignments to the principal's groups (transitive). Supported only for User Principals."
+                },
+                {
+                  "flags": "-a --includeClassicAdministrators",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-a",
+                  "long": "--includeClassicAdministrators",
+                  "description": "If specified, also returns the subscription classic administrators as role assignments."
+                },
+                {
                   "flags": "--subscription <subscription>",
                   "required": -16,
                   "optional": 0,
@@ -26638,7 +27020,7 @@
               "name": "delete",
               "description": "delete a role assignment",
               "fullName": "role assignment delete",
-              "usage": "[options] [objectId] [upn] [mail] [spn] [role] [scope] [resource-group] [resource-type] [resource-name]",
+              "usage": "[options] [objectId] [signInName] [spn] [roleName] [scope] [resource-group] [resource-type] [resource-name]",
               "filePath": "commands/arm/role/role.assignment._js",
               "options": [
                 {
@@ -26675,20 +27057,12 @@
                   "description": "Object id of an active directory user, group or service principal"
                 },
                 {
-                  "flags": "--upn <upn>",
-                  "required": -7,
+                  "flags": "--signInName <signInName>",
+                  "required": -14,
                   "optional": 0,
                   "bool": true,
-                  "long": "--upn",
-                  "description": "User principal name."
-                },
-                {
-                  "flags": "--mail <mail>",
-                  "required": -8,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--mail",
-                  "description": "Mail of a user or group."
+                  "long": "--signInName",
+                  "description": "Sign-in name of a user."
                 },
                 {
                   "flags": "--spn <spn>",
@@ -26699,13 +27073,13 @@
                   "description": "Service Principal Name."
                 },
                 {
-                  "flags": "-o --role <role>",
-                  "required": -11,
+                  "flags": "-o --roleName <roleName>",
+                  "required": -15,
                   "optional": 0,
                   "bool": true,
                   "short": "-o",
-                  "long": "--role",
-                  "description": "Role to remove from the principals."
+                  "long": "--roleName",
+                  "description": "Role name that the principal is assigned to."
                 },
                 {
                   "flags": "-c --scope <scope>",
@@ -26723,7 +27097,7 @@
                   "bool": true,
                   "short": "-g",
                   "long": "--resource-group",
-                  "description": "Resource group to role was assigned to."
+                  "description": "Resource group the role is assigned to."
                 },
                 {
                   "flags": "-r --resource-type <resource-type>",
@@ -26732,7 +27106,7 @@
                   "bool": true,
                   "short": "-r",
                   "long": "--resource-type",
-                  "description": "Type of the resource the role was assign to"
+                  "description": "Type of the resource the role is assigned to"
                 },
                 {
                   "flags": "-u --resource-name <resource-name>",
@@ -26741,7 +27115,7 @@
                   "bool": true,
                   "short": "-u",
                   "long": "--resource-name",
-                  "description": "The resource the role was assigned to."
+                  "description": "The resource the role is assigned to."
                 },
                 {
                   "flags": "--parent <parent>",
@@ -26749,7 +27123,7 @@
                   "optional": 0,
                   "bool": true,
                   "long": "--parent",
-                  "description": "Parent resource of the resource the role was assigned to, if there is any."
+                  "description": "Parent resource of the resource the role is assigned to, if there is any."
                 },
                 {
                   "flags": "-q --quiet",
@@ -26759,6 +27133,14 @@
                   "short": "-q",
                   "long": "--quiet",
                   "description": "If specified, won't prompt before delete."
+                },
+                {
+                  "flags": "--passthru",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--passthru",
+                  "description": "If set, displays the properties of deleted role assignment"
                 },
                 {
                   "flags": "--subscription <subscription>",
@@ -26774,15 +27156,16 @@
           "categories": {
             "changelog": {
               "name": "changelog",
+              "description": "List access change history for the subscription for the specified time i.e. who granted(or revoked) what role to whom at what scope",
               "fullName": "role assignment changelog",
               "usage": "[options] [command]",
               "options": [],
               "commands": [
                 {
                   "name": "list",
-                  "description": "List access change history for the subscription for the specified time i.e. who granted(or revoked) what role to whom at what scope",
+                  "description": "List all access changes",
                   "fullName": "role assignment changelog list",
-                  "usage": "[options]",
+                  "usage": "[options] [b startTime] [e endTime]",
                   "filePath": "commands/arm/role/role.assignment.audit._js",
                   "options": [
                     {
@@ -27125,20 +27508,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--reportedStartTime <reportedStartTime>",
+              "flags": "--reportedStartTime <datetime>",
               "required": -21,
               "optional": 0,
               "bool": true,
               "long": "--reportedStartTime",
-              "description": "The start of the time range to retrieve data for."
+              "description": "The start of the time range to retrieve data for, in UTC format."
             },
             {
-              "flags": "--reportedEndTime <reportedEndTime>",
+              "flags": "--reportedEndTime <datetime>",
               "required": -19,
               "optional": 0,
               "bool": true,
               "long": "--reportedEndTime",
-              "description": "The end of the time range to retrieve data for."
+              "description": "The end of the time range to retrieve data for, in UTC format."
             },
             {
               "flags": "--granularity <daily/hourly>",
