@@ -9221,6 +9221,2158 @@
       ],
       "categories": {}
     },
+    "vmss": {
+      "name": "vmss",
+      "description": "Commands to manage your virtual machine scale set.",
+      "fullName": "vmss",
+      "usage": "[options] [command]",
+      "options": [],
+      "commands": [
+        {
+          "name": "create-or-update",
+          "description": "create-or-update method to manage your virtual machine scale set.",
+          "fullName": "vmss create-or-update",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--parameters <parameters>",
+              "required": -14,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameters",
+              "description": "parameters"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "deallocate",
+          "description": "deallocate method to manage your virtual machine scale set.",
+          "fullName": "vmss deallocate",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "deallocate-instances",
+          "description": "deallocate-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss deallocate-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "description": "delete method to manage your virtual machine scale set.",
+          "fullName": "vmss delete",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "delete-instances",
+          "description": "delete-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss delete-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "get",
+          "description": "get method to manage your virtual machine scale set.",
+          "fullName": "vmss get",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "get-instance-view",
+          "description": "get-instance-view method to manage your virtual machine scale set.",
+          "fullName": "vmss get-instance-view",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list",
+          "description": "list method to manage your virtual machine scale set.",
+          "fullName": "vmss list",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list-all",
+          "description": "list-all method to manage your virtual machine scale set.",
+          "fullName": "vmss list-all",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--parameters <parameters>",
+              "required": -14,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameters",
+              "description": "parameters"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list-next",
+          "description": "list-next method to manage your virtual machine scale set.",
+          "fullName": "vmss list-next",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--next-link <next-link>",
+              "required": -13,
+              "optional": 0,
+              "bool": true,
+              "long": "--next-link",
+              "description": "next-link"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list-skus",
+          "description": "list-skus method to manage your virtual machine scale set.",
+          "fullName": "vmss list-skus",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "power-off",
+          "description": "power-off method to manage your virtual machine scale set.",
+          "fullName": "vmss power-off",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "power-off-instances",
+          "description": "power-off-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss power-off-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "restart",
+          "description": "restart method to manage your virtual machine scale set.",
+          "fullName": "vmss restart",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "restart-instances",
+          "description": "restart-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss restart-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "start",
+          "description": "start method to manage your virtual machine scale set.",
+          "fullName": "vmss start",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "start-instances",
+          "description": "start-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss start-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "update-instances",
+          "description": "update-instances method to manage your virtual machine scale set.",
+          "fullName": "vmss update-instances",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-instance-i-ds",
+              "description": "vm-instance-i-ds"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "parameters": {
+          "name": "parameters",
+          "description": "Commands to manage parameter for your virtual machine scale set.",
+          "fullName": "vmss parameters",
+          "usage": "[options] [command]",
+          "options": [],
+          "commands": [
+            {
+              "name": "patch",
+              "description": "Command to patch vmss parameter JSON file.",
+              "fullName": "vmss parameters patch",
+              "usage": "[options]",
+              "filePath": "commands/arm/compute/compute._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "--parameter-file <parameter-file>",
+                  "required": -18,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parameter-file",
+                  "description": "The parameter file path."
+                },
+                {
+                  "flags": "--operation <operation>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--operation",
+                  "description": "The JSON patch operation: add, remove, or replace."
+                },
+                {
+                  "flags": "--path <path>",
+                  "required": -8,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--path",
+                  "description": "The JSON data path, e.g.: \"foo/1\"."
+                },
+                {
+                  "flags": "--value <value>",
+                  "required": -9,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--value",
+                  "description": "The JSON value."
+                },
+                {
+                  "flags": "--parse",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parse",
+                  "description": "Parse the JSON value to object."
+                }
+              ]
+            }
+          ],
+          "categories": {
+            "generate": {
+              "name": "generate",
+              "description": "Commands to generate parameter file for your virtual machine scale set.",
+              "fullName": "vmss parameters generate",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "create-or-update",
+                  "description": "Generate vmss parameter string or files.",
+                  "fullName": "vmss parameters generate create-or-update",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                },
+                {
+                  "name": "list-all",
+                  "description": "Generate vmss parameter string or files.",
+                  "fullName": "vmss parameters generate list-all",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            }
+          }
+        }
+      }
+    },
+    "vmssvm": {
+      "name": "vmssvm",
+      "description": "Commands to manage your virtual machine scale set vm.",
+      "fullName": "vmssvm",
+      "usage": "[options] [command]",
+      "options": [],
+      "commands": [
+        {
+          "name": "deallocate",
+          "description": "deallocate method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm deallocate",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "delete",
+          "description": "delete method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm delete",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "get",
+          "description": "get method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm get",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "get-instance-view",
+          "description": "get-instance-view method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm get-instance-view",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list",
+          "description": "list method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm list",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--parameters <parameters>",
+              "required": -14,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameters",
+              "description": "parameters"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "power-off",
+          "description": "power-off method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm power-off",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "restart",
+          "description": "restart method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm restart",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "start",
+          "description": "start method to manage your virtual machine scale set vm.",
+          "fullName": "vmssvm start",
+          "usage": "[options]",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--vm-scale-set-name <vm-scale-set-name>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--instance-id <instance-id>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        }
+      ],
+      "categories": {
+        "parameters": {
+          "name": "parameters",
+          "description": "Commands to manage parameter for your virtual machine scale set vm.",
+          "fullName": "vmssvm parameters",
+          "usage": "[options] [command]",
+          "options": [],
+          "commands": [
+            {
+              "name": "patch",
+              "description": "Command to patch vmssvm parameter JSON file.",
+              "fullName": "vmssvm parameters patch",
+              "usage": "[options]",
+              "filePath": "commands/arm/compute/compute._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "--parameter-file <parameter-file>",
+                  "required": -18,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parameter-file",
+                  "description": "The parameter file path."
+                },
+                {
+                  "flags": "--operation <operation>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--operation",
+                  "description": "The JSON patch operation: add, remove, or replace."
+                },
+                {
+                  "flags": "--path <path>",
+                  "required": -8,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--path",
+                  "description": "The JSON data path, e.g.: \"foo/1\"."
+                },
+                {
+                  "flags": "--value <value>",
+                  "required": -9,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--value",
+                  "description": "The JSON value."
+                },
+                {
+                  "flags": "--parse",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parse",
+                  "description": "Parse the JSON value to object."
+                }
+              ]
+            }
+          ],
+          "categories": {
+            "generate": {
+              "name": "generate",
+              "description": "Commands to generate parameter file for your virtual machine scale set vm.",
+              "fullName": "vmssvm parameters generate",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Generate vmssvm parameter string or files.",
+                  "fullName": "vmssvm parameters generate list",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            }
+          }
+        }
+      }
+    },
     "feature": {
       "name": "feature",
       "description": "Commands to manage your features",
