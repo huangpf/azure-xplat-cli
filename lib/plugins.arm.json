@@ -10530,6 +10530,14 @@
                   "bool": true,
                   "long": "--value",
                   "description": "The JSON value."
+                },
+                {
+                  "flags": "--parse",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parse",
+                  "description": "Parse the JSON value to object."
                 }
               ]
             }
@@ -10575,7 +10583,7 @@
                       "description": "use json output"
                     },
                     {
-                      "flags": "--parameter-file <output-file>",
+                      "flags": "--parameter-file <parameter-file>",
                       "required": -18,
                       "optional": 0,
                       "bool": true,
@@ -10617,7 +10625,7 @@
                       "description": "use json output"
                     },
                     {
-                      "flags": "--parameter-file <output-file>",
+                      "flags": "--parameter-file <parameter-file>",
                       "required": -18,
                       "optional": 0,
                       "bool": true,
@@ -11296,6 +11304,14 @@
                   "bool": true,
                   "long": "--value",
                   "description": "The JSON value."
+                },
+                {
+                  "flags": "--parse",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parse",
+                  "description": "Parse the JSON value to object."
                 }
               ]
             }
@@ -11341,7 +11357,7 @@
                       "description": "use json output"
                     },
                     {
-                      "flags": "--parameter-file <output-file>",
+                      "flags": "--parameter-file <parameter-file>",
                       "required": -18,
                       "optional": 0,
                       "bool": true,
