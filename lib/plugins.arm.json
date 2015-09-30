@@ -10459,77 +10459,18 @@
           ]
         }
       ],
-      "categories": {}
-    },
-    "parameters": {
-      "name": "parameters",
-      "description": "Commands to generate and patch parameters.",
-      "fullName": "parameters",
-      "usage": "[options]",
-      "options": [],
-      "commands": [],
       "categories": {
-        "vmss": {
-          "name": "vmss",
-          "description": "Commands to generate parameter for your virtual machine scale set.",
-          "fullName": "parameters vmss",
+        "parameters": {
+          "name": "parameters",
+          "description": "Commands to manage parameter for your virtual machine scale set.",
+          "fullName": "vmss parameters",
           "usage": "[options] [command]",
           "options": [],
           "commands": [
-            {
-              "name": "create-or-update",
-              "description": "Generate vmss parameter string or files.",
-              "fullName": "parameters vmss create-or-update",
-              "usage": "[options]",
-              "filePath": "commands/arm/compute/compute._js",
-              "options": [
-                {
-                  "flags": "-v, --verbose",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-v",
-                  "long": "--verbose",
-                  "description": "use verbose output"
-                },
-                {
-                  "flags": "-vv",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "-vv",
-                  "description": "more verbose with debug output"
-                },
-                {
-                  "flags": "--json",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--json",
-                  "description": "use json output"
-                },
-                {
-                  "flags": "--generate",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--generate",
-                  "description": "To generate parameter string/file for method: createOrUpdate."
-                },
-                {
-                  "flags": "--output-file <output-file>",
-                  "required": -15,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--output-file",
-                  "description": "The output file path."
-                }
-              ]
-            },
             {
               "name": "patch",
               "description": "Command to patch vmss parameter JSON file.",
-              "fullName": "parameters vmss patch",
+              "fullName": "vmss parameters patch",
               "usage": "[options]",
               "filePath": "commands/arm/compute/compute._js",
               "options": [
@@ -10580,183 +10521,7 @@
                   "optional": 0,
                   "bool": true,
                   "long": "--path",
-                  "description": "The JSON data path, e.g.: \"foo/1.\""
-                },
-                {
-                  "flags": "--value <value>",
-                  "required": -9,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--value",
-                  "description": "The JSON value."
-                }
-              ]
-            },
-            {
-              "name": "list-all",
-              "description": "Generate vmss parameter string or files.",
-              "fullName": "parameters vmss list-all",
-              "usage": "[options]",
-              "filePath": "commands/arm/compute/compute._js",
-              "options": [
-                {
-                  "flags": "-v, --verbose",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-v",
-                  "long": "--verbose",
-                  "description": "use verbose output"
-                },
-                {
-                  "flags": "-vv",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "-vv",
-                  "description": "more verbose with debug output"
-                },
-                {
-                  "flags": "--json",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--json",
-                  "description": "use json output"
-                },
-                {
-                  "flags": "--generate",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--generate",
-                  "description": "To generate parameter string/file for method: listAll."
-                },
-                {
-                  "flags": "--output-file <output-file>",
-                  "required": -15,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--output-file",
-                  "description": "The output file path."
-                }
-              ]
-            }
-          ],
-          "categories": {}
-        },
-        "vmssvm": {
-          "name": "vmssvm",
-          "description": "Commands to generate parameter for your virtual machine scale set vm.",
-          "fullName": "parameters vmssvm",
-          "usage": "[options] [command]",
-          "options": [],
-          "commands": [
-            {
-              "name": "list",
-              "description": "Generate vmssvm parameter string or files.",
-              "fullName": "parameters vmssvm list",
-              "usage": "[options]",
-              "filePath": "commands/arm/compute/compute._js",
-              "options": [
-                {
-                  "flags": "-v, --verbose",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-v",
-                  "long": "--verbose",
-                  "description": "use verbose output"
-                },
-                {
-                  "flags": "-vv",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "-vv",
-                  "description": "more verbose with debug output"
-                },
-                {
-                  "flags": "--json",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--json",
-                  "description": "use json output"
-                },
-                {
-                  "flags": "--generate",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--generate",
-                  "description": "To generate parameter string/file for method: list."
-                },
-                {
-                  "flags": "--output-file <output-file>",
-                  "required": -15,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--output-file",
-                  "description": "The output file path."
-                }
-              ]
-            },
-            {
-              "name": "patch",
-              "description": "Command to patch vmssvm parameter JSON file.",
-              "fullName": "parameters vmssvm patch",
-              "usage": "[options]",
-              "filePath": "commands/arm/compute/compute._js",
-              "options": [
-                {
-                  "flags": "-v, --verbose",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-v",
-                  "long": "--verbose",
-                  "description": "use verbose output"
-                },
-                {
-                  "flags": "-vv",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "-vv",
-                  "description": "more verbose with debug output"
-                },
-                {
-                  "flags": "--json",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--json",
-                  "description": "use json output"
-                },
-                {
-                  "flags": "--parameter-file <parameter-file>",
-                  "required": -18,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--parameter-file",
-                  "description": "The parameter file path."
-                },
-                {
-                  "flags": "--operation <operation>",
-                  "required": -13,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--operation",
-                  "description": "The JSON patch operation: add, remove, or replace."
-                },
-                {
-                  "flags": "--path <path>",
-                  "required": -8,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--path",
-                  "description": "The JSON data path, e.g.: \"foo/1.\""
+                  "description": "The JSON data path, e.g.: \"foo/1\"."
                 },
                 {
                   "flags": "--value <value>",
@@ -10769,7 +10534,102 @@
               ]
             }
           ],
-          "categories": {}
+          "categories": {
+            "generate": {
+              "name": "generate",
+              "description": "Commands to generate parameter file for your virtual machine scale set.",
+              "fullName": "vmss parameters generate",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "create-or-update",
+                  "description": "Generate vmss parameter string or files.",
+                  "fullName": "vmss parameters generate create-or-update",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <output-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                },
+                {
+                  "name": "list-all",
+                  "description": "Generate vmss parameter string or files.",
+                  "fullName": "vmss parameters generate list-all",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <output-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            }
+          }
         }
       }
     },
@@ -11365,7 +11225,137 @@
           ]
         }
       ],
-      "categories": {}
+      "categories": {
+        "parameters": {
+          "name": "parameters",
+          "description": "Commands to manage parameter for your virtual machine scale set vm.",
+          "fullName": "vmssvm parameters",
+          "usage": "[options] [command]",
+          "options": [],
+          "commands": [
+            {
+              "name": "patch",
+              "description": "Command to patch vmssvm parameter JSON file.",
+              "fullName": "vmssvm parameters patch",
+              "usage": "[options]",
+              "filePath": "commands/arm/compute/compute._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "--parameter-file <parameter-file>",
+                  "required": -18,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--parameter-file",
+                  "description": "The parameter file path."
+                },
+                {
+                  "flags": "--operation <operation>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--operation",
+                  "description": "The JSON patch operation: add, remove, or replace."
+                },
+                {
+                  "flags": "--path <path>",
+                  "required": -8,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--path",
+                  "description": "The JSON data path, e.g.: \"foo/1\"."
+                },
+                {
+                  "flags": "--value <value>",
+                  "required": -9,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--value",
+                  "description": "The JSON value."
+                }
+              ]
+            }
+          ],
+          "categories": {
+            "generate": {
+              "name": "generate",
+              "description": "Commands to generate parameter file for your virtual machine scale set vm.",
+              "fullName": "vmssvm parameters generate",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "list",
+                  "description": "Generate vmssvm parameter string or files.",
+                  "fullName": "vmssvm parameters generate list",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <output-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            }
+          }
+        }
+      }
     },
     "feature": {
       "name": "feature",
