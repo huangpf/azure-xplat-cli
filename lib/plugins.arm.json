@@ -13807,6 +13807,54 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--provisioning-state <provisioningState>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--provisioning-state",
+                      "description": "Add the provisioning-state value."
+                    },
+                    {
+                      "flags": "--id <id>",
+                      "required": -6,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--id",
+                      "description": "Add the id value."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--type <type>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--type",
+                      "description": "Add the type value."
+                    },
+                    {
+                      "flags": "--location <location>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--location",
+                      "description": "Add the location value."
+                    },
+                    {
+                      "flags": "--tags <tags>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--tags",
+                      "description": "Add the tags value."
                     }
                   ]
                 },
@@ -13873,6 +13921,30 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--capacity <capacity>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--capacity",
+                      "description": "Add the capacity value."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--tier <tier>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--tier",
+                      "description": "Add the tier value."
                     }
                   ]
                 },
@@ -13939,6 +14011,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--mode <mode>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--mode",
+                      "description": "Add the mode value."
                     }
                   ]
                 },
@@ -14137,6 +14217,102 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--auto-upgrade-minor-version <autoUpgradeMinorVersion>",
+                      "required": -30,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--auto-upgrade-minor-version",
+                      "description": "Add the auto-upgrade-minor-version value."
+                    },
+                    {
+                      "flags": "--extension-type <extensionType>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extension-type",
+                      "description": "Add the extension-type value."
+                    },
+                    {
+                      "flags": "--protected-settings <protectedSettings>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--protected-settings",
+                      "description": "Add the protected-settings value."
+                    },
+                    {
+                      "flags": "--provisioning-state <provisioningState>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--provisioning-state",
+                      "description": "Add the provisioning-state value."
+                    },
+                    {
+                      "flags": "--publisher <publisher>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--publisher",
+                      "description": "Add the publisher value."
+                    },
+                    {
+                      "flags": "--settings <settings>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--settings",
+                      "description": "Add the settings value."
+                    },
+                    {
+                      "flags": "--type-handler-version <typeHandlerVersion>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--type-handler-version",
+                      "description": "Add the type-handler-version value."
+                    },
+                    {
+                      "flags": "--id <id>",
+                      "required": -6,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--id",
+                      "description": "Add the id value."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--type <type>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--type",
+                      "description": "Add the type value."
+                    },
+                    {
+                      "flags": "--location <location>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--location",
+                      "description": "Add the location value."
+                    },
+                    {
+                      "flags": "--tags <tags>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--tags",
+                      "description": "Add the tags value."
                     }
                   ]
                 },
@@ -14269,6 +14445,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--primary <primary>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--primary",
+                      "description": "Add the primary value."
                     }
                   ]
                 },
@@ -14335,6 +14527,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
                     }
                   ]
                 },
@@ -14401,6 +14601,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--reference-uri <referenceUri>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--reference-uri",
+                      "description": "Add the reference-uri value."
                     }
                   ]
                 },
@@ -14467,6 +14675,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--reference-uri <referenceUri>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--reference-uri",
+                      "description": "Add the reference-uri value."
                     }
                   ]
                 },
@@ -14533,6 +14749,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--reference-uri <referenceUri>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--reference-uri",
+                      "description": "Add the reference-uri value."
                     }
                   ]
                 },
@@ -14599,6 +14823,38 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--computer-name-prefix <computerNamePrefix>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--computer-name-prefix",
+                      "description": "Add the computer-name-prefix value."
+                    },
+                    {
+                      "flags": "--admin-password <adminPassword>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--admin-password",
+                      "description": "Add the admin-password value."
+                    },
+                    {
+                      "flags": "--admin-username <adminUsername>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--admin-username",
+                      "description": "Add the admin-username value."
+                    },
+                    {
+                      "flags": "--custom-data <customData>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--custom-data",
+                      "description": "Add the custom-data value."
                     }
                   ]
                 },
@@ -14665,6 +14921,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--disable-password-authentication <disablePasswordAuthentication>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--disable-password-authentication",
+                      "description": "Add the disable-password-authentication value."
                     }
                   ]
                 },
@@ -14797,6 +15061,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--key-data <keyData>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key-data",
+                      "description": "Add the key-data value."
+                    },
+                    {
+                      "flags": "--path <path>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--path",
+                      "description": "Add the path value."
                     }
                   ]
                 },
@@ -14929,6 +15209,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--reference-uri <referenceUri>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--reference-uri",
+                      "description": "Add the reference-uri value."
                     }
                   ]
                 },
@@ -14995,6 +15283,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--certificate-store <certificateStore>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--certificate-store",
+                      "description": "Add the certificate-store value."
+                    },
+                    {
+                      "flags": "--certificate-url <certificateUrl>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--certificate-url",
+                      "description": "Add the certificate-url value."
                     }
                   ]
                 },
@@ -15061,6 +15365,30 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--enable-automatic-updates <enableAutomaticUpdates>",
+                      "required": -28,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--enable-automatic-updates",
+                      "description": "Add the enable-automatic-updates value."
+                    },
+                    {
+                      "flags": "--provision-vm-agent <provisionVMAgent>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--provision-vm-agent",
+                      "description": "Add the provision-vm-agent value."
+                    },
+                    {
+                      "flags": "--time-zone <timeZone>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--time-zone",
+                      "description": "Add the time-zone value."
                     }
                   ]
                 },
@@ -15127,6 +15455,38 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--component-name <componentName>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--component-name",
+                      "description": "Add the component-name value."
+                    },
+                    {
+                      "flags": "--content <content>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--content",
+                      "description": "Add the content value."
+                    },
+                    {
+                      "flags": "--pass-name <passName>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--pass-name",
+                      "description": "Add the pass-name value."
+                    },
+                    {
+                      "flags": "--setting-name <settingName>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--setting-name",
+                      "description": "Add the setting-name value."
                     }
                   ]
                 },
@@ -15259,6 +15619,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--certificate-url <certificateUrl>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--certificate-url",
+                      "description": "Add the certificate-url value."
+                    },
+                    {
+                      "flags": "--protocol <protocol>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--protocol",
+                      "description": "Add the protocol value."
                     }
                   ]
                 },
@@ -15391,6 +15767,38 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--offer <offer>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--offer",
+                      "description": "Add the offer value."
+                    },
+                    {
+                      "flags": "--publisher <publisher>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--publisher",
+                      "description": "Add the publisher value."
+                    },
+                    {
+                      "flags": "--sku <sku>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--sku",
+                      "description": "Add the sku value."
+                    },
+                    {
+                      "flags": "--version <version>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--version",
+                      "description": "Add the version value."
                     }
                   ]
                 },
@@ -15457,6 +15865,38 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--caching <caching>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--caching",
+                      "description": "Add the caching value."
+                    },
+                    {
+                      "flags": "--create-option <createOption>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--create-option",
+                      "description": "Add the create-option value."
+                    },
+                    {
+                      "flags": "--name <name>",
+                      "required": -8,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--name",
+                      "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--operating-system-type <operatingSystemType>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--operating-system-type",
+                      "description": "Add the operating-system-type value."
                     }
                   ]
                 },
@@ -15523,6 +15963,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--uri <uri>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--uri",
+                      "description": "Add the uri value."
                     }
                   ]
                 },
@@ -16557,6 +17005,46 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--expand-expression <expandExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--expand-expression",
+                      "description": "Add the expand-expression value."
+                    },
+                    {
+                      "flags": "--filter-expression <filterExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--filter-expression",
+                      "description": "Add the filter-expression value."
+                    },
+                    {
+                      "flags": "--resource-group-name <resourceGroupName>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--resource-group-name",
+                      "description": "Add the resource-group-name value."
+                    },
+                    {
+                      "flags": "--select-expression <selectExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--select-expression",
+                      "description": "Add the select-expression value."
+                    },
+                    {
+                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
+                      "required": -34,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-scale-set-name",
+                      "description": "Add the virtual-machine-scale-set-name value."
                     }
                   ]
                 }
