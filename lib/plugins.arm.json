@@ -10462,7 +10462,7 @@
       "categories": {
         "parameters": {
           "name": "parameters",
-          "description": "Commands to remove parameter for your virtual-machine-scale-set.",
+          "description": "Commands to add parameter for your virtual-machine-scale-set.",
           "fullName": "vmss parameters",
           "usage": "[options] [command]",
           "options": [],
@@ -12401,7 +12401,7 @@
             },
             "remove": {
               "name": "remove",
-              "description": "Commands to set parameter file for your virtual-machine-scale-set.",
+              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set.",
               "fullName": "vmss parameters remove",
               "usage": "[options] [command]",
               "options": [],
@@ -13736,6 +13736,1864 @@
                 }
               ],
               "categories": {}
+            },
+            "add": {
+              "name": "add",
+              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set.",
+              "fullName": "vmss parameters add",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "virtual-machine-scale-set",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add virtual-machine-scale-set",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "sku",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add sku",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "upgrade-policy",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add upgrade-policy",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-machine-profile",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add virtual-machine-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "extension-profile",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add extension-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "extensions",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add extensions",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "network-profile",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add network-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "network-interface-configurations",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add network-interface-configurations",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "ip-configurations",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add ip-configurations",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "load-balancer-backend-address-pools",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add load-balancer-backend-address-pools",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "load-balancer-inbound-nat-pools",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add load-balancer-inbound-nat-pools",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "subnet",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add subnet",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "os-profile",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add os-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "linux-configuration",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add linux-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "ssh-configuration",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add ssh-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "public-keys",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add public-keys",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "secrets",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add secrets",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "source-vault",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add source-vault",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "vault-certificates",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add vault-certificates",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "windows-configuration",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add windows-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "additional-unattend-contents",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add additional-unattend-contents",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "win-rm-configuration",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add win-rm-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "listeners",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add listeners",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "storage-profile",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add storage-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "image-reference",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add image-reference",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "os-disk",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add os-disk",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "source-image",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add source-image",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "list-parameters",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add list-parameters",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
             }
           }
         }
@@ -14336,7 +16194,7 @@
       "categories": {
         "parameters": {
           "name": "parameters",
-          "description": "Commands to remove parameter for your virtual-machine-scale-set-vm.",
+          "description": "Commands to add parameter for your virtual-machine-scale-set-vm.",
           "fullName": "vmssvm parameters",
           "usage": "[options] [command]",
           "options": [],
@@ -14579,7 +16437,7 @@
             },
             "remove": {
               "name": "remove",
-              "description": "Commands to set parameter file for your virtual-machine-scale-set-vm.",
+              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set-vm.",
               "fullName": "vmssvm parameters remove",
               "usage": "[options] [command]",
               "options": [],
@@ -14623,6 +16481,82 @@
                       "bool": true,
                       "long": "--parameter-file",
                       "description": "The parameter file path."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            },
+            "add": {
+              "name": "add",
+              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set-vm.",
+              "fullName": "vmssvm parameters add",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "virtual-machine-scale-set-vm-list-parameters",
+                  "description": "Remove vmssvm parameter string or files.",
+                  "fullName": "vmssvm parameters add virtual-machine-scale-set-vm-list-parameters",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
                     }
                   ]
                 }
