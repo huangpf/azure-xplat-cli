@@ -9411,12 +9411,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -9553,12 +9553,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -10073,12 +10073,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -10215,12 +10215,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -10357,12 +10357,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -10432,12 +10432,12 @@
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-i-ds <vm-instance-i-ds>",
-              "required": -20,
+              "flags": "--vm-instance-ids <vm-instance-ids>",
+              "required": -19,
               "optional": 0,
               "bool": true,
-              "long": "--vm-instance-i-ds",
-              "description": "vm-instance-i-ds"
+              "long": "--vm-instance-ids",
+              "description": "vm-instance-ids"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -11725,6 +11725,72 @@
                   ]
                 },
                 {
+                  "name": "secrets",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set secrets",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--index <index>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--index",
+                      "description": "Indexer: index."
+                    }
+                  ]
+                },
+                {
                   "name": "source-vault",
                   "description": "Set vmss parameter string or files.",
                   "fullName": "vmss parameters set source-vault",
@@ -12327,6 +12393,14 @@
                       "bool": true,
                       "long": "--operating-system-type",
                       "description": "Set the operating-system-type value."
+                    },
+                    {
+                      "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-hard-disk-containers",
+                      "description": "Set the virtual-hard-disk-containers value."
                     }
                   ]
                 },
@@ -12393,6 +12467,72 @@
                       "bool": true,
                       "long": "--uri",
                       "description": "Set the uri value."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-hard-disk-containers",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set virtual-hard-disk-containers",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--index <index>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--index",
+                      "description": "Indexer: index."
                     }
                   ]
                 }
@@ -13689,6 +13829,56 @@
                       "bool": true,
                       "long": "--parameter-file",
                       "description": "The parameter file path."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-hard-disk-containers",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters remove virtual-hard-disk-containers",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--index <index>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--index",
+                      "description": "Indexer: index."
                     }
                   ]
                 },
@@ -15897,6 +16087,14 @@
                       "bool": true,
                       "long": "--operating-system-type",
                       "description": "Add the operating-system-type value."
+                    },
+                    {
+                      "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-hard-disk-containers",
+                      "description": "Add the virtual-hard-disk-containers value."
                     }
                   ]
                 },
@@ -15971,6 +16169,72 @@
                       "bool": true,
                       "long": "--uri",
                       "description": "Add the uri value."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-hard-disk-containers",
+                  "description": "Remove vmss parameter string or files.",
+                  "fullName": "vmss parameters add virtual-hard-disk-containers",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
                     }
                   ]
                 },
