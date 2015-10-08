@@ -10709,6 +10709,30 @@
                       "description": "Set the provisioning-state value."
                     },
                     {
+                      "flags": "--sku <sku>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--sku",
+                      "description": "Set the sku value."
+                    },
+                    {
+                      "flags": "--upgrade-policy <upgradePolicy>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--upgrade-policy",
+                      "description": "Set the upgrade-policy value."
+                    },
+                    {
+                      "flags": "--virtual-machine-profile <virtualMachineProfile>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-profile",
+                      "description": "Set the virtual-machine-profile value."
+                    },
+                    {
                       "flags": "--id <id>",
                       "required": -6,
                       "optional": 0,
@@ -10899,6 +10923,162 @@
                   ]
                 },
                 {
+                  "name": "virtual-machine-profile",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set virtual-machine-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extension-profile <extensionProfile>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extension-profile",
+                      "description": "Set the extension-profile value."
+                    },
+                    {
+                      "flags": "--network-profile <networkProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-profile",
+                      "description": "Set the network-profile value."
+                    },
+                    {
+                      "flags": "--os-profile <oSProfile>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-profile",
+                      "description": "Set the os-profile value."
+                    },
+                    {
+                      "flags": "--storage-profile <storageProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--storage-profile",
+                      "description": "Set the storage-profile value."
+                    }
+                  ]
+                },
+                {
+                  "name": "extension-profile",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set extension-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extensions <extensions>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extensions",
+                      "description": "Set the extensions value."
+                    }
+                  ]
+                },
+                {
                   "name": "extensions",
                   "description": "Set vmss parameter string or files.",
                   "fullName": "vmss parameters set extensions",
@@ -11061,6 +11241,72 @@
                   ]
                 },
                 {
+                  "name": "network-profile",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set network-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
+                      "required": -36,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations",
+                      "description": "Set the network-interface-configurations value."
+                    }
+                  ]
+                },
+                {
                   "name": "network-interface-configurations",
                   "description": "Set vmss parameter string or files.",
                   "fullName": "vmss parameters set network-interface-configurations",
@@ -11123,6 +11369,14 @@
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--ip-configurations <ipConfigurations>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations",
+                      "description": "Set the ip-configurations value."
                     },
                     {
                       "flags": "--name <name>",
@@ -11215,12 +11469,36 @@
                       "description": "Indexer: network-interface-configurations-index."
                     },
                     {
+                      "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
+                      "required": -39,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-backend-address-pools",
+                      "description": "Set the load-balancer-backend-address-pools value."
+                    },
+                    {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Set the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
                       "bool": true,
                       "long": "--name",
                       "description": "Set the name value."
+                    },
+                    {
+                      "flags": "--subnet <subnet>",
+                      "required": -10,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--subnet",
+                      "description": "Set the subnet value."
                     }
                   ]
                 },
@@ -11573,6 +11851,30 @@
                       "bool": true,
                       "long": "--custom-data",
                       "description": "Set the custom-data value."
+                    },
+                    {
+                      "flags": "--linux-configuration <linuxConfiguration>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--linux-configuration",
+                      "description": "Set the linux-configuration value."
+                    },
+                    {
+                      "flags": "--secrets <secrets>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--secrets",
+                      "description": "Set the secrets value."
+                    },
+                    {
+                      "flags": "--windows-configuration <windowsConfiguration>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--windows-configuration",
+                      "description": "Set the windows-configuration value."
                     }
                   ]
                 },
@@ -11639,6 +11941,80 @@
                       "bool": true,
                       "long": "--disable-password-authentication",
                       "description": "Set the disable-password-authentication value."
+                    },
+                    {
+                      "flags": "--ssh-configuration <sshConfiguration>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ssh-configuration",
+                      "description": "Set the ssh-configuration value."
+                    }
+                  ]
+                },
+                {
+                  "name": "ssh-configuration",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set ssh-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--public-keys <publicKeys>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--public-keys",
+                      "description": "Set the public-keys value."
                     }
                   ]
                 },
@@ -11787,6 +12163,22 @@
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--source-vault <sourceVault>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-vault",
+                      "description": "Set the source-vault value."
+                    },
+                    {
+                      "flags": "--vault-certificates <vaultCertificates>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--vault-certificates",
+                      "description": "Set the vault-certificates value."
                     }
                   ]
                 },
@@ -12011,6 +12403,14 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--additional-unattend-contents <additionalUnattendContents>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--additional-unattend-contents",
+                      "description": "Set the additional-unattend-contents value."
+                    },
+                    {
                       "flags": "--enable-automatic-updates <enableAutomaticUpdates>",
                       "required": -28,
                       "optional": 0,
@@ -12033,6 +12433,14 @@
                       "bool": true,
                       "long": "--time-zone",
                       "description": "Set the time-zone value."
+                    },
+                    {
+                      "flags": "--win-rm-configuration <winRMConfiguration>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--win-rm-configuration",
+                      "description": "Set the win-rm-configuration value."
                     }
                   ]
                 },
@@ -12135,6 +12543,72 @@
                   ]
                 },
                 {
+                  "name": "win-rm-configuration",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set win-rm-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--listeners <listeners>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--listeners",
+                      "description": "Set the listeners value."
+                    }
+                  ]
+                },
+                {
                   "name": "listeners",
                   "description": "Set vmss parameter string or files.",
                   "fullName": "vmss parameters set listeners",
@@ -12213,6 +12687,80 @@
                       "bool": true,
                       "long": "--protocol",
                       "description": "Set the protocol value."
+                    }
+                  ]
+                },
+                {
+                  "name": "storage-profile",
+                  "description": "Set vmss parameter string or files.",
+                  "fullName": "vmss parameters set storage-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--image-reference <imageReference>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--image-reference",
+                      "description": "Set the image-reference value."
+                    },
+                    {
+                      "flags": "--os-disk <oSDisk>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-disk",
+                      "description": "Set the os-disk value."
                     }
                   ]
                 },
@@ -12393,6 +12941,14 @@
                       "bool": true,
                       "long": "--operating-system-type",
                       "description": "Set the operating-system-type value."
+                    },
+                    {
+                      "flags": "--source-image <sourceImage>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-image",
+                      "description": "Set the source-image value."
                     },
                     {
                       "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
@@ -14007,6 +14563,30 @@
                       "description": "Add the provisioning-state value."
                     },
                     {
+                      "flags": "--sku <sku>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--sku",
+                      "description": "Add the sku value."
+                    },
+                    {
+                      "flags": "--upgrade-policy <upgradePolicy>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--upgrade-policy",
+                      "description": "Add the upgrade-policy value."
+                    },
+                    {
+                      "flags": "--virtual-machine-profile <virtualMachineProfile>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-profile",
+                      "description": "Add the virtual-machine-profile value."
+                    },
+                    {
                       "flags": "--id <id>",
                       "required": -6,
                       "optional": 0,
@@ -14275,6 +14855,38 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extension-profile <extensionProfile>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extension-profile",
+                      "description": "Add the extension-profile value."
+                    },
+                    {
+                      "flags": "--network-profile <networkProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-profile",
+                      "description": "Add the network-profile value."
+                    },
+                    {
+                      "flags": "--os-profile <oSProfile>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-profile",
+                      "description": "Add the os-profile value."
+                    },
+                    {
+                      "flags": "--storage-profile <storageProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--storage-profile",
+                      "description": "Add the storage-profile value."
                     }
                   ]
                 },
@@ -14341,6 +14953,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extensions <extensions>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extensions",
+                      "description": "Add the extensions value."
                     }
                   ]
                 },
@@ -14569,6 +15189,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
+                      "required": -36,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations",
+                      "description": "Add the network-interface-configurations value."
                     }
                   ]
                 },
@@ -14635,6 +15263,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--ip-configurations <ipConfigurations>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations",
+                      "description": "Add the ip-configurations value."
                     },
                     {
                       "flags": "--name <name>",
@@ -14719,12 +15355,36 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
+                      "required": -39,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-backend-address-pools",
+                      "description": "Add the load-balancer-backend-address-pools value."
+                    },
+                    {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Add the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
                       "bool": true,
                       "long": "--name",
                       "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--subnet <subnet>",
+                      "required": -10,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--subnet",
+                      "description": "Add the subnet value."
                     }
                   ]
                 },
@@ -15045,6 +15705,30 @@
                       "bool": true,
                       "long": "--custom-data",
                       "description": "Add the custom-data value."
+                    },
+                    {
+                      "flags": "--linux-configuration <linuxConfiguration>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--linux-configuration",
+                      "description": "Add the linux-configuration value."
+                    },
+                    {
+                      "flags": "--secrets <secrets>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--secrets",
+                      "description": "Add the secrets value."
+                    },
+                    {
+                      "flags": "--windows-configuration <windowsConfiguration>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--windows-configuration",
+                      "description": "Add the windows-configuration value."
                     }
                   ]
                 },
@@ -15119,6 +15803,14 @@
                       "bool": true,
                       "long": "--disable-password-authentication",
                       "description": "Add the disable-password-authentication value."
+                    },
+                    {
+                      "flags": "--ssh-configuration <sshConfiguration>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ssh-configuration",
+                      "description": "Add the ssh-configuration value."
                     }
                   ]
                 },
@@ -15185,6 +15877,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--public-keys <publicKeys>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--public-keys",
+                      "description": "Add the public-keys value."
                     }
                   ]
                 },
@@ -15333,6 +16033,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--source-vault <sourceVault>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-vault",
+                      "description": "Add the source-vault value."
+                    },
+                    {
+                      "flags": "--vault-certificates <vaultCertificates>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--vault-certificates",
+                      "description": "Add the vault-certificates value."
                     }
                   ]
                 },
@@ -15557,6 +16273,14 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--additional-unattend-contents <additionalUnattendContents>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--additional-unattend-contents",
+                      "description": "Add the additional-unattend-contents value."
+                    },
+                    {
                       "flags": "--enable-automatic-updates <enableAutomaticUpdates>",
                       "required": -28,
                       "optional": 0,
@@ -15579,6 +16303,14 @@
                       "bool": true,
                       "long": "--time-zone",
                       "description": "Add the time-zone value."
+                    },
+                    {
+                      "flags": "--win-rm-configuration <winRMConfiguration>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--win-rm-configuration",
+                      "description": "Add the win-rm-configuration value."
                     }
                   ]
                 },
@@ -15743,6 +16475,14 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--listeners <listeners>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--listeners",
+                      "description": "Add the listeners value."
                     }
                   ]
                 },
@@ -15891,6 +16631,22 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--image-reference <imageReference>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--image-reference",
+                      "description": "Add the image-reference value."
+                    },
+                    {
+                      "flags": "--os-disk <oSDisk>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-disk",
+                      "description": "Add the os-disk value."
                     }
                   ]
                 },
@@ -16087,6 +16843,14 @@
                       "bool": true,
                       "long": "--operating-system-type",
                       "description": "Add the operating-system-type value."
+                    },
+                    {
+                      "flags": "--source-image <sourceImage>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-image",
+                      "description": "Add the source-image value."
                     },
                     {
                       "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
