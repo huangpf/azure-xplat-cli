@@ -100,13 +100,20 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge);
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
+            var cmd = util.format('vmss list-all').split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                done();
+            });
+
+            /* TODO: The following commented tests won't pass in Playback mode. */
+            /*
             var cmd = util.format('location list').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
             });
-            /* TODO: The following commented tests won't pass in Playback mode. */
 
-            /*// Create the parameter file
+            // Create the parameter file
             var cmd = util.format('vmss parameters generate create-or-update --parameter-file ' + paramFileName).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
@@ -117,7 +124,8 @@ describe('arm', function() {
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
               done();
-            });*/
+            });
+            */
           });
         });
       });
