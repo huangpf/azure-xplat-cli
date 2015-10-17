@@ -50,7 +50,7 @@ var groupName,
   IaasDiagExtName,
   IaasDiagVersion,
   datafile = 'test/data/testdata.json',
-  paramFileName = './vmssParamTest.json'
+  paramFileName = 'test/data/vmssParamTest.json'
 
 describe('arm', function() {
   describe('compute', function() {
@@ -100,25 +100,23 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge);
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
-            var cmd = util.format('vmss list-all').split(' ');
+            var cmd = util.format('vmss list-all --json').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              cmd = util.format('location list --json').split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
-                done();
+                // Create the parameter file
+                cmd = util.format('vmss parameters generate create-or-update --parameter-file %s --json', paramFileName).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  done();
+                });
+              });
             });
 
             /* TODO: The following commented tests won't pass in Playback mode. */
             /*
-            var cmd = util.format('location list').split(' ');
-            testUtils.executeCommand(suite, retry, cmd, function(result) {
-              result.exitStatus.should.equal(0);
-            });
-
-            // Create the parameter file
-            var cmd = util.format('vmss parameters generate create-or-update --parameter-file ' + paramFileName).split(' ');
-            testUtils.executeCommand(suite, retry, cmd, function(result) {
-              result.exitStatus.should.equal(0);
-            });
-
             // Patch replace the parameter file
             var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
