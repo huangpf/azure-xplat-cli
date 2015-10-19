@@ -114,67 +114,9 @@ describe('arm', function() {
                 });
               });
             });
-
-            /* TODO: The following commented tests won't pass in Playback mode. */
-            /*
-            // Patch replace the parameter file
-            var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-            testUtils.executeCommand(suite, retry, cmd, function(result) {
-              result.exitStatus.should.equal(0);
-              done();
-            });
-            */
           });
         });
       });
-
-      /* TODO: The following commented tests won't run. */
-
-      /*it('parameters patch add should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch replace the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-        });
-        // Patch the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation add --path /test1 --value "test2"').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });
-
-      it('parameters patch add should pass again', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch add the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation add --path /test2 --value "test3"').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });
-
-      it('parameters patch remove should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch remove the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation remove --path /test1').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });
-
-      it('parameters patch replace should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch replace the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });*/
-
     });
   });
 });
