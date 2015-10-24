@@ -1178,7 +1178,7 @@
             },
             {
               "name": "set",
-              "description": "Update a storage account",
+              "description": "Update a storage account (Only one property can be updated at a time)",
               "fullName": "storage account set",
               "usage": "[options] <name>",
               "filePath": "commands/storage/storage.account._js",
@@ -1207,6 +1207,30 @@
                   "bool": true,
                   "long": "--json",
                   "description": "use json output"
+                },
+                {
+                  "flags": "--custom-domain <customDomain>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--custom-domain",
+                  "description": "the custom domain"
+                },
+                {
+                  "flags": "--subdomain",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--subdomain",
+                  "description": "whether uses the 'asverify' subdomain to preregister the custom domain"
+                },
+                {
+                  "flags": "--tags <tags>",
+                  "required": -8,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--tags",
+                  "description": "the account tags. Tags are key=value pairs and separated with semicolon(;)"
                 },
                 {
                   "flags": "--type <type>",
@@ -26318,6 +26342,38 @@
               "bool": true,
               "long": "--disable-bginfo-extension",
               "description": "The switch parameter to disable the BGInfo extension for VM."
+            },
+            {
+              "flags": "--disk-encryption-key-vault-id <disk-encryption-key-vault-id>",
+              "required": -32,
+              "optional": 0,
+              "bool": true,
+              "long": "--disk-encryption-key-vault-id",
+              "description": "The disk encryption key vault ID."
+            },
+            {
+              "flags": "--disk-encryption-key-secret-url <disk-encryption-key-secret-url>",
+              "required": -34,
+              "optional": 0,
+              "bool": true,
+              "long": "--disk-encryption-key-secret-url",
+              "description": "The disk encryption key secret URL."
+            },
+            {
+              "flags": "--key-encryption-key-vault-id <key-encryption-key-vault-id>",
+              "required": -31,
+              "optional": 0,
+              "bool": true,
+              "long": "--key-encryption-key-vault-id",
+              "description": "The key encryption key vault ID."
+            },
+            {
+              "flags": "--key-encryption-key-url <key-encryption-key-url>",
+              "required": -26,
+              "optional": 0,
+              "bool": true,
+              "long": "--key-encryption-key-url",
+              "description": "The key encryption key URL."
             }
           ]
         },
