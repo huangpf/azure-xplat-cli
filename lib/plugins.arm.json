@@ -10473,6 +10473,209 @@
               "description": "the subscription identifier"
             }
           ]
+        },
+        {
+          "name": "quick-create",
+          "description": "quick-create method to manage your virtual machine scale set.",
+          "fullName": "vmss quick-create",
+          "usage": "[options]",
+          "filePath": "commands/arm/vmss/vmss._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--name <name>",
+              "required": -8,
+              "optional": 0,
+              "bool": true,
+              "long": "--name",
+              "description": "name"
+            },
+            {
+              "flags": "--location <location>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--location",
+              "description": "location"
+            },
+            {
+              "flags": "--sku-capacity <sku-capacity>",
+              "required": -16,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-capacity",
+              "description": "sku-capacity"
+            },
+            {
+              "flags": "--sku-name <sku-name>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-name",
+              "description": "sku-name"
+            },
+            {
+              "flags": "--sku-tier <sku-tier>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-tier",
+              "description": "sku-tier"
+            },
+            {
+              "flags": "--upgrade-policy-mode <upgrade-policy-mode>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--upgrade-policy-mode",
+              "description": "upgrade-policy-mode"
+            },
+            {
+              "flags": "--network-interface-configuration-name <network-interface-configuration-name>",
+              "required": -40,
+              "optional": 0,
+              "bool": true,
+              "long": "--network-interface-configuration-name",
+              "description": "network-interface-configuration-name"
+            },
+            {
+              "flags": "--ip-configuration-name <ip-configuration-name>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--ip-configuration-name",
+              "description": "ip-configuration-name"
+            },
+            {
+              "flags": "--ip-configuration-subnet <ip-configuration-subnet>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "long": "--ip-configuration-subnet",
+              "description": "ip-configuration-subnet"
+            },
+            {
+              "flags": "--computer-name-prefix <computer-name-prefix>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--computer-name-prefix",
+              "description": "computer-name-prefix"
+            },
+            {
+              "flags": "--admin-username <admin-username>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--admin-username",
+              "description": "admin-username"
+            },
+            {
+              "flags": "--admin-password <admin-password>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--admin-password",
+              "description": "admin-password"
+            },
+            {
+              "flags": "--image-reference <image-reference>",
+              "required": -19,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference",
+              "description": "image-reference"
+            },
+            {
+              "flags": "--os-disk-name <os-disk-name>",
+              "required": -16,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-name",
+              "description": "os-disk-name"
+            },
+            {
+              "flags": "--os-disk-caching <os-disk-caching>",
+              "required": -19,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-caching",
+              "description": "os-disk-caching"
+            },
+            {
+              "flags": "--os-disk-create-option <os-disk-create-option>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-create-option",
+              "description": "os-disk-create-option"
+            },
+            {
+              "flags": "--os-disk-source-image <os-disk-source-image>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-source-image",
+              "description": "os-disk-source-image"
+            },
+            {
+              "flags": "--parameters <parameters>",
+              "required": -14,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameters",
+              "description": "parameters"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
         }
       ],
       "categories": {
