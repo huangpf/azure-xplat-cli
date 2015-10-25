@@ -10579,6 +10579,14 @@
               "description": "ip-configuration-name"
             },
             {
+              "flags": "--virtual-network-name <virtual-network-name>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--virtual-network-name",
+              "description": "virtual-network-name"
+            },
+            {
               "flags": "--ip-configuration-subnet <ip-configuration-subnet>",
               "required": -27,
               "optional": 0,
@@ -10611,12 +10619,36 @@
               "description": "admin-password"
             },
             {
-              "flags": "--image-reference <image-reference>",
-              "required": -19,
+              "flags": "--image-reference-publisher <image-reference-publisher>",
+              "required": -29,
               "optional": 0,
               "bool": true,
-              "long": "--image-reference",
-              "description": "image-reference"
+              "long": "--image-reference-publisher",
+              "description": "image-reference-publisher"
+            },
+            {
+              "flags": "--image-reference-sku <image-reference-sku>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-sku",
+              "description": "image-reference-sku"
+            },
+            {
+              "flags": "--image-reference-offer <image-reference-offer>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-offer",
+              "description": "image-reference-offer"
+            },
+            {
+              "flags": "--image-reference-version <image-reference-version>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-version",
+              "description": "image-reference-version"
             },
             {
               "flags": "--os-disk-name <os-disk-name>",
@@ -10643,6 +10675,22 @@
               "description": "os-disk-create-option"
             },
             {
+              "flags": "--os-disk-operating-system-type <os-disk-operating-system-type>",
+              "required": -33,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-operating-system-type",
+              "description": "os-disk-operating-system-type"
+            },
+            {
+              "flags": "--storage-account-name <storage-account-name>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--storage-account-name",
+              "description": "storage-account-name"
+            },
+            {
               "flags": "--os-disk-source-image <os-disk-source-image>",
               "required": -24,
               "optional": 0,
@@ -10651,20 +10699,12 @@
               "description": "os-disk-source-image"
             },
             {
-              "flags": "--parameters <parameters>",
-              "required": -14,
+              "flags": "--virtual-hard-disk-container <virtual-hard-disk-container>",
+              "required": -31,
               "optional": 0,
               "bool": true,
-              "long": "--parameters",
-              "description": "parameters"
-            },
-            {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
+              "long": "--virtual-hard-disk-container",
+              "description": "virtual-hard-disk-container"
             },
             {
               "flags": "-s, --subscription <subscription>",
