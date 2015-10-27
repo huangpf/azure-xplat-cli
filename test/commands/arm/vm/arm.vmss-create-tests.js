@@ -118,7 +118,7 @@ describe('arm', function() {
         });
       });
 
-      it.only('vmss quick-create should pass', function(done) {
+      it('vmss quick-create should pass', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
@@ -163,6 +163,34 @@ describe('arm', function() {
           });
         });
       });
+
+      it('vmss get instance view should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge);
+        var cmd = util.format('vmss get-instance-view --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+      it('vmss update instances should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge);
+        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --vm-instance-ids 0,1 --json', groupName, vmssPrefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+      it('vmss delete should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
     });
   });
 });
