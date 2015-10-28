@@ -9924,14 +9924,6 @@
               "description": "use json output"
             },
             {
-              "flags": "--parameters <parameters>",
-              "required": -14,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameters",
-              "description": "parameters"
-            },
-            {
               "flags": "--parameter-file <parameter-file>",
               "required": -18,
               "optional": 0,
@@ -10576,19 +10568,262 @@
               "description": "the subscription identifier"
             }
           ]
+        },
+        {
+          "name": "quick-create",
+          "description": "quick-create method to manage your virtual machine scale set.",
+          "fullName": "vmss quick-create",
+          "usage": "[options]",
+          "filePath": "commands/arm/vmss/vmss._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--name <name>",
+              "required": -8,
+              "optional": 0,
+              "bool": true,
+              "long": "--name",
+              "description": "name"
+            },
+            {
+              "flags": "--location <location>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--location",
+              "description": "location"
+            },
+            {
+              "flags": "--sku-capacity <sku-capacity>",
+              "required": -16,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-capacity",
+              "description": "sku-capacity"
+            },
+            {
+              "flags": "--sku-name <sku-name>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-name",
+              "description": "sku-name"
+            },
+            {
+              "flags": "--sku-tier <sku-tier>",
+              "required": -12,
+              "optional": 0,
+              "bool": true,
+              "long": "--sku-tier",
+              "description": "sku-tier"
+            },
+            {
+              "flags": "--upgrade-policy-mode <upgrade-policy-mode>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--upgrade-policy-mode",
+              "description": "upgrade-policy-mode"
+            },
+            {
+              "flags": "--network-interface-configuration-name <network-interface-configuration-name>",
+              "required": -40,
+              "optional": 0,
+              "bool": true,
+              "long": "--network-interface-configuration-name",
+              "description": "network-interface-configuration-name"
+            },
+            {
+              "flags": "--ip-configuration-name <ip-configuration-name>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--ip-configuration-name",
+              "description": "ip-configuration-name"
+            },
+            {
+              "flags": "--virtual-network-name <virtual-network-name>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--virtual-network-name",
+              "description": "virtual-network-name"
+            },
+            {
+              "flags": "--ip-configuration-subnet <ip-configuration-subnet>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "long": "--ip-configuration-subnet",
+              "description": "ip-configuration-subnet"
+            },
+            {
+              "flags": "--computer-name-prefix <computer-name-prefix>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--computer-name-prefix",
+              "description": "computer-name-prefix"
+            },
+            {
+              "flags": "--admin-username <admin-username>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--admin-username",
+              "description": "admin-username"
+            },
+            {
+              "flags": "--admin-password <admin-password>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--admin-password",
+              "description": "admin-password"
+            },
+            {
+              "flags": "--image-reference-publisher <image-reference-publisher>",
+              "required": -29,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-publisher",
+              "description": "image-reference-publisher"
+            },
+            {
+              "flags": "--image-reference-sku <image-reference-sku>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-sku",
+              "description": "image-reference-sku"
+            },
+            {
+              "flags": "--image-reference-offer <image-reference-offer>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-offer",
+              "description": "image-reference-offer"
+            },
+            {
+              "flags": "--image-reference-version <image-reference-version>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "long": "--image-reference-version",
+              "description": "image-reference-version"
+            },
+            {
+              "flags": "--os-disk-name <os-disk-name>",
+              "required": -16,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-name",
+              "description": "os-disk-name"
+            },
+            {
+              "flags": "--os-disk-caching <os-disk-caching>",
+              "required": -19,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-caching",
+              "description": "os-disk-caching"
+            },
+            {
+              "flags": "--os-disk-create-option <os-disk-create-option>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-create-option",
+              "description": "os-disk-create-option"
+            },
+            {
+              "flags": "--os-disk-operating-system-type <os-disk-operating-system-type>",
+              "required": -33,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-operating-system-type",
+              "description": "os-disk-operating-system-type"
+            },
+            {
+              "flags": "--storage-account-name <storage-account-name>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--storage-account-name",
+              "description": "storage-account-name"
+            },
+            {
+              "flags": "--os-disk-source-image <os-disk-source-image>",
+              "required": -24,
+              "optional": 0,
+              "bool": true,
+              "long": "--os-disk-source-image",
+              "description": "os-disk-source-image"
+            },
+            {
+              "flags": "--virtual-hard-disk-container <virtual-hard-disk-container>",
+              "required": -31,
+              "optional": 0,
+              "bool": true,
+              "long": "--virtual-hard-disk-container",
+              "description": "virtual-hard-disk-container"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
         }
       ],
       "categories": {
         "parameters": {
           "name": "parameters",
-          "description": "Commands to add parameter for your virtual-machine-scale-set.",
+          "description": "Commands to add parameter for your virtual-machine-scale-set-vm.",
           "fullName": "vmss parameters",
           "usage": "[options] [command]",
           "options": [],
           "commands": [
             {
               "name": "patch",
-              "description": "Command to patch vmss parameter JSON file.",
+              "description": "Command to patch vmssListAll parameter JSON file.",
               "fullName": "vmss parameters patch",
               "usage": "[options]",
               "filePath": "commands/arm/compute/compute._js",
@@ -10671,7 +10906,7 @@
               "commands": [
                 {
                   "name": "create-or-update",
-                  "description": "Generate vmss parameter string or files.",
+                  "description": "Generate vmssCreateOrUpdate parameter string or files.",
                   "fullName": "vmss parameters generate create-or-update",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10713,7 +10948,7 @@
                 },
                 {
                   "name": "list-all",
-                  "description": "Generate vmss parameter string or files.",
+                  "description": "Generate vmssListAll parameter string or files.",
                   "fullName": "vmss parameters generate list-all",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10758,14 +10993,14 @@
             },
             "set": {
               "name": "set",
-              "description": "Commands to set parameter file for your virtual-machine-scale-set.",
+              "description": "Commands to set parameter file for your virtual-machine-scale-set-vm.",
               "fullName": "vmss parameters set",
               "usage": "[options] [command]",
               "options": [],
               "commands": [
                 {
                   "name": "virtual-machine-scale-set",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetVirtualMachineScaleSet0 parameter string or files.",
                   "fullName": "vmss parameters set virtual-machine-scale-set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10828,6 +11063,30 @@
                       "description": "Set the provisioning-state value."
                     },
                     {
+                      "flags": "--sku <sku>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--sku",
+                      "description": "Set the sku value."
+                    },
+                    {
+                      "flags": "--upgrade-policy <upgradePolicy>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--upgrade-policy",
+                      "description": "Set the upgrade-policy value."
+                    },
+                    {
+                      "flags": "--virtual-machine-profile <virtualMachineProfile>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-profile",
+                      "description": "Set the virtual-machine-profile value."
+                    },
+                    {
                       "flags": "--id <id>",
                       "required": -6,
                       "optional": 0,
@@ -10871,7 +11130,7 @@
                 },
                 {
                   "name": "sku",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetSku0 parameter string or files.",
                   "fullName": "vmss parameters set sku",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10953,7 +11212,7 @@
                 },
                 {
                   "name": "upgrade-policy",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetUpgradePolicy0 parameter string or files.",
                   "fullName": "vmss parameters set upgrade-policy",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11018,8 +11277,164 @@
                   ]
                 },
                 {
+                  "name": "virtual-machine-profile",
+                  "description": "Set catparametersVirtualMachineScaleSetVirtualMachineProfile0 parameter string or files.",
+                  "fullName": "vmss parameters set virtual-machine-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extension-profile <extensionProfile>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extension-profile",
+                      "description": "Set the extension-profile value."
+                    },
+                    {
+                      "flags": "--network-profile <networkProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-profile",
+                      "description": "Set the network-profile value."
+                    },
+                    {
+                      "flags": "--os-profile <oSProfile>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-profile",
+                      "description": "Set the os-profile value."
+                    },
+                    {
+                      "flags": "--storage-profile <storageProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--storage-profile",
+                      "description": "Set the storage-profile value."
+                    }
+                  ]
+                },
+                {
+                  "name": "extension-profile",
+                  "description": "Set catparametersVirtualMachineScaleSetExtensionProfile0 parameter string or files.",
+                  "fullName": "vmss parameters set extension-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extensions <extensions>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extensions",
+                      "description": "Set the extensions value."
+                    }
+                  ]
+                },
+                {
                   "name": "extensions",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetExtensions0 parameter string or files.",
                   "fullName": "vmss parameters set extensions",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11180,8 +11595,74 @@
                   ]
                 },
                 {
+                  "name": "network-profile",
+                  "description": "Set catparametersVirtualMachineScaleSetNetworkProfile0 parameter string or files.",
+                  "fullName": "vmss parameters set network-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
+                      "required": -36,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations",
+                      "description": "Set the network-interface-configurations value."
+                    }
+                  ]
+                },
+                {
                   "name": "network-interface-configurations",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetNetworkInterfaceConfigurations0 parameter string or files.",
                   "fullName": "vmss parameters set network-interface-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11244,6 +11725,14 @@
                       "description": "Indexer: index."
                     },
                     {
+                      "flags": "--ip-configurations <ipConfigurations>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations",
+                      "description": "Set the ip-configurations value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
@@ -11263,7 +11752,7 @@
                 },
                 {
                   "name": "ip-configurations",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetIPConfigurations0 parameter string or files.",
                   "fullName": "vmss parameters set ip-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11334,18 +11823,42 @@
                       "description": "Indexer: network-interface-configurations-index."
                     },
                     {
+                      "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
+                      "required": -39,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-backend-address-pools",
+                      "description": "Set the load-balancer-backend-address-pools value."
+                    },
+                    {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Set the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
                       "bool": true,
                       "long": "--name",
                       "description": "Set the name value."
+                    },
+                    {
+                      "flags": "--subnet <subnet>",
+                      "required": -10,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--subnet",
+                      "description": "Set the subnet value."
                     }
                   ]
                 },
                 {
                   "name": "load-balancer-backend-address-pools",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetLoadBalancerBackendAddressPools0 parameter string or files.",
                   "fullName": "vmss parameters set load-balancer-backend-address-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11435,7 +11948,7 @@
                 },
                 {
                   "name": "load-balancer-inbound-nat-pools",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetLoadBalancerInboundNatPools0 parameter string or files.",
                   "fullName": "vmss parameters set load-balancer-inbound-nat-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11525,7 +12038,7 @@
                 },
                 {
                   "name": "subnet",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetSubnet0 parameter string or files.",
                   "fullName": "vmss parameters set subnet",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11607,7 +12120,7 @@
                 },
                 {
                   "name": "os-profile",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetOSProfile0 parameter string or files.",
                   "fullName": "vmss parameters set os-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11692,12 +12205,36 @@
                       "bool": true,
                       "long": "--custom-data",
                       "description": "Set the custom-data value."
+                    },
+                    {
+                      "flags": "--linux-configuration <linuxConfiguration>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--linux-configuration",
+                      "description": "Set the linux-configuration value."
+                    },
+                    {
+                      "flags": "--secrets <secrets>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--secrets",
+                      "description": "Set the secrets value."
+                    },
+                    {
+                      "flags": "--windows-configuration <windowsConfiguration>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--windows-configuration",
+                      "description": "Set the windows-configuration value."
                     }
                   ]
                 },
                 {
                   "name": "linux-configuration",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetLinuxConfiguration0 parameter string or files.",
                   "fullName": "vmss parameters set linux-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11758,12 +12295,86 @@
                       "bool": true,
                       "long": "--disable-password-authentication",
                       "description": "Set the disable-password-authentication value."
+                    },
+                    {
+                      "flags": "--ssh-configuration <sshConfiguration>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ssh-configuration",
+                      "description": "Set the ssh-configuration value."
+                    }
+                  ]
+                },
+                {
+                  "name": "ssh-configuration",
+                  "description": "Set catparametersVirtualMachineScaleSetSshConfiguration0 parameter string or files.",
+                  "fullName": "vmss parameters set ssh-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--public-keys <publicKeys>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--public-keys",
+                      "description": "Set the public-keys value."
                     }
                   ]
                 },
                 {
                   "name": "public-keys",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetPublicKeys0 parameter string or files.",
                   "fullName": "vmss parameters set public-keys",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11845,7 +12456,7 @@
                 },
                 {
                   "name": "secrets",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetSecrets0 parameter string or files.",
                   "fullName": "vmss parameters set secrets",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11906,12 +12517,28 @@
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--source-vault <sourceVault>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-vault",
+                      "description": "Set the source-vault value."
+                    },
+                    {
+                      "flags": "--vault-certificates <vaultCertificates>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--vault-certificates",
+                      "description": "Set the vault-certificates value."
                     }
                   ]
                 },
                 {
                   "name": "source-vault",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetSourceVault0 parameter string or files.",
                   "fullName": "vmss parameters set source-vault",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11985,7 +12612,7 @@
                 },
                 {
                   "name": "vault-certificates",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetVaultCertificates0 parameter string or files.",
                   "fullName": "vmss parameters set vault-certificates",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12075,7 +12702,7 @@
                 },
                 {
                   "name": "windows-configuration",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetWindowsConfiguration0 parameter string or files.",
                   "fullName": "vmss parameters set windows-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12130,6 +12757,14 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--additional-unattend-contents <additionalUnattendContents>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--additional-unattend-contents",
+                      "description": "Set the additional-unattend-contents value."
+                    },
+                    {
                       "flags": "--enable-automatic-updates <enableAutomaticUpdates>",
                       "required": -28,
                       "optional": 0,
@@ -12152,12 +12787,20 @@
                       "bool": true,
                       "long": "--time-zone",
                       "description": "Set the time-zone value."
+                    },
+                    {
+                      "flags": "--win-rm-configuration <winRMConfiguration>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--win-rm-configuration",
+                      "description": "Set the win-rm-configuration value."
                     }
                   ]
                 },
                 {
                   "name": "additional-unattend-contents",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetAdditionalUnattendContents0 parameter string or files.",
                   "fullName": "vmss parameters set additional-unattend-contents",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12254,8 +12897,74 @@
                   ]
                 },
                 {
+                  "name": "win-rm-configuration",
+                  "description": "Set catparametersVirtualMachineScaleSetWinRMConfiguration0 parameter string or files.",
+                  "fullName": "vmss parameters set win-rm-configuration",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--listeners <listeners>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--listeners",
+                      "description": "Set the listeners value."
+                    }
+                  ]
+                },
+                {
                   "name": "listeners",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetListeners0 parameter string or files.",
                   "fullName": "vmss parameters set listeners",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12336,8 +13045,82 @@
                   ]
                 },
                 {
+                  "name": "storage-profile",
+                  "description": "Set catparametersVirtualMachineScaleSetStorageProfile0 parameter string or files.",
+                  "fullName": "vmss parameters set storage-profile",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--image-reference <imageReference>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--image-reference",
+                      "description": "Set the image-reference value."
+                    },
+                    {
+                      "flags": "--os-disk <oSDisk>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-disk",
+                      "description": "Set the os-disk value."
+                    }
+                  ]
+                },
+                {
                   "name": "image-reference",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetImageReference0 parameter string or files.",
                   "fullName": "vmss parameters set image-reference",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12427,7 +13210,7 @@
                 },
                 {
                   "name": "os-disk",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetOSDisk0 parameter string or files.",
                   "fullName": "vmss parameters set os-disk",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12514,6 +13297,14 @@
                       "description": "Set the operating-system-type value."
                     },
                     {
+                      "flags": "--source-image <sourceImage>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-image",
+                      "description": "Set the source-image value."
+                    },
+                    {
                       "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
                       "required": -32,
                       "optional": 0,
@@ -12525,7 +13316,7 @@
                 },
                 {
                   "name": "source-image",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetSourceImage0 parameter string or files.",
                   "fullName": "vmss parameters set source-image",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12591,7 +13382,7 @@
                 },
                 {
                   "name": "virtual-hard-disk-containers",
-                  "description": "Set vmss parameter string or files.",
+                  "description": "Set catparametersVirtualMachineScaleSetVirtualHardDiskContainers0 parameter string or files.",
                   "fullName": "vmss parameters set virtual-hard-disk-containers",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12654,20 +13445,118 @@
                       "description": "Indexer: index."
                     }
                   ]
+                },
+                {
+                  "name": "virtual-machine-scale-set-vm-list-parameters",
+                  "description": "Set catparametersVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters0 parameter string or files.",
+                  "fullName": "vmss parameters set virtual-machine-scale-set-vm-list-parameters",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--expand-expression <expandExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--expand-expression",
+                      "description": "Set the expand-expression value."
+                    },
+                    {
+                      "flags": "--filter-expression <filterExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--filter-expression",
+                      "description": "Set the filter-expression value."
+                    },
+                    {
+                      "flags": "--resource-group-name <resourceGroupName>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--resource-group-name",
+                      "description": "Set the resource-group-name value."
+                    },
+                    {
+                      "flags": "--select-expression <selectExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--select-expression",
+                      "description": "Set the select-expression value."
+                    },
+                    {
+                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
+                      "required": -34,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-scale-set-name",
+                      "description": "Set the virtual-machine-scale-set-name value."
+                    }
+                  ]
                 }
               ],
               "categories": {}
             },
             "remove": {
               "name": "remove",
-              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set.",
+              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set-vm.",
               "fullName": "vmss parameters remove",
               "usage": "[options] [command]",
               "options": [],
               "commands": [
                 {
                   "name": "virtual-machine-scale-set",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualMachineScaleSet1 parameter string or files.",
                   "fullName": "vmss parameters remove virtual-machine-scale-set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12709,7 +13598,7 @@
                 },
                 {
                   "name": "sku",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSku1 parameter string or files.",
                   "fullName": "vmss parameters remove sku",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12751,7 +13640,7 @@
                 },
                 {
                   "name": "upgrade-policy",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetUpgradePolicy1 parameter string or files.",
                   "fullName": "vmss parameters remove upgrade-policy",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12793,7 +13682,7 @@
                 },
                 {
                   "name": "virtual-machine-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualMachineProfile1 parameter string or files.",
                   "fullName": "vmss parameters remove virtual-machine-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12835,7 +13724,7 @@
                 },
                 {
                   "name": "extension-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetExtensionProfile1 parameter string or files.",
                   "fullName": "vmss parameters remove extension-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12877,7 +13766,7 @@
                 },
                 {
                   "name": "extensions",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetExtensions1 parameter string or files.",
                   "fullName": "vmss parameters remove extensions",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12927,7 +13816,7 @@
                 },
                 {
                   "name": "network-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetNetworkProfile1 parameter string or files.",
                   "fullName": "vmss parameters remove network-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12969,7 +13858,7 @@
                 },
                 {
                   "name": "network-interface-configurations",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetNetworkInterfaceConfigurations1 parameter string or files.",
                   "fullName": "vmss parameters remove network-interface-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13019,7 +13908,7 @@
                 },
                 {
                   "name": "ip-configurations",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetIPConfigurations1 parameter string or files.",
                   "fullName": "vmss parameters remove ip-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13077,7 +13966,7 @@
                 },
                 {
                   "name": "load-balancer-backend-address-pools",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLoadBalancerBackendAddressPools1 parameter string or files.",
                   "fullName": "vmss parameters remove load-balancer-backend-address-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13143,7 +14032,7 @@
                 },
                 {
                   "name": "load-balancer-inbound-nat-pools",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLoadBalancerInboundNatPools1 parameter string or files.",
                   "fullName": "vmss parameters remove load-balancer-inbound-nat-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13209,7 +14098,7 @@
                 },
                 {
                   "name": "subnet",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSubnet1 parameter string or files.",
                   "fullName": "vmss parameters remove subnet",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13267,7 +14156,7 @@
                 },
                 {
                   "name": "os-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetOSProfile1 parameter string or files.",
                   "fullName": "vmss parameters remove os-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13309,7 +14198,7 @@
                 },
                 {
                   "name": "linux-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLinuxConfiguration1 parameter string or files.",
                   "fullName": "vmss parameters remove linux-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13351,7 +14240,7 @@
                 },
                 {
                   "name": "ssh-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSshConfiguration1 parameter string or files.",
                   "fullName": "vmss parameters remove ssh-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13393,7 +14282,7 @@
                 },
                 {
                   "name": "public-keys",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetPublicKeys1 parameter string or files.",
                   "fullName": "vmss parameters remove public-keys",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13443,7 +14332,7 @@
                 },
                 {
                   "name": "secrets",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSecrets1 parameter string or files.",
                   "fullName": "vmss parameters remove secrets",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13493,7 +14382,7 @@
                 },
                 {
                   "name": "source-vault",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSourceVault1 parameter string or files.",
                   "fullName": "vmss parameters remove source-vault",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13543,7 +14432,7 @@
                 },
                 {
                   "name": "vault-certificates",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVaultCertificates1 parameter string or files.",
                   "fullName": "vmss parameters remove vault-certificates",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13601,7 +14490,7 @@
                 },
                 {
                   "name": "windows-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetWindowsConfiguration1 parameter string or files.",
                   "fullName": "vmss parameters remove windows-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13643,7 +14532,7 @@
                 },
                 {
                   "name": "additional-unattend-contents",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetAdditionalUnattendContents1 parameter string or files.",
                   "fullName": "vmss parameters remove additional-unattend-contents",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13693,7 +14582,7 @@
                 },
                 {
                   "name": "win-rm-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetWinRMConfiguration1 parameter string or files.",
                   "fullName": "vmss parameters remove win-rm-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13735,7 +14624,7 @@
                 },
                 {
                   "name": "listeners",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetListeners1 parameter string or files.",
                   "fullName": "vmss parameters remove listeners",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13785,7 +14674,7 @@
                 },
                 {
                   "name": "storage-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetStorageProfile1 parameter string or files.",
                   "fullName": "vmss parameters remove storage-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13827,7 +14716,7 @@
                 },
                 {
                   "name": "image-reference",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetImageReference1 parameter string or files.",
                   "fullName": "vmss parameters remove image-reference",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13869,7 +14758,7 @@
                 },
                 {
                   "name": "os-disk",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetOSDisk1 parameter string or files.",
                   "fullName": "vmss parameters remove os-disk",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13911,7 +14800,7 @@
                 },
                 {
                   "name": "source-image",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSourceImage1 parameter string or files.",
                   "fullName": "vmss parameters remove source-image",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13953,7 +14842,7 @@
                 },
                 {
                   "name": "virtual-hard-disk-containers",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualHardDiskContainers1 parameter string or files.",
                   "fullName": "vmss parameters remove virtual-hard-disk-containers",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14003,8 +14892,50 @@
                 },
                 {
                   "name": "list-parameters",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetListParameters1 parameter string or files.",
                   "fullName": "vmss parameters remove list-parameters",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-machine-scale-set-vm-list-parameters",
+                  "description": "Remove catparametersVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters1 parameter string or files.",
+                  "fullName": "vmss parameters remove virtual-machine-scale-set-vm-list-parameters",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
                   "options": [
@@ -14048,14 +14979,14 @@
             },
             "add": {
               "name": "add",
-              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set.",
+              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set-vm.",
               "fullName": "vmss parameters add",
               "usage": "[options] [command]",
               "options": [],
               "commands": [
                 {
                   "name": "virtual-machine-scale-set",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualMachineScaleSet2 parameter string or files.",
                   "fullName": "vmss parameters add virtual-machine-scale-set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14126,6 +15057,30 @@
                       "description": "Add the provisioning-state value."
                     },
                     {
+                      "flags": "--sku <sku>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--sku",
+                      "description": "Add the sku value."
+                    },
+                    {
+                      "flags": "--upgrade-policy <upgradePolicy>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--upgrade-policy",
+                      "description": "Add the upgrade-policy value."
+                    },
+                    {
+                      "flags": "--virtual-machine-profile <virtualMachineProfile>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-profile",
+                      "description": "Add the virtual-machine-profile value."
+                    },
+                    {
                       "flags": "--id <id>",
                       "required": -6,
                       "optional": 0,
@@ -14169,7 +15124,7 @@
                 },
                 {
                   "name": "sku",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSku2 parameter string or files.",
                   "fullName": "vmss parameters add sku",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14259,7 +15214,7 @@
                 },
                 {
                   "name": "upgrade-policy",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetUpgradePolicy2 parameter string or files.",
                   "fullName": "vmss parameters add upgrade-policy",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14333,7 +15288,7 @@
                 },
                 {
                   "name": "virtual-machine-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualMachineProfile2 parameter string or files.",
                   "fullName": "vmss parameters add virtual-machine-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14394,12 +15349,44 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extension-profile <extensionProfile>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extension-profile",
+                      "description": "Add the extension-profile value."
+                    },
+                    {
+                      "flags": "--network-profile <networkProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-profile",
+                      "description": "Add the network-profile value."
+                    },
+                    {
+                      "flags": "--os-profile <oSProfile>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-profile",
+                      "description": "Add the os-profile value."
+                    },
+                    {
+                      "flags": "--storage-profile <storageProfile>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--storage-profile",
+                      "description": "Add the storage-profile value."
                     }
                   ]
                 },
                 {
                   "name": "extension-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetExtensionProfile2 parameter string or files.",
                   "fullName": "vmss parameters add extension-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14460,12 +15447,20 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--extensions <extensions>",
+                      "required": -14,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--extensions",
+                      "description": "Add the extensions value."
                     }
                   ]
                 },
                 {
                   "name": "extensions",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetExtensions2 parameter string or files.",
                   "fullName": "vmss parameters add extensions",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14627,7 +15622,7 @@
                 },
                 {
                   "name": "network-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetNetworkProfile2 parameter string or files.",
                   "fullName": "vmss parameters add network-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14688,12 +15683,20 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
+                      "required": -36,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations",
+                      "description": "Add the network-interface-configurations value."
                     }
                   ]
                 },
                 {
                   "name": "network-interface-configurations",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetNetworkInterfaceConfigurations2 parameter string or files.",
                   "fullName": "vmss parameters add network-interface-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14756,6 +15759,14 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--ip-configurations <ipConfigurations>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations",
+                      "description": "Add the ip-configurations value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
@@ -14775,7 +15786,7 @@
                 },
                 {
                   "name": "ip-configurations",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetIPConfigurations2 parameter string or files.",
                   "fullName": "vmss parameters add ip-configurations",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14838,18 +15849,42 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
+                      "required": -39,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-backend-address-pools",
+                      "description": "Add the load-balancer-backend-address-pools value."
+                    },
+                    {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Add the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--name <name>",
                       "required": -8,
                       "optional": 0,
                       "bool": true,
                       "long": "--name",
                       "description": "Add the name value."
+                    },
+                    {
+                      "flags": "--subnet <subnet>",
+                      "required": -10,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--subnet",
+                      "description": "Add the subnet value."
                     }
                   ]
                 },
                 {
                   "name": "load-balancer-backend-address-pools",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLoadBalancerBackendAddressPools2 parameter string or files.",
                   "fullName": "vmss parameters add load-balancer-backend-address-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14923,7 +15958,7 @@
                 },
                 {
                   "name": "load-balancer-inbound-nat-pools",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLoadBalancerInboundNatPools2 parameter string or files.",
                   "fullName": "vmss parameters add load-balancer-inbound-nat-pools",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14997,7 +16032,7 @@
                 },
                 {
                   "name": "subnet",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSubnet2 parameter string or files.",
                   "fullName": "vmss parameters add subnet",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15071,7 +16106,7 @@
                 },
                 {
                   "name": "os-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetOSProfile2 parameter string or files.",
                   "fullName": "vmss parameters add os-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15164,12 +16199,36 @@
                       "bool": true,
                       "long": "--custom-data",
                       "description": "Add the custom-data value."
+                    },
+                    {
+                      "flags": "--linux-configuration <linuxConfiguration>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--linux-configuration",
+                      "description": "Add the linux-configuration value."
+                    },
+                    {
+                      "flags": "--secrets <secrets>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--secrets",
+                      "description": "Add the secrets value."
+                    },
+                    {
+                      "flags": "--windows-configuration <windowsConfiguration>",
+                      "required": -25,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--windows-configuration",
+                      "description": "Add the windows-configuration value."
                     }
                   ]
                 },
                 {
                   "name": "linux-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetLinuxConfiguration2 parameter string or files.",
                   "fullName": "vmss parameters add linux-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15238,12 +16297,20 @@
                       "bool": true,
                       "long": "--disable-password-authentication",
                       "description": "Add the disable-password-authentication value."
+                    },
+                    {
+                      "flags": "--ssh-configuration <sshConfiguration>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ssh-configuration",
+                      "description": "Add the ssh-configuration value."
                     }
                   ]
                 },
                 {
                   "name": "ssh-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSshConfiguration2 parameter string or files.",
                   "fullName": "vmss parameters add ssh-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15304,12 +16371,20 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--public-keys <publicKeys>",
+                      "required": -15,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--public-keys",
+                      "description": "Add the public-keys value."
                     }
                   ]
                 },
                 {
                   "name": "public-keys",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetPublicKeys2 parameter string or files.",
                   "fullName": "vmss parameters add public-keys",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15391,7 +16466,7 @@
                 },
                 {
                   "name": "secrets",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSecrets2 parameter string or files.",
                   "fullName": "vmss parameters add secrets",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15452,12 +16527,28 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--source-vault <sourceVault>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-vault",
+                      "description": "Add the source-vault value."
+                    },
+                    {
+                      "flags": "--vault-certificates <vaultCertificates>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--vault-certificates",
+                      "description": "Add the vault-certificates value."
                     }
                   ]
                 },
                 {
                   "name": "source-vault",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSourceVault2 parameter string or files.",
                   "fullName": "vmss parameters add source-vault",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15531,7 +16622,7 @@
                 },
                 {
                   "name": "vault-certificates",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVaultCertificates2 parameter string or files.",
                   "fullName": "vmss parameters add vault-certificates",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15613,7 +16704,7 @@
                 },
                 {
                   "name": "windows-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetWindowsConfiguration2 parameter string or files.",
                   "fullName": "vmss parameters add windows-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15676,6 +16767,14 @@
                       "description": "Parse the JSON value to object."
                     },
                     {
+                      "flags": "--additional-unattend-contents <additionalUnattendContents>",
+                      "required": -32,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--additional-unattend-contents",
+                      "description": "Add the additional-unattend-contents value."
+                    },
+                    {
                       "flags": "--enable-automatic-updates <enableAutomaticUpdates>",
                       "required": -28,
                       "optional": 0,
@@ -15698,12 +16797,20 @@
                       "bool": true,
                       "long": "--time-zone",
                       "description": "Add the time-zone value."
+                    },
+                    {
+                      "flags": "--win-rm-configuration <winRMConfiguration>",
+                      "required": -24,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--win-rm-configuration",
+                      "description": "Add the win-rm-configuration value."
                     }
                   ]
                 },
                 {
                   "name": "additional-unattend-contents",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetAdditionalUnattendContents2 parameter string or files.",
                   "fullName": "vmss parameters add additional-unattend-contents",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15801,7 +16908,7 @@
                 },
                 {
                   "name": "win-rm-configuration",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetWinRMConfiguration2 parameter string or files.",
                   "fullName": "vmss parameters add win-rm-configuration",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15862,12 +16969,20 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--listeners <listeners>",
+                      "required": -13,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--listeners",
+                      "description": "Add the listeners value."
                     }
                   ]
                 },
                 {
                   "name": "listeners",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetListeners2 parameter string or files.",
                   "fullName": "vmss parameters add listeners",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15949,7 +17064,7 @@
                 },
                 {
                   "name": "storage-profile",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetStorageProfile2 parameter string or files.",
                   "fullName": "vmss parameters add storage-profile",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16010,12 +17125,28 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--image-reference <imageReference>",
+                      "required": -19,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--image-reference",
+                      "description": "Add the image-reference value."
+                    },
+                    {
+                      "flags": "--os-disk <oSDisk>",
+                      "required": -11,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--os-disk",
+                      "description": "Add the os-disk value."
                     }
                   ]
                 },
                 {
                   "name": "image-reference",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetImageReference2 parameter string or files.",
                   "fullName": "vmss parameters add image-reference",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16113,7 +17244,7 @@
                 },
                 {
                   "name": "os-disk",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetOSDisk2 parameter string or files.",
                   "fullName": "vmss parameters add os-disk",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16208,6 +17339,14 @@
                       "description": "Add the operating-system-type value."
                     },
                     {
+                      "flags": "--source-image <sourceImage>",
+                      "required": -16,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--source-image",
+                      "description": "Add the source-image value."
+                    },
+                    {
                       "flags": "--virtual-hard-disk-containers <virtualHardDiskContainers>",
                       "required": -32,
                       "optional": 0,
@@ -16219,7 +17358,7 @@
                 },
                 {
                   "name": "source-image",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetSourceImage2 parameter string or files.",
                   "fullName": "vmss parameters add source-image",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16293,7 +17432,7 @@
                 },
                 {
                   "name": "virtual-hard-disk-containers",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetVirtualHardDiskContainers2 parameter string or files.",
                   "fullName": "vmss parameters add virtual-hard-disk-containers",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16359,7 +17498,7 @@
                 },
                 {
                   "name": "list-parameters",
-                  "description": "Remove vmss parameter string or files.",
+                  "description": "Remove catparametersVirtualMachineScaleSetListParameters2 parameter string or files.",
                   "fullName": "vmss parameters add list-parameters",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16420,6 +17559,112 @@
                       "bool": true,
                       "long": "--parse",
                       "description": "Parse the JSON value to object."
+                    }
+                  ]
+                },
+                {
+                  "name": "virtual-machine-scale-set-vm-list-parameters",
+                  "description": "Remove catparametersVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters2 parameter string or files.",
+                  "fullName": "vmss parameters add virtual-machine-scale-set-vm-list-parameters",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the JSON value to object."
+                    },
+                    {
+                      "flags": "--expand-expression <expandExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--expand-expression",
+                      "description": "Add the expand-expression value."
+                    },
+                    {
+                      "flags": "--filter-expression <filterExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--filter-expression",
+                      "description": "Add the filter-expression value."
+                    },
+                    {
+                      "flags": "--resource-group-name <resourceGroupName>",
+                      "required": -23,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--resource-group-name",
+                      "description": "Add the resource-group-name value."
+                    },
+                    {
+                      "flags": "--select-expression <selectExpression>",
+                      "required": -21,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--select-expression",
+                      "description": "Add the select-expression value."
+                    },
+                    {
+                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
+                      "required": -34,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--virtual-machine-scale-set-name",
+                      "description": "Add the virtual-machine-scale-set-name value."
                     }
                   ]
                 }
@@ -16770,12 +18015,44 @@
               "description": "use json output"
             },
             {
-              "flags": "--parameters <parameters>",
-              "required": -14,
+              "flags": "--expand-expression <expand-expression>",
+              "required": -21,
               "optional": 0,
               "bool": true,
-              "long": "--parameters",
-              "description": "parameters"
+              "long": "--expand-expression",
+              "description": "expand-expression"
+            },
+            {
+              "flags": "--filter-expression <filter-expression>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--filter-expression",
+              "description": "filter-expression"
+            },
+            {
+              "flags": "--resource-group-name <resource-group-name>",
+              "required": -23,
+              "optional": 0,
+              "bool": true,
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--select-expression <select-expression>",
+              "required": -21,
+              "optional": 0,
+              "bool": true,
+              "long": "--select-expression",
+              "description": "select-expression"
+            },
+            {
+              "flags": "--virtual-machine-scale-set-name <virtual-machine-scale-set-name>",
+              "required": -34,
+              "optional": 0,
+              "bool": true,
+              "long": "--virtual-machine-scale-set-name",
+              "description": "virtual-machine-scale-set-name"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -17025,14 +18302,14 @@
       "categories": {
         "parameters": {
           "name": "parameters",
-          "description": "Commands to add parameter for your virtual-machine-scale-set-vm.",
+          "description": "Commands to manage parameter for your virtual machine scale set vm.",
           "fullName": "vmssvm parameters",
           "usage": "[options] [command]",
           "options": [],
           "commands": [
             {
               "name": "patch",
-              "description": "Command to patch vmssvm parameter JSON file.",
+              "description": "Command to patch vmssvmList parameter JSON file.",
               "fullName": "vmssvm parameters patch",
               "usage": "[options]",
               "filePath": "commands/arm/compute/compute._js",
@@ -17115,7 +18392,7 @@
               "commands": [
                 {
                   "name": "list",
-                  "description": "Generate vmssvm parameter string or files.",
+                  "description": "Generate vmssvmList parameter string or files.",
                   "fullName": "vmssvm parameters generate list",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17152,282 +18429,6 @@
                       "bool": true,
                       "long": "--parameter-file",
                       "description": "The parameter file path."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "set": {
-              "name": "set",
-              "description": "Commands to set parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters set",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Set vmssvm parameter string or files.",
-                  "fullName": "vmssvm parameters set virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--value <value>",
-                      "required": -9,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--value",
-                      "description": "The JSON value."
-                    },
-                    {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
-                      "flags": "--expand-expression <expandExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--expand-expression",
-                      "description": "Set the expand-expression value."
-                    },
-                    {
-                      "flags": "--filter-expression <filterExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--filter-expression",
-                      "description": "Set the filter-expression value."
-                    },
-                    {
-                      "flags": "--resource-group-name <resourceGroupName>",
-                      "required": -23,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--resource-group-name",
-                      "description": "Set the resource-group-name value."
-                    },
-                    {
-                      "flags": "--select-expression <selectExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--select-expression",
-                      "description": "Set the select-expression value."
-                    },
-                    {
-                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
-                      "required": -34,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--virtual-machine-scale-set-name",
-                      "description": "Set the virtual-machine-scale-set-name value."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "remove": {
-              "name": "remove",
-              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters remove",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Remove vmssvm parameter string or files.",
-                  "fullName": "vmssvm parameters remove virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "add": {
-              "name": "add",
-              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters add",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Remove vmssvm parameter string or files.",
-                  "fullName": "vmssvm parameters add virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--key <key>",
-                      "required": -7,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--key",
-                      "description": "The JSON key."
-                    },
-                    {
-                      "flags": "--value <value>",
-                      "required": -9,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--value",
-                      "description": "The JSON value."
-                    },
-                    {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
-                      "flags": "--expand-expression <expandExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--expand-expression",
-                      "description": "Add the expand-expression value."
-                    },
-                    {
-                      "flags": "--filter-expression <filterExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--filter-expression",
-                      "description": "Add the filter-expression value."
-                    },
-                    {
-                      "flags": "--resource-group-name <resourceGroupName>",
-                      "required": -23,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--resource-group-name",
-                      "description": "Add the resource-group-name value."
-                    },
-                    {
-                      "flags": "--select-expression <selectExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--select-expression",
-                      "description": "Add the select-expression value."
-                    },
-                    {
-                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
-                      "required": -34,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--virtual-machine-scale-set-name",
-                      "description": "Add the virtual-machine-scale-set-name value."
                     }
                   ]
                 }
@@ -20724,7 +21725,23 @@
               "optional": 0,
               "bool": true,
               "long": "--enabled-for-deployment",
-              "description": "reserved for future use"
+              "description": "specifies whether the Azure Compute resource provider can access secrets"
+            },
+            {
+              "flags": "--enabled-for-template-deployment <boolean>",
+              "required": -35,
+              "optional": 0,
+              "bool": true,
+              "long": "--enabled-for-template-deployment",
+              "description": "specifies whether Azure Resource Manager can access secrets"
+            },
+            {
+              "flags": "--enabled-for-disk-encryption <boolean>",
+              "required": -31,
+              "optional": 0,
+              "bool": true,
+              "long": "--enabled-for-disk-encryption",
+              "description": "specifies whether Azure Disk Encryption can access secrets"
             },
             {
               "flags": "-s, --subscription <subscription>",
@@ -20817,7 +21834,23 @@
               "optional": 0,
               "bool": true,
               "long": "--enabled-for-deployment",
-              "description": "if informed, will set the enabledForDeployment property to false in the vault"
+              "description": "if provided, will set the enabledForDeployment property to false in the vault"
+            },
+            {
+              "flags": "--enabled-for-template-deployment",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--enabled-for-template-deployment",
+              "description": "if provided, will set the enabledForTemplateDeployment property to false in the vault"
+            },
+            {
+              "flags": "--enabled-for-disk-encryption",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--enabled-for-disk-encryption",
+              "description": "if provided, will set the enabledForDiskEncryption property to false in the vault"
             },
             {
               "flags": "-s, --subscription <subscription>",
@@ -27953,6 +28986,100 @@
                       "description": "the subscription identifier"
                     }
                   ]
+                },
+                {
+                  "name": "import",
+                  "description": "Import a DNS zone",
+                  "fullName": "network dns zone import",
+                  "usage": "[options] <resource-group> <name> <file-name>",
+                  "filePath": "commands/arm/network/network._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "-g, --resource-group <resource-group>",
+                      "required": -22,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-g",
+                      "long": "--resource-group",
+                      "description": "the name of the resource group"
+                    },
+                    {
+                      "flags": "-n, --name <name>",
+                      "required": -12,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-n",
+                      "long": "--name",
+                      "description": "the name of the DNS zone"
+                    },
+                    {
+                      "flags": "-f, --file-name <file-name>",
+                      "required": -17,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-f",
+                      "long": "--file-name",
+                      "description": "the name of the zone file"
+                    },
+                    {
+                      "flags": "--force",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--force",
+                      "description": "force overwrite of existing record sets. Otherwise, records are merged with existing record sets"
+                    },
+                    {
+                      "flags": "--debug",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--debug",
+                      "description": "output debug info"
+                    },
+                    {
+                      "flags": "--parse-only",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse-only",
+                      "description": "parse zone file only, without import"
+                    },
+                    {
+                      "flags": "-s, --subscription <subscription>",
+                      "required": -20,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-s",
+                      "long": "--subscription",
+                      "description": "the subscription identifier"
+                    }
+                  ]
                 }
               ],
               "categories": {}
@@ -31903,9 +33030,9 @@
           "commands": [
             {
               "name": "show",
-              "description": "Show operations for the requested provider operation search string. The command takes as input a operation search string (with wildcard (*) character) which determines the action details to display.",
+              "description": "Show operations for the requested provider operation search string. Operations can be composed to create custom roles in Azure RBAC. The command takes as input a operation search string (with wildcard (*) character(s)) which determines the action details to display.",
               "fullName": "provider operations show",
-              "usage": "[options] <operationSearchString>",
+              "usage": "[options] <operationSearchString>\n\n     --------------------------  Get all actions for all providers  --------------------------\n     azure provider operations show --operationSearchString *\n\n     --------------------------  Get actions for a particular resource provider  --------------------------\n     azure provider operations show --operationSearchString Microsoft.Insights/*\n\n     --------------------------  Get all actions that can be performed on virtual machines  --------------------------\n     azure provider operations show --operationSearchString */virtualMachines/*",
               "filePath": "commands/arm/providers/provider.operations._js",
               "options": [
                 {
@@ -33079,9 +34206,9 @@
         },
         {
           "name": "show",
-          "description": "Search for a role definition",
+          "description": "Search for a role definition with role name or id to view its details. To inspect individual operations that a role grants access to, review the Actions and NotActions properties of the role.",
           "fullName": "role show",
-          "usage": "[name] [id]\n\n           -----    Example 1   -------\n           azure role list --name Reader\n           Get the Reader role definition.\n           -----    Example 2   -------\n           azure role list --id Reader\n           Get the Reader role definition.\n",
+          "usage": "[name] [id]\n\n           -----    Example 1   -------\n           azure role show --name Reader\n           Get the Reader role definition.\n           -----    Example 2   -------\n           azure role show --id 52a6cc13-ff92-47a8-a39b-2a8205c3087e\n           Get the Reader role definition.\n",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -33116,7 +34243,7 @@
               "bool": true,
               "short": "-n",
               "long": "--name",
-              "description": "Name of the role."
+              "description": "Role definition name. For e.g. Reader, Contributor, Virtual Machine Contributor."
             },
             {
               "flags": "--id <id>",
@@ -33124,7 +34251,7 @@
               "optional": 0,
               "bool": true,
               "long": "--id",
-              "description": "Id of the Role definition to be deleted"
+              "description": "Role definition Id."
             },
             {
               "flags": "--subscription <subscription>",
@@ -33138,9 +34265,9 @@
         },
         {
           "name": "create",
-          "description": "Create a new role definition. The role definition for a new custom role MUST contain the DisplayName, Actions and the AssignableScopes properties. The role definition MAY contain the Description and NotActions property.",
+          "description": "Creates a custom role in Azure RBAC. Provide either a JSON role definition file or a JSON-formatted string containing the role definition as input.\n     The input role definition MUST contain the following properties:\n     1) DisplayName: the name of the custom role\n     2) Description: a short description of the role that summarizes the access that the role grants.\n     3) Actions: the set of operations to which the custom role grants access. Use \"azure provider operations show\" with operationSearchString to get the operation for Azure resource providers that can be secured using Azure RBAC. Following are some valid operation strings\n       - \"*/read\" grants access to read operations of all Azure resource providers.\n       - \"Microsoft.Network/*/read\" grants access to read operations for all resource types in the Microsoft.Network resource provider of Azure.\n       - \"Microsoft.Compute/virtualMachines/*\" grants access to all operations of virtual machines and its child resource types.\n     4) AssignableScopes: the set of scopes (Azure subscriptions or resource groups) in which the custom role will be available for assignment. Using AssignableScopes you can make the custom role available for assignment in only the subscriptions or resource groups that need it, and not clutter the user experience for the rest of the subscriptions or resource groups. Following are some valid assignable scopes\n       - \"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e\", \"/subscriptions/e91d47c4-76f3-4271-a796-21b4ecfe3624\": makes the role available for assignment in two subscriptions.\n       - \"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e\": makes the role available for assignment in a single subscription.\n       - \"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups/Network\": makes the role available for assignment only in the Network resource group.\n\n     The input role definition MAY contain the following properties:\n     1) NotActions: the set of operations that must be excluded from the Actions to determine the effective actions for the custom role. If there is a specific operation that you do not wish to grant access to in a custom role, it is convenient to use NotActions to exclude it, rather than specifying all operations other than that specific operation in Actions.\n\n     NOTE: If a user is assigned a role that specifies an operation in NotActions and also assigned another role grants access to the same operation, the user will be able to perform that operation. NotActions is not a deny rule, it is simply a convenient way to create a set of allowed operations when specific operations need to be excluded.\n\n     Following is a sample json role definition that can be provided as input: \n     {\n     \"Name\": \"Contoso On-call\",\n     \"Description\": \"Can monitor compute, network and storage, and restart virtual machines\",\n     \"Actions\": [\n       \"Microsoft.Compute/*/read\",\n       \"Microsoft.Compute/virtualMachines/start/action\",\n       \"Microsoft.Compute/virtualMachines/restart/action\",\n       \"Microsoft.Compute/virtualMachines/downloadRemoteDesktopConnectionFile/action\",\n       \"Microsoft.Network/*/read\",\n       \"Microsoft.Storage/*/read\",\n       \"Microsoft.Authorization/*/read\",\n       \"Microsoft.Resources/subscriptions/resourceGroups/read\",\n       \"Microsoft.Resources/subscriptions/resourceGroups/resources/read\",\n       \"Microsoft.Insights/alertRules/*\",\n       \"Microsoft.Support/*\"\n     ],\n     \"AssignableScopes\": [\"/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\",\"/subscriptions/yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy\"]\n     }",
           "fullName": "role create",
-          "usage": "[options] [inputfile] [roledefinition]",
+          "usage": "[inputfile] [roledefinition]\n     --------------------------  Create using JSON file  --------------------------\n     azure role create --inputfile C:\\Temp\\roleDefinition.json",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -33184,7 +34311,7 @@
               "bool": true,
               "short": "-r",
               "long": "--roledefinition",
-              "description": "A JSON-formatted string containing the role definition. For e.g. {\"Name\": \"Test Role\",\"Description\": \"Test role\",\"Actions\": [\"Microsoft.Support/*/read\"],\"Notactions\": [],\"AssignableScopes\": [\"/subscriptions/4004a9fd-d58e-48dc-aeb2-4a4aec58606f\"]}"
+              "description": "A JSON-formatted string containing the role definition."
             },
             {
               "flags": "--subscription <subscription>",
@@ -33198,9 +34325,9 @@
         },
         {
           "name": "set",
-          "description": "Update an existing role definition. The role definition for the updated custom role MUST contain the Id property. The role definition SHOULD contain at least one property that is being updated: DisplayName, Description, Actions, NotActions, AssignableScopes",
+          "description": "Modifies a custom role in Azure RBAC. Provide the modified role definition either as a JSON file or as a JSON-formatted string containing the role definition.\n     The role definition for the updated custom role MUST contain the Id property. The role definition SHOULD contain at least one property that is being updated: DisplayName, Description, Actions, NotActions, AssignableScopes.\n\n     Following is a sample updated role definition json that can be provided as input:\n\n     {\n     \"Id\": \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\",\n     \"Description\": \"Can monitor all resources and start and restart virtual machines\",\n     \"Actions\": [\n       \"*/read\",\n       \"Microsoft.ClassicCompute/virtualmachines/restart/action\",\n       \"Microsoft.ClassicCompute/virtualmachines/start/action\"\n     ]\n     }",
           "fullName": "role set",
-          "usage": "[options] [inputfile] [roledefinition]",
+          "usage": "[inputfile] [roledefinition]\n     --------------------------  Create using JSON file  --------------------------\n     azure role set --inputfile C:\\Temp\\roleDefinition.json",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -33244,7 +34371,7 @@
               "bool": true,
               "short": "-r",
               "long": "--roledefinition",
-              "description": "A JSON-formatted string containing the role definition. For e.g. {\"Id\": \"/subscriptions/eb910d4f-edbf-429b-94F6-d76bae7ff401/providers/Microsoft.Authorization/roleDefinitions/52a6cc13-ff92-47a8-a39b-2a8205c3087e\",\"Description\": \"Updated role\",\"Actions\": [\"Microsoft.Support/*/read\"],\"Notactions\": [],\"AssignableScopes\": [\"/subscriptions/5004a9fd-d58e-48dc-aeb2-4a4aec58606f\"]}"
+              "description": "A JSON-formatted string containing the role definition. For e.g. {\"Id\": \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\",\"Description\": \"Updated role\",\"Actions\": [\"Microsoft.Support/*/read\"],\"Notactions\": [],\"AssignableScopes\": [\"/subscriptions/5004a9fd-d58e-48dc-aeb2-4a4aec58606f\"]}"
             },
             {
               "flags": "--subscription <subscription>",
@@ -33258,9 +34385,9 @@
         },
         {
           "name": "delete",
-          "description": "Deletes an existing custom role definition in Azure RBAC. The role definition to delete is provided using the Id property of the role definition.Use list or show roleName to determine the role definition to be deleted.",
+          "description": "Deletes a custom role in Azure RBAC. The role to be deleted is specified using the Id or Name property of the role. Delete will fail if there are existing role assignments made to the custom role.",
           "fullName": "role delete",
-          "usage": "[options] [id] [name]",
+          "usage": "[id] [name]\n\n     --------------------------  Example 1  --------------------------\n     azure role delete --name \"Contoso On-call\"\n\n     --------------------------  Example 2  --------------------------\n     azure role delete --id \"52a6cc13-ff92-47a8-a39b-2a8205c3087e\"",
           "filePath": "commands/arm/role/role.definition._js",
           "options": [
             {
@@ -33303,7 +34430,7 @@
               "bool": true,
               "short": "-n",
               "long": "--name",
-              "description": "the role definition name"
+              "description": "Name of the Role definition to be deleted."
             },
             {
               "flags": "-q --quiet",
@@ -33473,7 +34600,7 @@
               "name": "list",
               "description": "Lists Azure RBAC role assignments at the specified scope. \n         By default it lists all role assignments in the selected Azure subscription. Use respective parameters to list assignments to a specific user, or to list assignments on a specific resource group or resource. \n         The Azure RBAC role that is assigned dictates what type of resources the user is allowed to manage in the scope, and what actions the user is allowed to perform on those resources. Use 'azure role list' or 'azure role show' commands to list actions that a given role allows. ",
               "fullName": "role assignment list",
-              "usage": "[objectId] [signInName] [spn] [roleName] [scope] [resource-group] [resource-type] [resource-name]\n\n           -----    Example 1   -------\n           azure role assignment list\n           List all role assignments in the subscription\n\n           -----    Example 2   -------\n           azure role assignment list --resource-group testRG --signInName john.doe@contoso.com -e\n           Gets all role assignments made to user john.doe@contoso.com  and the groups of which he is member  at the testRG scope or above.\n\n           -----    Example 3   -------\n           azure role assignment list --spn \"http://testapp1.com\"\n           Gets all role assignments of the specified service principal.\n\n           -----    Example 4   -------\n           azure role assignment list --scope \"/subscriptions/96231a05-34ce-4eb4-aa6a-70759cbb5e83/resourcegroups/rg1/providers/Microsoft.Web/sites/site1\"\n           Gets role assignments at the 'site1' website scope.\n",
+              "usage": "[objectId] [signInName] [spn] [roleName] [roleId] [scope] [resource-group] [resource-type] [resource-name]\n\n           -----    Example 1   -------\n           azure role assignment list\n           List all role assignments in the subscription\n\n           -----    Example 2   -------\n           azure role assignment list --resource-group testRG --signInName john.doe@contoso.com -e\n           Gets all role assignments made to user john.doe@contoso.com  and the groups of which he is member  at the testRG scope or above.\n\n           -----    Example 3   -------\n           azure role assignment list --spn \"http://testapp1.com\"\n           Gets all role assignments of the specified service principal.\n\n           -----    Example 4   -------\n           azure role assignment list --scope \"/subscriptions/96231a05-34ce-4eb4-aa6a-70759cbb5e83/resourcegroups/rg1/providers/Microsoft.Web/sites/site1\"\n           Gets role assignments at the 'site1' website scope.\n",
               "filePath": "commands/arm/role/role.assignment._js",
               "options": [
                 {
@@ -33532,7 +34659,16 @@
                   "bool": true,
                   "short": "-o",
                   "long": "--roleName",
-                  "description": "The Role that is assigned to the principal i.e. Reader, Contributor, Virtual Network Administrator, etc."
+                  "description": "Name of the Role that is assigned to the principal i.e. Reader, Contributor, Virtual Network Administrator, etc."
+                },
+                {
+                  "flags": "-d --roleId <roleId>",
+                  "required": -13,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-d",
+                  "long": "--roleId",
+                  "description": "Id of the Role that is assigned to the principal"
                 },
                 {
                   "flags": "-c --scope <scope>",
@@ -33678,7 +34814,7 @@
                   "bool": true,
                   "short": "-d",
                   "long": "--roleId",
-                  "description": "The Id of the RBAC role that needs to be assigned to the principal."
+                  "description": "The Id of the RBAC role for which the assignment needs to be deleted."
                 },
                 {
                   "flags": "-c --scope <scope>",

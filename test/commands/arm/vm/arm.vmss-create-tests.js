@@ -32,7 +32,7 @@ var requiredEnvironment = [{
 }];
 
 var groupName,
-  vmPrefix = 'xplattestvm',
+  vmssPrefix = 'xplattestvmss',
   nicName = 'xplattestnic',
   location,
   username = 'azureuser',
@@ -50,7 +50,7 @@ var groupName,
   IaasDiagExtName,
   IaasDiagVersion,
   datafile = 'test/data/testdata.json',
-  paramFileName = './vmssParamTest.json'
+  paramFileName = 'test/data/vmssParamTest.json'
 
 describe('arm', function() {
   describe('compute', function() {
@@ -62,8 +62,8 @@ describe('arm', function() {
         location = process.env.AZURE_VM_TEST_LOCATION;
         sshcert = process.env.SSHCERT;
         groupName = suite.generateId(groupPrefix, null);
-        vmPrefix = suite.isMocked ? vmPrefix : suite.generateId(vmPrefix, null);
-        nicName = suite.isMocked ? nicName : suite.generateId(nicName, null);
+        vmssPrefix = suite.isMocked ? vmssPrefix : suite.generateId(vmssPrefix, null);
+        nicName = suite.generateId(nicName, null);
         storageAccount = suite.generateId(storageAccount, null);
         storageCont = suite.generateId(storageCont, null);
         osdiskvhd = suite.isMocked ? osdiskvhd : suite.generateId(osdiskvhd, null);
@@ -100,74 +100,96 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge);
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
-            var cmd = util.format('location list').split(' ');
+            var cmd = util.format('vmss list-all --json').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
+              cmd = util.format('location list --json').split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                // Create the parameter file
+                cmd = util.format('vmss parameters generate create-or-update --parameter-file %s --json', paramFileName).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  done();
+                });
+              });
             });
-            /* TODO: The following commented tests won't pass in Playback mode. */
-
-            /*// Create the parameter file
-            var cmd = util.format('vmss parameters generate create-or-update --parameter-file ' + paramFileName).split(' ');
-            testUtils.executeCommand(suite, retry, cmd, function(result) {
-              result.exitStatus.should.equal(0);
-            });
-
-            // Patch replace the parameter file
-            var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-            testUtils.executeCommand(suite, retry, cmd, function(result) {
-              result.exitStatus.should.equal(0);
-              done();
-            });*/
           });
         });
       });
 
-      /* TODO: The following commented tests won't run. */
-
-      /*it('parameters patch add should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch replace the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
+      it('vmss quick-create should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        vmTest.checkImagefile(function() {
+          vmTest.createGroup(groupName, location, suite, function(result) {
+            var cmd = util.format('storage account create -l %s -g %s %s --type GRS --json', location, groupName, storageAccount).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              var cmd = util.format('network vnet create %s %s %s --json', groupName, vNetPrefix, location).split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                var cmd = util.format('network public-ip create %s %s %s --json', groupName, publicipName, location).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  var cmd = util.format('network vnet subnet create --vnet-name %s %s %s %s --json', vNetPrefix, groupName, subnetName, location).split(' ');
+                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                    result.exitStatus.should.equal(0);
+                    var cmd = util.format('network nic create --subnet-name %s --subnet-vnet-name %s %s %s %s --json', subnetName, vNetPrefix, groupName, nicName, location).split(' ');
+                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                      result.exitStatus.should.equal(0);
+                      var cmd = util.format('account show --json').split(' ');
+                      testUtils.executeCommand(suite, retry, cmd, function(result) {
+                        result.exitStatus.should.equal(0);
+                        var accountResult = JSON.parse(result.text);
+                        var subId = accountResult[0].Id;
+                        var subnetId = util.format('/subscriptions/%s/resourceGroups/%s/providers/Microsoft.Network/virtualNetworks/%s/subnets/%s', subId, groupName, vNetPrefix, subnetName);
+                        var cmd = util.format(
+                          'vmss quick-create --resource-group-name %s --name %s --location %s --sku-capacity 2 --sku-name Standard_A1 --sku-tier Standard --upgrade-policy-mode Manual ' +
+                          '--network-interface-configuration-name %s --ip-configuration-name test --virtual-network-name %s --ip-configuration-subnet %s ' +
+                          '--computer-name-prefix test --admin-username %s --admin-password %s ' +
+                          '--image-reference-publisher MicrosoftWindowsServer --image-reference-offer WindowsServer --image-reference-sku 2008-R2-SP1 --image-reference-version 2.0.201506 ' +
+                          '--os-disk-name test --os-disk-caching None --os-disk-create-option FromImage --storage-account-name %s --virtual-hard-disk-container test --json',
+                          groupName, vmssPrefix, location, nicName, vNetPrefix, subnetName, username, password, storageAccount).split(' ');
+                        testUtils.executeCommand(suite, retry, cmd, function(result) {
+                          result.exitStatus.should.equal(0);
+                          done();
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
         });
-        // Patch the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation add --path /test1 --value "test2"').split(' ');
+      });
+
+      it('vmss get instance view should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge);
+        var cmd = util.format('vmss get-instance-view --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
         });
       });
 
-      it('parameters patch add should pass again', function(done) {
+      it('vmss update instances should pass', function(done) {
         this.timeout(vmTest.timeoutLarge);
-        // Patch add the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation add --path /test2 --value "test3"').split(' ');
+        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --vm-instance-ids 0,1 --json', groupName, vmssPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
         });
       });
 
-      it('parameters patch remove should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch remove the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation remove --path /test1').split(' ');
+      it('vmss delete should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
         });
       });
-
-      it('parameters patch replace should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        // Patch replace the parameter file
-        var cmd = util.format('vmss parameters patch --parameter-file ' + paramFileName + ' --operation replace --path /tags --value {\"key\":\"test4\"}').split(' ');
-        testUtils.executeCommand(suite, retry, cmd, function(result) {
-          result.exitStatus.should.equal(0);
-          done();
-        });
-      });*/
 
     });
   });
