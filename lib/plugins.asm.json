@@ -49,7 +49,7 @@
     },
     {
       "name": "login",
-      "description": "Log in to an Azure subscription using Active Directory.",
+      "description": "Log in to an Azure subscription using Active Directory or a Microsoft account identity.",
       "fullName": "login",
       "usage": "[options]",
       "filePath": "commands/login._js",
@@ -86,7 +86,7 @@
           "bool": true,
           "short": "-u",
           "long": "--username",
-          "description": "user name or service principal ID"
+          "description": "user name or service principal ID. If multifactor authentication is required, you will be prompted to use the login command without parameters for interactive support."
         },
         {
           "flags": "-e --environment [environment]",
@@ -95,7 +95,7 @@
           "bool": true,
           "short": "-e",
           "long": "--environment",
-          "description": "Environment to authenticate against, must support active directory"
+          "description": "Environment to authenticate against, such as AzureChinaCloud; must support active directory."
         },
         {
           "flags": "-p --password <password>",
@@ -104,7 +104,7 @@
           "bool": true,
           "short": "-p",
           "long": "--password",
-          "description": "user password or service principal key, will prompt if not given"
+          "description": "user password or service principal key, will prompt if not given."
         },
         {
           "flags": "--service-principal",
@@ -112,7 +112,7 @@
           "optional": 0,
           "bool": true,
           "long": "--service-principal",
-          "description": "If given, log in as a service principal rather than a user"
+          "description": "If given, log in as a service principal rather than a user."
         },
         {
           "flags": "--tenant <tenant>",
@@ -120,7 +120,7 @@
           "optional": 0,
           "bool": true,
           "long": "--tenant",
-          "description": "Tenant domain or ID to log into"
+          "description": "Tenant domain or ID to log into."
         },
         {
           "flags": "-q --quiet",
@@ -129,7 +129,7 @@
           "bool": true,
           "short": "-q",
           "long": "--quiet",
-          "description": "do not prompt for confirmation of PII storage"
+          "description": "do not prompt for confirmation of PII storage."
         }
       ]
     },
@@ -21025,6 +21025,65 @@
               ]
             },
             {
+              "name": "get",
+              "description": "Get Azure certificate",
+              "fullName": "service cert get",
+              "usage": "[options]",
+              "filePath": "commands/asm/service.cert._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "--service-name <serviceName>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--service-name",
+                  "description": "the cloud service name"
+                },
+                {
+                  "flags": "--certificate-name <certName>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--certificate-name",
+                  "description": "the certificate name"
+                },
+                {
+                  "flags": "-s, --subscription <id>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription id"
+                }
+              ]
+            },
+            {
               "name": "create",
               "description": "Upload certificate",
               "fullName": "service cert create",
@@ -27435,7 +27494,7 @@
                   "bool": true,
                   "short": "-O",
                   "long": "--validation-pem",
-                  "description": "chef validation pem file path"
+                  "description": "chef validation pem file path. Not required if -C or --client-pem option specified"
                 },
                 {
                   "flags": "-c, --client-config <client-config>",
@@ -27445,6 +27504,15 @@
                   "short": "-c",
                   "long": "--client-config",
                   "description": "chef client configuration file(i.e client.rb) path"
+                },
+                {
+                  "flags": "-C, --client-pem <client-pem>",
+                  "required": -18,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-C",
+                  "long": "--client-pem",
+                  "description": "chef client pem file path i.e required in validator less bootstrap"
                 },
                 {
                   "flags": "-a, --auto-update-client",
