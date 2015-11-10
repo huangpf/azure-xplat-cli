@@ -6,13 +6,13 @@ exports.getMockedProfile = function () {
   var newProfile = new profile.Profile();
 
   newProfile.addSubscription(new profile.Subscription({
-    id: 'e00d2b3f-3b94-4dfc-ae8e-ca34c8ba1a99',
-    name: 'Pay-As-You-Go',
+    id: '4d368445-cbb1-42a7-97a6-6850ab99f48e',
+    name: 'Internal Consumption',
     user: {
       name: 'user@domain.example',
       type: 'user'
     },
-    tenantId: 'abeb039a-5e53-40ee-b48f-0c99bdc99d15',
+    tenantId: '72f988bf-86f1-41af-91ab-2d7cd011db47',
     state: 'Enabled',
     registeredProviders: [],
     isDefault: true
@@ -22,9 +22,9 @@ exports.getMockedProfile = function () {
 };
 
 exports.setEnvironment = function() {
-  process.env['AZURE_VM_TEST_LOCATION'] = 'West US';
+  process.env['AZURE_CLOUD_SERVICE_TEST_LOCATION'] = 'West US';
 };
 
 exports.scopes = [];
 
- exports.randomTestIdsGenerated = function() { return ['clitestvm1684'];};
+ exports.randomTestIdsGenerated = function() { return ['clitestcert9491'];};
