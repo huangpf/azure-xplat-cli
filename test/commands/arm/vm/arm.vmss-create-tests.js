@@ -147,7 +147,7 @@ describe('arm', function() {
                           'vmss quick-create --resource-group-name %s --name %s --location %s --sku-capacity 2 --sku-name Standard_A1 --sku-tier Standard --upgrade-policy-mode Manual ' +
                           '--network-interface-configuration-name %s --ip-configuration-name test --virtual-network-name %s --ip-configuration-subnet %s ' +
                           '--computer-name-prefix test --admin-username %s --admin-password %s ' +
-                          '--image-reference-publisher MicrosoftWindowsServer --image-reference-offer WindowsServer --image-reference-sku 2008-R2-SP1 --image-reference-version 2.0.201506 ' +
+                          '--image-reference-publisher MicrosoftWindowsServer --image-reference-offer WindowsServer --image-reference-sku 2008-R2-SP1 --image-reference-version 2.0.20151022 ' +
                           '--os-disk-name test --os-disk-caching None --os-disk-create-option FromImage --storage-account-name %s --virtual-hard-disk-container test --json',
                           groupName, vmssPrefix, location, nicName, vNetPrefix, subnetName, username, password, storageAccount).split(' ');
                         testUtils.executeCommand(suite, retry, cmd, function(result) {
