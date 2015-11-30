@@ -94,6 +94,7 @@ describe('arm', function() {
       });
     });
     after(function(done) {
+      this.timeout(vmTest.timeoutLarge * 10);
       vmTest.deleteUsedGroup(groupName, suite, function(result) {
         suite.teardownSuite(done);
       });
