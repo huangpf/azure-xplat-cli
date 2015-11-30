@@ -308,7 +308,7 @@ describe('arm', function() {
       });
 
       it('delete should delete VM', function(done) {
-        this.timeout(vmTest.timeoutLarge);
+        this.timeout(vmTest.timeoutLarge * 10);
         var cmd = util.format('vm delete %s %s --quiet --json', groupName, vmPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
