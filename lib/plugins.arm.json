@@ -10667,7 +10667,7 @@
               "bool": true,
               "short": "-Q",
               "long": "--image-urn",
-              "description": "the image URN in the form \"publisherName:offer:skus:version\""
+              "description": "the image reference, e.g. \"publisher:offer:skus:version\""
             },
             {
               "flags": "-u, --admin-username <admin-username>",
@@ -10686,38 +10686,6 @@
               "short": "-p",
               "long": "--admin-password",
               "description": "the password"
-            },
-            {
-              "flags": "--network-interface-configuration-name <network-interface-configuration-name>",
-              "required": -40,
-              "optional": 0,
-              "bool": true,
-              "long": "--network-interface-configuration-name",
-              "description": "network-interface-configuration-name"
-            },
-            {
-              "flags": "--ip-configuration-name <ip-configuration-name>",
-              "required": -25,
-              "optional": 0,
-              "bool": true,
-              "long": "--ip-configuration-name",
-              "description": "ip-configuration-name"
-            },
-            {
-              "flags": "--virtual-network-name <virtual-network-name>",
-              "required": -24,
-              "optional": 0,
-              "bool": true,
-              "long": "--virtual-network-name",
-              "description": "virtual-network-name"
-            },
-            {
-              "flags": "--ip-configuration-subnet <ip-configuration-subnet>",
-              "required": -27,
-              "optional": 0,
-              "bool": true,
-              "long": "--ip-configuration-subnet",
-              "description": "ip-configuration-subnet"
             },
             {
               "flags": "-s, --subscription <subscription>",
