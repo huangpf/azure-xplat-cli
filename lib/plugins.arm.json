@@ -10603,9 +10603,9 @@
         },
         {
           "name": "quick-create",
-          "description": "quick-create method to manage your virtual machine scale set.",
+          "description": "Create a virtual machine scale set with default resources in a resource group",
           "fullName": "vmss quick-create",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <name> <location> <image-urn> <admin-username> <admin-password>",
           "filePath": "commands/arm/vmss/vmss._js",
           "options": [
             {
@@ -10634,60 +10634,58 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
-              "description": "resource-group-name"
+              "description": "the resource group name"
             },
             {
-              "flags": "--name <name>",
-              "required": -8,
-              "optional": 0,
-              "bool": true,
-              "long": "--name",
-              "description": "name"
-            },
-            {
-              "flags": "--location <location>",
+              "flags": "-n, --name <name>",
               "required": -12,
               "optional": 0,
               "bool": true,
-              "long": "--location",
-              "description": "location"
+              "short": "-n",
+              "long": "--name",
+              "description": "the virtual machine name"
             },
             {
-              "flags": "--sku-capacity <sku-capacity>",
+              "flags": "-l, --location <location>",
               "required": -16,
               "optional": 0,
               "bool": true,
-              "long": "--sku-capacity",
-              "description": "sku-capacity"
+              "short": "-l",
+              "long": "--location",
+              "description": "the location"
             },
             {
-              "flags": "--sku-name <sku-name>",
-              "required": -12,
+              "flags": "-Q, --image-urn <image-urn>",
+              "required": -17,
               "optional": 0,
               "bool": true,
-              "long": "--sku-name",
-              "description": "sku-name"
+              "short": "-Q",
+              "long": "--image-urn",
+              "description": "the image URN in the form \"publisherName:offer:skus:version\""
             },
             {
-              "flags": "--sku-tier <sku-tier>",
-              "required": -12,
+              "flags": "-u, --admin-username <admin-username>",
+              "required": -22,
               "optional": 0,
               "bool": true,
-              "long": "--sku-tier",
-              "description": "sku-tier"
+              "short": "-u",
+              "long": "--admin-username",
+              "description": "the user name"
             },
             {
-              "flags": "--upgrade-policy-mode <upgrade-policy-mode>",
-              "required": -23,
+              "flags": "-p, --admin-password <admin-password>",
+              "required": -22,
               "optional": 0,
               "bool": true,
-              "long": "--upgrade-policy-mode",
-              "description": "upgrade-policy-mode"
+              "short": "-p",
+              "long": "--admin-password",
+              "description": "the password"
             },
             {
               "flags": "--network-interface-configuration-name <network-interface-configuration-name>",
@@ -10720,118 +10718,6 @@
               "bool": true,
               "long": "--ip-configuration-subnet",
               "description": "ip-configuration-subnet"
-            },
-            {
-              "flags": "--computer-name-prefix <computer-name-prefix>",
-              "required": -24,
-              "optional": 0,
-              "bool": true,
-              "long": "--computer-name-prefix",
-              "description": "computer-name-prefix"
-            },
-            {
-              "flags": "--admin-username <admin-username>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--admin-username",
-              "description": "admin-username"
-            },
-            {
-              "flags": "--admin-password <admin-password>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--admin-password",
-              "description": "admin-password"
-            },
-            {
-              "flags": "--image-reference-publisher <image-reference-publisher>",
-              "required": -29,
-              "optional": 0,
-              "bool": true,
-              "long": "--image-reference-publisher",
-              "description": "image-reference-publisher"
-            },
-            {
-              "flags": "--image-reference-sku <image-reference-sku>",
-              "required": -23,
-              "optional": 0,
-              "bool": true,
-              "long": "--image-reference-sku",
-              "description": "image-reference-sku"
-            },
-            {
-              "flags": "--image-reference-offer <image-reference-offer>",
-              "required": -25,
-              "optional": 0,
-              "bool": true,
-              "long": "--image-reference-offer",
-              "description": "image-reference-offer"
-            },
-            {
-              "flags": "--image-reference-version <image-reference-version>",
-              "required": -27,
-              "optional": 0,
-              "bool": true,
-              "long": "--image-reference-version",
-              "description": "image-reference-version"
-            },
-            {
-              "flags": "--os-disk-name <os-disk-name>",
-              "required": -16,
-              "optional": 0,
-              "bool": true,
-              "long": "--os-disk-name",
-              "description": "os-disk-name"
-            },
-            {
-              "flags": "--os-disk-caching <os-disk-caching>",
-              "required": -19,
-              "optional": 0,
-              "bool": true,
-              "long": "--os-disk-caching",
-              "description": "os-disk-caching"
-            },
-            {
-              "flags": "--os-disk-create-option <os-disk-create-option>",
-              "required": -25,
-              "optional": 0,
-              "bool": true,
-              "long": "--os-disk-create-option",
-              "description": "os-disk-create-option"
-            },
-            {
-              "flags": "--os-disk-operating-system-type <os-disk-operating-system-type>",
-              "required": -33,
-              "optional": 0,
-              "bool": true,
-              "long": "--os-disk-operating-system-type",
-              "description": "os-disk-operating-system-type"
-            },
-            {
-              "flags": "--storage-account-name <storage-account-name>",
-              "required": -24,
-              "optional": 0,
-              "bool": true,
-              "long": "--storage-account-name",
-              "description": "storage-account-name"
-            },
-            {
-              "flags": "--os-disk-source-image <os-disk-source-image>",
-              "required": -24,
-              "optional": 0,
-              "bool": true,
-              "long": "--os-disk-source-image",
-              "description": "os-disk-source-image"
-            },
-            {
-              "flags": "--virtual-hard-disk-container <virtual-hard-disk-container>",
-              "required": -31,
-              "optional": 0,
-              "bool": true,
-              "long": "--virtual-hard-disk-container",
-              "description": "virtual-hard-disk-container"
             },
             {
               "flags": "-s, --subscription <subscription>",

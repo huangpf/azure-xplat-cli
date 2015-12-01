@@ -33,8 +33,10 @@ var requiredEnvironment = [{
 
 var groupName,
   vmssPrefix = 'xplattestvmss',
+  vmssPrefix2 = 'xplattestvms2',
   nicName = 'xplattestnic',
   location,
+  imageUrn = 'MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:2.0.20151022',
   username = 'azureuser',
   password = 'Brillio@2015',
   storageAccount = 'xplatteststorage1',
@@ -63,6 +65,7 @@ describe('arm', function() {
         sshcert = process.env.SSHCERT;
         groupName = suite.generateId(groupPrefix, null);
         vmssPrefix = suite.isMocked ? vmssPrefix : suite.generateId(vmssPrefix, null);
+        vmssPrefix2 = suite.isMocked ? vmssPrefix2 : suite.generateId(vmssPrefix2, null);
         nicName = suite.generateId(nicName, null);
         storageAccount = suite.generateId(storageAccount, null);
         storageCont = suite.generateId(storageCont, null);
@@ -122,43 +125,12 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge * 10);
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
-            var cmd = util.format('storage account create -l %s -g %s %s --type GRS --json', location, groupName, storageAccount).split(' ');
+            var cmd = util.format(
+              'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s --json',
+              groupName, vmssPrefix, location, imageUrn, username, password).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
-              var cmd = util.format('network vnet create %s %s %s --json', groupName, vNetPrefix, location).split(' ');
-              testUtils.executeCommand(suite, retry, cmd, function(result) {
-                result.exitStatus.should.equal(0);
-                var cmd = util.format('network public-ip create %s %s %s --json', groupName, publicipName, location).split(' ');
-                testUtils.executeCommand(suite, retry, cmd, function(result) {
-                  result.exitStatus.should.equal(0);
-                  var cmd = util.format('network vnet subnet create --vnet-name %s %s %s %s --json', vNetPrefix, groupName, subnetName, location).split(' ');
-                  testUtils.executeCommand(suite, retry, cmd, function(result) {
-                    result.exitStatus.should.equal(0);
-                    var cmd = util.format('network nic create --subnet-name %s --subnet-vnet-name %s %s %s %s --json', subnetName, vNetPrefix, groupName, nicName, location).split(' ');
-                    testUtils.executeCommand(suite, retry, cmd, function(result) {
-                      result.exitStatus.should.equal(0);
-                      var cmd = util.format('account show --json').split(' ');
-                      testUtils.executeCommand(suite, retry, cmd, function(result) {
-                        result.exitStatus.should.equal(0);
-                        var accountResult = JSON.parse(result.text);
-                        var subId = accountResult[0].Id;
-                        var subnetId = util.format('/subscriptions/%s/resourceGroups/%s/providers/Microsoft.Network/virtualNetworks/%s/subnets/%s', subId, groupName, vNetPrefix, subnetName);
-                        var cmd = util.format(
-                          'vmss quick-create --resource-group-name %s --name %s --location %s --sku-capacity 2 --sku-name Standard_A1 --sku-tier Standard --upgrade-policy-mode Manual ' +
-                          '--network-interface-configuration-name %s --ip-configuration-name test --virtual-network-name %s --ip-configuration-subnet %s ' +
-                          '--computer-name-prefix test --admin-username %s --admin-password %s ' +
-                          '--image-reference-publisher MicrosoftWindowsServer --image-reference-offer WindowsServer --image-reference-sku 2008-R2-SP1 --image-reference-version 2.0.20151022 ' +
-                          '--os-disk-name test --os-disk-caching None --os-disk-create-option FromImage --storage-account-name %s --virtual-hard-disk-container test --json',
-                          groupName, vmssPrefix, location, nicName, vNetPrefix, subnetName, username, password, storageAccount).split(' ');
-                        testUtils.executeCommand(suite, retry, cmd, function(result) {
-                          result.exitStatus.should.equal(0);
-                          done();
-                        });
-                      });
-                    });
-                  });
-                });
-              });
+              done();
             });
           });
         });
@@ -185,6 +157,30 @@ describe('arm', function() {
       it('vmss delete should pass', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
         var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+      it('vmss quick-create 2 using long param names should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        vmTest.checkImagefile(function() {
+          vmTest.createGroup(groupName, location, suite, function(result) {
+            var cmd = util.format(
+              'vmss quick-create --resource-group-name %s --name %s --location %s --image-urn %s --admin-username %s --admin-password %s --json',
+              groupName, vmssPrefix2, location, imageUrn, username, password).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              done();
+            });
+          });
+        });
+      });
+
+      it('vmss delete 2 should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix2).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
