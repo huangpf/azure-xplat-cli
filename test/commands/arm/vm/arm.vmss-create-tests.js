@@ -106,7 +106,7 @@ describe('arm', function() {
             var cmd = util.format('vmss list-all --json').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
-              cmd = util.format('location list --json').split(' ');
+              cmd = util.format('provider list --json').split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 // Create the parameter file
