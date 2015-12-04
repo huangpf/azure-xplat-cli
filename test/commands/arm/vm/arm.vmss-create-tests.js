@@ -33,10 +33,12 @@ var requiredEnvironment = [{
 
 var groupName,
   vmssPrefix = 'xplattestvmss',
+  vmssPrefix1 = 'xplattestvmss1',
   vmssPrefix2 = 'xplattestvms2',
   nicName = 'xplattestnic',
   location,
   imageUrn = 'MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:2.0.20151022',
+  linuxImageUrn = 'SUSE:openSUSE:13.2:latest',
   username = 'azureuser',
   password = 'Brillio@2015',
   storageAccount = 'xplatteststorage1',
@@ -130,7 +132,13 @@ describe('arm', function() {
               groupName, vmssPrefix, location, imageUrn, username, password).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
-              done();
+              var cmd = util.format(
+                'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s --json',
+                groupName, vmssPrefix1, location, linuxImageUrn, username, password).split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                done();
+              });
             });
           });
         });
@@ -159,7 +167,11 @@ describe('arm', function() {
         var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
-          done();
+          var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix1).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            done();
+          });
         });
       });
 
@@ -186,7 +198,7 @@ describe('arm', function() {
           done();
         });
       });
-
+      
     });
   });
 });
