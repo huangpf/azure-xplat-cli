@@ -9412,18 +9412,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--parameters <parameters>",
-              "required": -14,
+              "flags": "-p, --parameters <parameters>",
+              "required": -18,
               "optional": 0,
               "bool": true,
+              "short": "-p",
               "long": "--parameters",
               "description": "parameters"
             },
@@ -9479,18 +9481,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9546,26 +9550,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -9621,18 +9628,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9688,26 +9697,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -9763,18 +9775,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9830,18 +9844,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9897,10 +9913,11 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
@@ -10066,18 +10083,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10133,18 +10152,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10200,26 +10221,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10275,18 +10299,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10342,26 +10368,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10417,18 +10446,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10484,26 +10515,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10559,26 +10593,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -18019,26 +18056,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18094,26 +18134,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18169,26 +18212,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18244,26 +18290,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18335,10 +18384,11 @@
               "description": "filter-expression"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
@@ -18410,26 +18460,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18485,26 +18538,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18560,26 +18616,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
