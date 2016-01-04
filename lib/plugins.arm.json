@@ -8299,7 +8299,7 @@
                   "description": "use json output"
                 },
                 {
-                  "flags": "--objectId <object-id>",
+                  "flags": "--objectId <objectId>",
                   "required": -12,
                   "optional": 0,
                   "bool": true,
@@ -8314,6 +8314,106 @@
                   "short": "-q",
                   "long": "--quiet",
                   "description": "quiet mode (do not ask for delete confirmation)"
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "Get all active directory applications in current subscription's tenant",
+              "fullName": "ad app list",
+              "usage": "[options]",
+              "filePath": "commands/arm/ad/ad.application._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                }
+              ]
+            },
+            {
+              "name": "show",
+              "description": "Get active directory applications",
+              "fullName": "ad app show",
+              "usage": "[options]",
+              "filePath": "commands/arm/ad/ad.application._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "--appId <appId>",
+                  "required": -9,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--appId",
+                  "description": "the name of the application to return"
+                },
+                {
+                  "flags": "--objectId <objectId>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--objectId",
+                  "description": "the object id of the application to return"
+                },
+                {
+                  "flags": "--identifierUri <identifierUri>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--identifierUri",
+                  "description": "the identifier uri of the application to return"
+                },
+                {
+                  "flags": "--search <search>",
+                  "required": -10,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--search",
+                  "description": "search display name of the application starting with the provided value"
                 }
               ]
             }
@@ -8588,7 +8688,7 @@
               "name": "create",
               "description": "Create active directory service principal",
               "fullName": "ad sp create",
-              "usage": "[options] <application-id>",
+              "usage": "[options] <applicationId>",
               "filePath": "commands/arm/ad/ad.servicePrincipals._js",
               "options": [
                 {
@@ -8617,7 +8717,7 @@
                   "description": "use json output"
                 },
                 {
-                  "flags": "--applicationId <application-id>",
+                  "flags": "--applicationId <applicationId>",
                   "required": -17,
                   "optional": 0,
                   "bool": true,
@@ -8630,7 +8730,7 @@
               "name": "delete",
               "description": "Deletes active directory service principal",
               "fullName": "ad sp delete",
-              "usage": "[options] <object-id>",
+              "usage": "[options] <objectId>",
               "filePath": "commands/arm/ad/ad.servicePrincipals._js",
               "options": [
                 {
@@ -8659,7 +8759,7 @@
                   "description": "use json output"
                 },
                 {
-                  "flags": "--objectId <object-id>",
+                  "flags": "--objectId <objectId>",
                   "required": -12,
                   "optional": 0,
                   "bool": true,
@@ -9383,7 +9483,7 @@
           "name": "create-or-update",
           "description": "create-or-update method to manage your virtual machine scale set.",
           "fullName": "vmss create-or-update",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <parameters>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9412,18 +9512,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--parameters <parameters>",
-              "required": -14,
+              "flags": "-p, --parameters <parameters>",
+              "required": -18,
               "optional": 0,
               "bool": true,
+              "short": "-p",
               "long": "--parameters",
               "description": "parameters"
             },
@@ -9450,7 +9552,7 @@
           "name": "deallocate",
           "description": "deallocate method to manage your virtual machine scale set.",
           "fullName": "vmss deallocate",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9479,18 +9581,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9517,7 +9621,7 @@
           "name": "deallocate-instances",
           "description": "deallocate-instances method to manage your virtual machine scale set.",
           "fullName": "vmss deallocate-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9546,26 +9650,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -9592,7 +9699,7 @@
           "name": "delete",
           "description": "delete method to manage your virtual machine scale set.",
           "fullName": "vmss delete",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9621,18 +9728,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9659,7 +9768,7 @@
           "name": "delete-instances",
           "description": "delete-instances method to manage your virtual machine scale set.",
           "fullName": "vmss delete-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9688,26 +9797,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -9734,7 +9846,7 @@
           "name": "get",
           "description": "get method to manage your virtual machine scale set.",
           "fullName": "vmss get",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9763,18 +9875,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9801,7 +9915,7 @@
           "name": "get-instance-view",
           "description": "get-instance-view method to manage your virtual machine scale set.",
           "fullName": "vmss get-instance-view",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9830,18 +9944,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -9868,7 +9984,7 @@
           "name": "list",
           "description": "list method to manage your virtual machine scale set.",
           "fullName": "vmss list",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -9897,10 +10013,11 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
@@ -9978,7 +10095,7 @@
           "name": "list-next",
           "description": "list-next method to manage your virtual machine scale set.",
           "fullName": "vmss list-next",
-          "usage": "[options]",
+          "usage": "[options] <next-link>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10037,7 +10154,7 @@
           "name": "list-skus",
           "description": "list-skus method to manage your virtual machine scale set.",
           "fullName": "vmss list-skus",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10066,18 +10183,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10104,7 +10223,7 @@
           "name": "power-off",
           "description": "power-off method to manage your virtual machine scale set.",
           "fullName": "vmss power-off",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10133,18 +10252,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10171,7 +10292,7 @@
           "name": "power-off-instances",
           "description": "power-off-instances method to manage your virtual machine scale set.",
           "fullName": "vmss power-off-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10200,26 +10321,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10246,7 +10370,7 @@
           "name": "restart",
           "description": "restart method to manage your virtual machine scale set.",
           "fullName": "vmss restart",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10275,18 +10399,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10313,7 +10439,7 @@
           "name": "restart-instances",
           "description": "restart-instances method to manage your virtual machine scale set.",
           "fullName": "vmss restart-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10342,26 +10468,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10388,7 +10517,7 @@
           "name": "start",
           "description": "start method to manage your virtual machine scale set.",
           "fullName": "vmss start",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10417,18 +10546,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
@@ -10455,7 +10586,7 @@
           "name": "start-instances",
           "description": "start-instances method to manage your virtual machine scale set.",
           "fullName": "vmss start-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10484,26 +10615,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -10530,7 +10664,7 @@
           "name": "update-instances",
           "description": "update-instances method to manage your virtual machine scale set.",
           "fullName": "vmss update-instances",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -10559,26 +10693,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--vm-instance-ids <vm-instance-ids>",
-              "required": -19,
+              "flags": "-D, --vm-instance-ids <vm-instance-ids>",
+              "required": -23,
               "optional": 0,
               "bool": true,
+              "short": "-D",
               "long": "--vm-instance-ids",
               "description": "vm-instance-ids"
             },
@@ -17990,7 +18127,7 @@
           "name": "deallocate",
           "description": "deallocate method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm deallocate",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18019,26 +18156,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18065,7 +18205,7 @@
           "name": "delete",
           "description": "delete method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm delete",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18094,26 +18234,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18140,7 +18283,7 @@
           "name": "get",
           "description": "get method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm get",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18169,26 +18312,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18215,7 +18361,7 @@
           "name": "get-instance-view",
           "description": "get-instance-view method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm get-instance-view",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18244,26 +18390,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18290,7 +18439,7 @@
           "name": "list",
           "description": "list method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm list",
-          "usage": "[options]",
+          "usage": "[options] <expand-expression> <filter-expression> <resource-group-name> <select-expression> <virtual-machine-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18335,10 +18484,11 @@
               "description": "filter-expression"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
@@ -18381,7 +18531,7 @@
           "name": "power-off",
           "description": "power-off method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm power-off",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18410,26 +18560,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18456,7 +18609,7 @@
           "name": "restart",
           "description": "restart method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm restart",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18485,26 +18638,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -18531,7 +18687,7 @@
           "name": "start",
           "description": "start method to manage your virtual machine scale set vm.",
           "fullName": "vmssvm start",
-          "usage": "[options]",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18560,26 +18716,29 @@
               "description": "use json output"
             },
             {
-              "flags": "--resource-group-name <resource-group-name>",
-              "required": -23,
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
               "optional": 0,
               "bool": true,
+              "short": "-g",
               "long": "--resource-group-name",
               "description": "resource-group-name"
             },
             {
-              "flags": "--vm-scale-set-name <vm-scale-set-name>",
-              "required": -21,
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
             },
             {
-              "flags": "--instance-id <instance-id>",
-              "required": -15,
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
               "optional": 0,
               "bool": true,
+              "short": "-d",
               "long": "--instance-id",
               "description": "instance-id"
             },
@@ -43376,11 +43535,21 @@
                   "description": "the subscription id"
                 }
               ]
-            },
+            }
+          ],
+          "categories": {}
+        },
+        "extension-image": {
+          "name": "extension-image",
+          "description": "Commands to manage VM resource extension images",
+          "fullName": "vm extension-image",
+          "usage": "[options] [command]",
+          "options": [],
+          "commands": [
             {
-              "name": "list-image-publishers",
+              "name": "list-publishers",
               "description": "Lists virtual machine/extension image publishers",
-              "fullName": "vm extension list-image-publishers",
+              "fullName": "vm extension-image list-publishers",
               "usage": "[options] <location>",
               "filePath": "commands/arm/vm/vm._js",
               "options": [
@@ -43430,9 +43599,9 @@
               ]
             },
             {
-              "name": "list-image-types",
+              "name": "list-types",
               "description": "Lists virtual machine extension image types by a publisher",
-              "fullName": "vm extension list-image-types",
+              "fullName": "vm extension-image list-types",
               "usage": "[options] <location> <publisher>",
               "filePath": "commands/arm/vm/vm._js",
               "options": [
@@ -43491,9 +43660,9 @@
               ]
             },
             {
-              "name": "list-image-versions",
+              "name": "list-versions",
               "description": "Lists virtual machine extension image versions by publisher and type input",
-              "fullName": "vm extension list-image-versions",
+              "fullName": "vm extension-image list-versions",
               "usage": "[options] <location> <publisher> <typeName>",
               "filePath": "commands/arm/vm/vm._js",
               "options": [
@@ -43561,9 +43730,79 @@
               ]
             },
             {
-              "name": "get-image",
+              "name": "list",
+              "description": "Lists virtual machine extension images by publisher, and type input",
+              "fullName": "vm extension-image list",
+              "usage": "[options] <location> <publisher> <typeName>",
+              "filePath": "commands/arm/vm/vm._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-l, --location <location>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--location",
+                  "description": "the location"
+                },
+                {
+                  "flags": "-p, --publisher <publisher>",
+                  "required": -17,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-p",
+                  "long": "--publisher",
+                  "description": "the publisher name"
+                },
+                {
+                  "flags": "-t, --typeName <typeName>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-t",
+                  "long": "--typeName",
+                  "description": "the type name"
+                },
+                {
+                  "flags": "-s, --subscription <subscription>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "show",
               "description": "Lists virtual machine extension image versions by publisher, type and version input",
-              "fullName": "vm extension get-image",
+              "fullName": "vm extension-image show",
               "usage": "[options] <location> <publisher> <typeName> <version>",
               "filePath": "commands/arm/vm/vm._js",
               "options": [
