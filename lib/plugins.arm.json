@@ -10971,7 +10971,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineScaleSet0 parameter string or files.",
+                  "description": "Set virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11101,7 +11101,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineScaleSet1 parameter string or files.",
+                  "description": "Remove virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11215,7 +11215,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineScaleSet2 parameter string or files.",
+                  "description": "Add virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11363,7 +11363,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSku0 parameter string or files.",
+                  "description": "Set sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11445,7 +11445,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSku1 parameter string or files.",
+                  "description": "Remove sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11511,7 +11511,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSku2 parameter string or files.",
+                  "description": "Add sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11611,7 +11611,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetUpgradePolicy0 parameter string or files.",
+                  "description": "Set upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11677,7 +11677,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetUpgradePolicy1 parameter string or files.",
+                  "description": "Remove upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11727,7 +11727,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetUpgradePolicy2 parameter string or files.",
+                  "description": "Add upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11811,7 +11811,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineProfile0 parameter string or files.",
+                  "description": "Set virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11901,7 +11901,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineProfile1 parameter string or files.",
+                  "description": "Remove virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11975,7 +11975,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualMachineProfile2 parameter string or files.",
+                  "description": "Add virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12083,7 +12083,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetExtensionProfile0 parameter string or files.",
+                  "description": "Set extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12149,7 +12149,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetExtensionProfile1 parameter string or files.",
+                  "description": "Remove extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12199,7 +12199,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetExtensionProfile2 parameter string or files.",
+                  "description": "Add extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12283,7 +12283,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetExtensions0 parameter string or files.",
+                  "description": "Set extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12445,7 +12445,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetExtensions1 parameter string or files.",
+                  "description": "Remove extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12591,7 +12591,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetExtensions2 parameter string or files.",
+                  "description": "Add extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12763,7 +12763,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetNetworkProfile0 parameter string or files.",
+                  "description": "Set network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12829,7 +12829,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetNetworkProfile1 parameter string or files.",
+                  "description": "Remove network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12879,7 +12879,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetNetworkProfile2 parameter string or files.",
+                  "description": "Add network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12963,7 +12963,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetNetworkInterfaceConfigurations0 parameter string or files.",
+                  "description": "Set network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13053,7 +13053,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetNetworkInterfaceConfigurations1 parameter string or files.",
+                  "description": "Remove network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13127,7 +13127,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetNetworkInterfaceConfigurations2 parameter string or files.",
+                  "description": "Add network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13227,7 +13227,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetIPConfigurations0 parameter string or files.",
+                  "description": "Set ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13333,7 +13333,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetIPConfigurations1 parameter string or files.",
+                  "description": "Remove ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13423,7 +13423,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetIPConfigurations2 parameter string or files.",
+                  "description": "Add ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13531,7 +13531,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerBackendAddressPools0 parameter string or files.",
+                  "description": "Set load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13621,7 +13621,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerBackendAddressPools1 parameter string or files.",
+                  "description": "Remove load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13695,7 +13695,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerBackendAddressPools2 parameter string or files.",
+                  "description": "Add load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13779,7 +13779,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerInboundNatPools0 parameter string or files.",
+                  "description": "Set load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13869,7 +13869,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerInboundNatPools1 parameter string or files.",
+                  "description": "Remove load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13943,7 +13943,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLoadBalancerInboundNatPools2 parameter string or files.",
+                  "description": "Add load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14027,7 +14027,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSubnet0 parameter string or files.",
+                  "description": "Set subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14109,7 +14109,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSubnet1 parameter string or files.",
+                  "description": "Remove subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14175,7 +14175,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSubnet2 parameter string or files.",
+                  "description": "Add subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14259,7 +14259,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetOSProfile0 parameter string or files.",
+                  "description": "Set os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14373,7 +14373,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetOSProfile1 parameter string or files.",
+                  "description": "Remove os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14471,7 +14471,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetOSProfile2 parameter string or files.",
+                  "description": "Add os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14603,7 +14603,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetLinuxConfiguration0 parameter string or files.",
+                  "description": "Set linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14677,7 +14677,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLinuxConfiguration1 parameter string or files.",
+                  "description": "Remove linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14735,7 +14735,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetLinuxConfiguration2 parameter string or files.",
+                  "description": "Add linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14827,7 +14827,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSshConfiguration0 parameter string or files.",
+                  "description": "Set ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14893,7 +14893,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSshConfiguration1 parameter string or files.",
+                  "description": "Remove ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14943,7 +14943,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSshConfiguration2 parameter string or files.",
+                  "description": "Add ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15027,7 +15027,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetPublicKeys0 parameter string or files.",
+                  "description": "Set public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15109,7 +15109,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetPublicKeys1 parameter string or files.",
+                  "description": "Remove public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15175,7 +15175,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetPublicKeys2 parameter string or files.",
+                  "description": "Add public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15267,7 +15267,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSecrets0 parameter string or files.",
+                  "description": "Set secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15349,7 +15349,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSecrets1 parameter string or files.",
+                  "description": "Remove secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15415,7 +15415,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSecrets2 parameter string or files.",
+                  "description": "Add secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15507,7 +15507,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSourceVault0 parameter string or files.",
+                  "description": "Set source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15581,7 +15581,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSourceVault1 parameter string or files.",
+                  "description": "Remove source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15639,7 +15639,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSourceVault2 parameter string or files.",
+                  "description": "Add source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15723,7 +15723,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetVaultCertificates0 parameter string or files.",
+                  "description": "Set vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15813,7 +15813,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVaultCertificates1 parameter string or files.",
+                  "description": "Remove vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15887,7 +15887,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVaultCertificates2 parameter string or files.",
+                  "description": "Add vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15979,7 +15979,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetWindowsConfiguration0 parameter string or files.",
+                  "description": "Set windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16077,7 +16077,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetWindowsConfiguration1 parameter string or files.",
+                  "description": "Remove windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16159,7 +16159,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetWindowsConfiguration2 parameter string or files.",
+                  "description": "Add windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16275,7 +16275,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetAdditionalUnattendContents0 parameter string or files.",
+                  "description": "Set additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16373,7 +16373,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetAdditionalUnattendContents1 parameter string or files.",
+                  "description": "Remove additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16455,7 +16455,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetAdditionalUnattendContents2 parameter string or files.",
+                  "description": "Add additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16563,7 +16563,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetWinRMConfiguration0 parameter string or files.",
+                  "description": "Set win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16629,7 +16629,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetWinRMConfiguration1 parameter string or files.",
+                  "description": "Remove win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16679,7 +16679,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetWinRMConfiguration2 parameter string or files.",
+                  "description": "Add win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16763,7 +16763,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetListeners0 parameter string or files.",
+                  "description": "Set listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16845,7 +16845,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetListeners1 parameter string or files.",
+                  "description": "Remove listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16911,7 +16911,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetListeners2 parameter string or files.",
+                  "description": "Add listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17003,7 +17003,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetStorageProfile0 parameter string or files.",
+                  "description": "Set storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17077,7 +17077,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetStorageProfile1 parameter string or files.",
+                  "description": "Remove storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17135,7 +17135,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetStorageProfile2 parameter string or files.",
+                  "description": "Add storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17227,7 +17227,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetImageReference0 parameter string or files.",
+                  "description": "Set image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17317,7 +17317,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetImageReference1 parameter string or files.",
+                  "description": "Remove image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17391,7 +17391,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetImageReference2 parameter string or files.",
+                  "description": "Add image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17499,7 +17499,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetOSDisk0 parameter string or files.",
+                  "description": "Set os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17605,7 +17605,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetOSDisk1 parameter string or files.",
+                  "description": "Remove os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17695,7 +17695,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetOSDisk2 parameter string or files.",
+                  "description": "Add os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17819,7 +17819,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetSourceImage0 parameter string or files.",
+                  "description": "Set source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17885,7 +17885,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSourceImage1 parameter string or files.",
+                  "description": "Remove source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17935,7 +17935,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetSourceImage2 parameter string or files.",
+                  "description": "Add source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18019,7 +18019,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set catparametersCreateOrUpdateVirtualMachineScaleSetVirtualHardDiskContainers0 parameter string or files.",
+                  "description": "Set virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18085,7 +18085,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualHardDiskContainers1 parameter string or files.",
+                  "description": "Remove virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18135,7 +18135,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Remove catparametersCreateOrUpdateVirtualMachineScaleSetVirtualHardDiskContainers2 parameter string or files.",
+                  "description": "Add virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
