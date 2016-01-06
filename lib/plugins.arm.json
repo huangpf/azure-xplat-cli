@@ -10971,7 +10971,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"provisioningState\":\"\",\r\n  \"sku\":{\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"id\":\"\",\r\n  \"name\":\"\",\r\n  \"type\":\"\",\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11101,7 +11101,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"provisioningState\":\"\",\r\n  \"sku\":{\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"id\":\"\",\r\n  \"name\":\"\",\r\n  \"type\":\"\",\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11215,7 +11215,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"upgradePolicy\" : \"__input_value__\"\r\n  \"virtualMachineProfile\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"provisioningState\":\"\",\r\n  \"sku\":{\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  },\r\n  \"id\":\"\",\r\n  \"name\":\"\",\r\n  \"type\":\"\",\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11363,7 +11363,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set sku in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sku\" : {\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11445,7 +11445,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove sku in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sku\" : {\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11511,7 +11511,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add sku in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"capacity\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"tier\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add sku in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sku\" : {\r\n    \"capacity\":null,\r\n    \"name\":\"\",\r\n    \"tier\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters sku add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11611,7 +11611,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"upgradePolicy\" : {\r\n    \"mode\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11677,7 +11677,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"upgradePolicy\" : {\r\n    \"mode\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11727,7 +11727,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"mode\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add upgrade-policy in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"upgradePolicy\" : {\r\n    \"mode\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters upgrade-policy add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11811,7 +11811,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualMachineProfile\" : {\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11901,7 +11901,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualMachineProfile\" : {\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11975,7 +11975,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensionProfile\" : \"__input_value__\"\r\n  \"networkProfile\" : \"__input_value__\"\r\n  \"oSProfile\" : \"__input_value__\"\r\n  \"storageProfile\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualMachineProfile\" : {\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"autoUpgradeMinorVersion\":false,\r\n          \"extensionType\":\"\",\r\n          \"protectedSettings\":\"\",\r\n          \"provisioningState\":\"\",\r\n          \"publisher\":\"\",\r\n          \"settings\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"id\":\"\",\r\n          \"name\":\"\",\r\n          \"type\":\"\",\r\n          \"location\":\"\",\r\n          \"tags\":{\r\n          }\r\n        }\r\n      ]\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"iPConfigurations\":[\r\n            {\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"referenceUri\":\"\"\r\n                }\r\n              ],\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"referenceUri\":\"\"\r\n              }\r\n            }\r\n          ],\r\n          \"name\":\"\",\r\n          \"primary\":null\r\n        }\r\n      ]\r\n    },\r\n    \"oSProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"customData\":\"\",\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"sshConfiguration\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"keyData\":\"\",\r\n              \"path\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"referenceUri\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateStore\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"windowsConfiguration\":{\r\n        \"additionalUnattendContents\":[\r\n          {\r\n            \"componentName\":\"\",\r\n            \"content\":\"\",\r\n            \"passName\":\"\",\r\n            \"settingName\":\"\"\r\n          }\r\n        ],\r\n        \"enableAutomaticUpdates\":null,\r\n        \"provisionVMAgent\":null,\r\n        \"timeZone\":\"\",\r\n        \"winRMConfiguration\":{\r\n          \"listeners\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"protocol\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      }\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"offer\":\"\",\r\n        \"publisher\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"oSDisk\":{\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"name\":\"\",\r\n        \"operatingSystemType\":\"\",\r\n        \"sourceImage\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"virtualHardDiskContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12083,7 +12083,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensionProfile\" : {\r\n    \"extensions\":[\r\n      {\r\n        \"autoUpgradeMinorVersion\":false,\r\n        \"extensionType\":\"\",\r\n        \"protectedSettings\":\"\",\r\n        \"provisioningState\":\"\",\r\n        \"publisher\":\"\",\r\n        \"settings\":\"\",\r\n        \"typeHandlerVersion\":\"\",\r\n        \"id\":\"\",\r\n        \"name\":\"\",\r\n        \"type\":\"\",\r\n        \"location\":\"\",\r\n        \"tags\":{\r\n        }\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12149,7 +12149,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensionProfile\" : {\r\n    \"extensions\":[\r\n      {\r\n        \"autoUpgradeMinorVersion\":false,\r\n        \"extensionType\":\"\",\r\n        \"protectedSettings\":\"\",\r\n        \"provisioningState\":\"\",\r\n        \"publisher\":\"\",\r\n        \"settings\":\"\",\r\n        \"typeHandlerVersion\":\"\",\r\n        \"id\":\"\",\r\n        \"name\":\"\",\r\n        \"type\":\"\",\r\n        \"location\":\"\",\r\n        \"tags\":{\r\n        }\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12199,7 +12199,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"extensions\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add extension-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensionProfile\" : {\r\n    \"extensions\":[\r\n      {\r\n        \"autoUpgradeMinorVersion\":false,\r\n        \"extensionType\":\"\",\r\n        \"protectedSettings\":\"\",\r\n        \"provisioningState\":\"\",\r\n        \"publisher\":\"\",\r\n        \"settings\":\"\",\r\n        \"typeHandlerVersion\":\"\",\r\n        \"id\":\"\",\r\n        \"name\":\"\",\r\n        \"type\":\"\",\r\n        \"location\":\"\",\r\n        \"tags\":{\r\n        }\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extension-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12283,7 +12283,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensions\" : {\r\n    \"autoUpgradeMinorVersion\":false,\r\n    \"extensionType\":\"\",\r\n    \"protectedSettings\":\"\",\r\n    \"provisioningState\":\"\",\r\n    \"publisher\":\"\",\r\n    \"settings\":\"\",\r\n    \"typeHandlerVersion\":\"\",\r\n    \"id\":\"\",\r\n    \"name\":\"\",\r\n    \"type\":\"\",\r\n    \"location\":\"\",\r\n    \"tags\":{\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12445,7 +12445,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensions\" : {\r\n    \"autoUpgradeMinorVersion\":false,\r\n    \"extensionType\":\"\",\r\n    \"protectedSettings\":\"\",\r\n    \"provisioningState\":\"\",\r\n    \"publisher\":\"\",\r\n    \"settings\":\"\",\r\n    \"typeHandlerVersion\":\"\",\r\n    \"id\":\"\",\r\n    \"name\":\"\",\r\n    \"type\":\"\",\r\n    \"location\":\"\",\r\n    \"tags\":{\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12591,7 +12591,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"autoUpgradeMinorVersion\" : \"__input_value__\"\r\n  \"extensionType\" : \"__input_value__\"\r\n  \"protectedSettings\" : \"__input_value__\"\r\n  \"provisioningState\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"settings\" : \"__input_value__\"\r\n  \"typeHandlerVersion\" : \"__input_value__\"\r\n  \"id\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"type\" : \"__input_value__\"\r\n  \"location\" : \"__input_value__\"\r\n  \"tags\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add extensions in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"extensions\" : {\r\n    \"autoUpgradeMinorVersion\":false,\r\n    \"extensionType\":\"\",\r\n    \"protectedSettings\":\"\",\r\n    \"provisioningState\":\"\",\r\n    \"publisher\":\"\",\r\n    \"settings\":\"\",\r\n    \"typeHandlerVersion\":\"\",\r\n    \"id\":\"\",\r\n    \"name\":\"\",\r\n    \"type\":\"\",\r\n    \"location\":\"\",\r\n    \"tags\":{\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters extensions add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12763,7 +12763,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkProfile\" : {\r\n    \"networkInterfaceConfigurations\":[\r\n      {\r\n        \"iPConfigurations\":[\r\n          {\r\n            \"loadBalancerBackendAddressPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"loadBalancerInboundNatPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"name\":\"\",\r\n            \"subnet\":{\r\n              \"referenceUri\":\"\"\r\n            }\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"primary\":null\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12829,7 +12829,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkProfile\" : {\r\n    \"networkInterfaceConfigurations\":[\r\n      {\r\n        \"iPConfigurations\":[\r\n          {\r\n            \"loadBalancerBackendAddressPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"loadBalancerInboundNatPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"name\":\"\",\r\n            \"subnet\":{\r\n              \"referenceUri\":\"\"\r\n            }\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"primary\":null\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12879,7 +12879,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"networkInterfaceConfigurations\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add network-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkProfile\" : {\r\n    \"networkInterfaceConfigurations\":[\r\n      {\r\n        \"iPConfigurations\":[\r\n          {\r\n            \"loadBalancerBackendAddressPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"loadBalancerInboundNatPools\":[\r\n              {\r\n                \"referenceUri\":\"\"\r\n              }\r\n            ],\r\n            \"name\":\"\",\r\n            \"subnet\":{\r\n              \"referenceUri\":\"\"\r\n            }\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"primary\":null\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -12963,7 +12963,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkInterfaceConfigurations\" : {\r\n    \"iPConfigurations\":[\r\n      {\r\n        \"loadBalancerBackendAddressPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"loadBalancerInboundNatPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"subnet\":{\r\n          \"referenceUri\":\"\"\r\n        }\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"primary\":null\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13053,7 +13053,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkInterfaceConfigurations\" : {\r\n    \"iPConfigurations\":[\r\n      {\r\n        \"loadBalancerBackendAddressPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"loadBalancerInboundNatPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"subnet\":{\r\n          \"referenceUri\":\"\"\r\n        }\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"primary\":null\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13127,7 +13127,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"ipConfigurations\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"primary\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"networkInterfaceConfigurations\" : {\r\n    \"iPConfigurations\":[\r\n      {\r\n        \"loadBalancerBackendAddressPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"loadBalancerInboundNatPools\":[\r\n          {\r\n            \"referenceUri\":\"\"\r\n          }\r\n        ],\r\n        \"name\":\"\",\r\n        \"subnet\":{\r\n          \"referenceUri\":\"\"\r\n        }\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"primary\":null\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13227,7 +13227,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"ipConfigurations\" : {\r\n    \"loadBalancerBackendAddressPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"loadBalancerInboundNatPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"subnet\":{\r\n      \"referenceUri\":\"\"\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13333,7 +13333,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"ipConfigurations\" : {\r\n    \"loadBalancerBackendAddressPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"loadBalancerInboundNatPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"subnet\":{\r\n      \"referenceUri\":\"\"\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13423,7 +13423,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"loadBalancerBackendAddressPools\" : \"__input_value__\"\r\n  \"loadBalancerInboundNatPools\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"subnet\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add ip-configurations in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"ipConfigurations\" : {\r\n    \"loadBalancerBackendAddressPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"loadBalancerInboundNatPools\":[\r\n      {\r\n        \"referenceUri\":\"\"\r\n      }\r\n    ],\r\n    \"name\":\"\",\r\n    \"subnet\":{\r\n      \"referenceUri\":\"\"\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ip-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13531,7 +13531,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerBackendAddressPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13621,7 +13621,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerBackendAddressPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13695,7 +13695,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerBackendAddressPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13779,7 +13779,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerInboundNatPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13869,7 +13869,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerInboundNatPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -13943,7 +13943,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"loadBalancerInboundNatPools\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14027,7 +14027,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"subnet\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14109,7 +14109,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"subnet\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14175,7 +14175,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add subnet in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"subnet\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters subnet add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14259,7 +14259,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSProfile\" : {\r\n    \"computerNamePrefix\":\"\",\r\n    \"adminPassword\":\"\",\r\n    \"adminUsername\":\"\",\r\n    \"customData\":\"\",\r\n    \"linuxConfiguration\":{\r\n      \"disablePasswordAuthentication\":null,\r\n      \"sshConfiguration\":{\r\n        \"publicKeys\":[\r\n          {\r\n            \"keyData\":\"\",\r\n            \"path\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"secrets\":[\r\n      {\r\n        \"sourceVault\":{\r\n          \"referenceUri\":\"\"\r\n        },\r\n        \"vaultCertificates\":[\r\n          {\r\n            \"certificateStore\":\"\",\r\n            \"certificateUrl\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"windowsConfiguration\":{\r\n      \"additionalUnattendContents\":[\r\n        {\r\n          \"componentName\":\"\",\r\n          \"content\":\"\",\r\n          \"passName\":\"\",\r\n          \"settingName\":\"\"\r\n        }\r\n      ],\r\n      \"enableAutomaticUpdates\":null,\r\n      \"provisionVMAgent\":null,\r\n      \"timeZone\":\"\",\r\n      \"winRMConfiguration\":{\r\n        \"listeners\":[\r\n          {\r\n            \"certificateUrl\":\"\",\r\n            \"protocol\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14373,7 +14373,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSProfile\" : {\r\n    \"computerNamePrefix\":\"\",\r\n    \"adminPassword\":\"\",\r\n    \"adminUsername\":\"\",\r\n    \"customData\":\"\",\r\n    \"linuxConfiguration\":{\r\n      \"disablePasswordAuthentication\":null,\r\n      \"sshConfiguration\":{\r\n        \"publicKeys\":[\r\n          {\r\n            \"keyData\":\"\",\r\n            \"path\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"secrets\":[\r\n      {\r\n        \"sourceVault\":{\r\n          \"referenceUri\":\"\"\r\n        },\r\n        \"vaultCertificates\":[\r\n          {\r\n            \"certificateStore\":\"\",\r\n            \"certificateUrl\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"windowsConfiguration\":{\r\n      \"additionalUnattendContents\":[\r\n        {\r\n          \"componentName\":\"\",\r\n          \"content\":\"\",\r\n          \"passName\":\"\",\r\n          \"settingName\":\"\"\r\n        }\r\n      ],\r\n      \"enableAutomaticUpdates\":null,\r\n      \"provisionVMAgent\":null,\r\n      \"timeZone\":\"\",\r\n      \"winRMConfiguration\":{\r\n        \"listeners\":[\r\n          {\r\n            \"certificateUrl\":\"\",\r\n            \"protocol\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14471,7 +14471,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"computerNamePrefix\" : \"__input_value__\"\r\n  \"adminPassword\" : \"__input_value__\"\r\n  \"adminUsername\" : \"__input_value__\"\r\n  \"customData\" : \"__input_value__\"\r\n  \"linuxConfiguration\" : \"__input_value__\"\r\n  \"secrets\" : \"__input_value__\"\r\n  \"windowsConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add os-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSProfile\" : {\r\n    \"computerNamePrefix\":\"\",\r\n    \"adminPassword\":\"\",\r\n    \"adminUsername\":\"\",\r\n    \"customData\":\"\",\r\n    \"linuxConfiguration\":{\r\n      \"disablePasswordAuthentication\":null,\r\n      \"sshConfiguration\":{\r\n        \"publicKeys\":[\r\n          {\r\n            \"keyData\":\"\",\r\n            \"path\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    \"secrets\":[\r\n      {\r\n        \"sourceVault\":{\r\n          \"referenceUri\":\"\"\r\n        },\r\n        \"vaultCertificates\":[\r\n          {\r\n            \"certificateStore\":\"\",\r\n            \"certificateUrl\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"windowsConfiguration\":{\r\n      \"additionalUnattendContents\":[\r\n        {\r\n          \"componentName\":\"\",\r\n          \"content\":\"\",\r\n          \"passName\":\"\",\r\n          \"settingName\":\"\"\r\n        }\r\n      ],\r\n      \"enableAutomaticUpdates\":null,\r\n      \"provisionVMAgent\":null,\r\n      \"timeZone\":\"\",\r\n      \"winRMConfiguration\":{\r\n        \"listeners\":[\r\n          {\r\n            \"certificateUrl\":\"\",\r\n            \"protocol\":\"\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14603,7 +14603,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"linuxConfiguration\" : {\r\n    \"disablePasswordAuthentication\":null,\r\n    \"sshConfiguration\":{\r\n      \"publicKeys\":[\r\n        {\r\n          \"keyData\":\"\",\r\n          \"path\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14677,7 +14677,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"linuxConfiguration\" : {\r\n    \"disablePasswordAuthentication\":null,\r\n    \"sshConfiguration\":{\r\n      \"publicKeys\":[\r\n        {\r\n          \"keyData\":\"\",\r\n          \"path\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14735,7 +14735,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"disablePasswordAuthentication\" : \"__input_value__\"\r\n  \"sshConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add linux-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"linuxConfiguration\" : {\r\n    \"disablePasswordAuthentication\":null,\r\n    \"sshConfiguration\":{\r\n      \"publicKeys\":[\r\n        {\r\n          \"keyData\":\"\",\r\n          \"path\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters linux-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14827,7 +14827,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sshConfiguration\" : {\r\n    \"publicKeys\":[\r\n      {\r\n        \"keyData\":\"\",\r\n        \"path\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14893,7 +14893,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sshConfiguration\" : {\r\n    \"publicKeys\":[\r\n      {\r\n        \"keyData\":\"\",\r\n        \"path\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -14943,7 +14943,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"publicKeys\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add ssh-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sshConfiguration\" : {\r\n    \"publicKeys\":[\r\n      {\r\n        \"keyData\":\"\",\r\n        \"path\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters ssh-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15027,7 +15027,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"publicKeys\" : {\r\n    \"keyData\":\"\",\r\n    \"path\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15109,7 +15109,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"publicKeys\" : {\r\n    \"keyData\":\"\",\r\n    \"path\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15175,7 +15175,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"keyData\" : \"__input_value__\"\r\n  \"path\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add public-keys in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"publicKeys\" : {\r\n    \"keyData\":\"\",\r\n    \"path\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters public-keys add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15267,7 +15267,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"secrets\" : {\r\n    \"sourceVault\":{\r\n      \"referenceUri\":\"\"\r\n    },\r\n    \"vaultCertificates\":[\r\n      {\r\n        \"certificateStore\":\"\",\r\n        \"certificateUrl\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15349,7 +15349,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"secrets\" : {\r\n    \"sourceVault\":{\r\n      \"referenceUri\":\"\"\r\n    },\r\n    \"vaultCertificates\":[\r\n      {\r\n        \"certificateStore\":\"\",\r\n        \"certificateUrl\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15415,7 +15415,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"sourceVault\" : \"__input_value__\"\r\n  \"vaultCertificates\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add secrets in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"secrets\" : {\r\n    \"sourceVault\":{\r\n      \"referenceUri\":\"\"\r\n    },\r\n    \"vaultCertificates\":[\r\n      {\r\n        \"certificateStore\":\"\",\r\n        \"certificateUrl\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters secrets add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15507,7 +15507,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceVault\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15581,7 +15581,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceVault\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15639,7 +15639,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"referenceUri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add source-vault in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceVault\" : {\r\n    \"referenceUri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-vault add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15723,7 +15723,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"vaultCertificates\" : {\r\n    \"certificateStore\":\"\",\r\n    \"certificateUrl\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15813,7 +15813,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"vaultCertificates\" : {\r\n    \"certificateStore\":\"\",\r\n    \"certificateUrl\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15887,7 +15887,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateStore\" : \"__input_value__\"\r\n  \"certificateUrl\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add vault-certificates in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"vaultCertificates\" : {\r\n    \"certificateStore\":\"\",\r\n    \"certificateUrl\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters vault-certificates add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15979,7 +15979,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"windowsConfiguration\" : {\r\n    \"additionalUnattendContents\":[\r\n      {\r\n        \"componentName\":\"\",\r\n        \"content\":\"\",\r\n        \"passName\":\"\",\r\n        \"settingName\":\"\"\r\n      }\r\n    ],\r\n    \"enableAutomaticUpdates\":null,\r\n    \"provisionVMAgent\":null,\r\n    \"timeZone\":\"\",\r\n    \"winRMConfiguration\":{\r\n      \"listeners\":[\r\n        {\r\n          \"certificateUrl\":\"\",\r\n          \"protocol\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16077,7 +16077,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"windowsConfiguration\" : {\r\n    \"additionalUnattendContents\":[\r\n      {\r\n        \"componentName\":\"\",\r\n        \"content\":\"\",\r\n        \"passName\":\"\",\r\n        \"settingName\":\"\"\r\n      }\r\n    ],\r\n    \"enableAutomaticUpdates\":null,\r\n    \"provisionVMAgent\":null,\r\n    \"timeZone\":\"\",\r\n    \"winRMConfiguration\":{\r\n      \"listeners\":[\r\n        {\r\n          \"certificateUrl\":\"\",\r\n          \"protocol\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16159,7 +16159,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"additionalUnattendContents\" : \"__input_value__\"\r\n  \"enableAutomaticUpdates\" : \"__input_value__\"\r\n  \"provisionVMAgent\" : \"__input_value__\"\r\n  \"timeZone\" : \"__input_value__\"\r\n  \"winRMConfiguration\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add windows-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"windowsConfiguration\" : {\r\n    \"additionalUnattendContents\":[\r\n      {\r\n        \"componentName\":\"\",\r\n        \"content\":\"\",\r\n        \"passName\":\"\",\r\n        \"settingName\":\"\"\r\n      }\r\n    ],\r\n    \"enableAutomaticUpdates\":null,\r\n    \"provisionVMAgent\":null,\r\n    \"timeZone\":\"\",\r\n    \"winRMConfiguration\":{\r\n      \"listeners\":[\r\n        {\r\n          \"certificateUrl\":\"\",\r\n          \"protocol\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters windows-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16275,7 +16275,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"additionalUnattendContents\" : {\r\n    \"componentName\":\"\",\r\n    \"content\":\"\",\r\n    \"passName\":\"\",\r\n    \"settingName\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16373,7 +16373,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"additionalUnattendContents\" : {\r\n    \"componentName\":\"\",\r\n    \"content\":\"\",\r\n    \"passName\":\"\",\r\n    \"settingName\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16455,7 +16455,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"componentName\" : \"__input_value__\"\r\n  \"content\" : \"__input_value__\"\r\n  \"passName\" : \"__input_value__\"\r\n  \"settingName\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add additional-unattend-contents in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"additionalUnattendContents\" : {\r\n    \"componentName\":\"\",\r\n    \"content\":\"\",\r\n    \"passName\":\"\",\r\n    \"settingName\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters additional-unattend-contents add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16563,7 +16563,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"winRMConfiguration\" : {\r\n    \"listeners\":[\r\n      {\r\n        \"certificateUrl\":\"\",\r\n        \"protocol\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16629,7 +16629,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"winRMConfiguration\" : {\r\n    \"listeners\":[\r\n      {\r\n        \"certificateUrl\":\"\",\r\n        \"protocol\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16679,7 +16679,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"listeners\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add win-rm-configuration in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"winRMConfiguration\" : {\r\n    \"listeners\":[\r\n      {\r\n        \"certificateUrl\":\"\",\r\n        \"protocol\":\"\"\r\n      }\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters win-rm-configuration add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16763,7 +16763,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"listeners\" : {\r\n    \"certificateUrl\":\"\",\r\n    \"protocol\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16845,7 +16845,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"listeners\" : {\r\n    \"certificateUrl\":\"\",\r\n    \"protocol\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16911,7 +16911,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"certificateUrl\" : \"__input_value__\"\r\n  \"protocol\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add listeners in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"listeners\" : {\r\n    \"certificateUrl\":\"\",\r\n    \"protocol\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters listeners add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17003,7 +17003,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"storageProfile\" : {\r\n    \"imageReference\":{\r\n      \"offer\":\"\",\r\n      \"publisher\":\"\",\r\n      \"sku\":\"\",\r\n      \"version\":\"\"\r\n    },\r\n    \"oSDisk\":{\r\n      \"caching\":\"\",\r\n      \"createOption\":\"\",\r\n      \"name\":\"\",\r\n      \"operatingSystemType\":\"\",\r\n      \"sourceImage\":{\r\n        \"uri\":\"\"\r\n      },\r\n      \"virtualHardDiskContainers\":[\r\n        \"\"\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17077,7 +17077,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"storageProfile\" : {\r\n    \"imageReference\":{\r\n      \"offer\":\"\",\r\n      \"publisher\":\"\",\r\n      \"sku\":\"\",\r\n      \"version\":\"\"\r\n    },\r\n    \"oSDisk\":{\r\n      \"caching\":\"\",\r\n      \"createOption\":\"\",\r\n      \"name\":\"\",\r\n      \"operatingSystemType\":\"\",\r\n      \"sourceImage\":{\r\n        \"uri\":\"\"\r\n      },\r\n      \"virtualHardDiskContainers\":[\r\n        \"\"\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17135,7 +17135,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"imageReference\" : \"__input_value__\"\r\n  \"oSDisk\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add storage-profile in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"storageProfile\" : {\r\n    \"imageReference\":{\r\n      \"offer\":\"\",\r\n      \"publisher\":\"\",\r\n      \"sku\":\"\",\r\n      \"version\":\"\"\r\n    },\r\n    \"oSDisk\":{\r\n      \"caching\":\"\",\r\n      \"createOption\":\"\",\r\n      \"name\":\"\",\r\n      \"operatingSystemType\":\"\",\r\n      \"sourceImage\":{\r\n        \"uri\":\"\"\r\n      },\r\n      \"virtualHardDiskContainers\":[\r\n        \"\"\r\n      ]\r\n    }\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters storage-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17227,7 +17227,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"imageReference\" : {\r\n    \"offer\":\"\",\r\n    \"publisher\":\"\",\r\n    \"sku\":\"\",\r\n    \"version\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17317,7 +17317,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"imageReference\" : {\r\n    \"offer\":\"\",\r\n    \"publisher\":\"\",\r\n    \"sku\":\"\",\r\n    \"version\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17391,7 +17391,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"offer\" : \"__input_value__\"\r\n  \"publisher\" : \"__input_value__\"\r\n  \"sku\" : \"__input_value__\"\r\n  \"version\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add image-reference in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"imageReference\" : {\r\n    \"offer\":\"\",\r\n    \"publisher\":\"\",\r\n    \"sku\":\"\",\r\n    \"version\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters image-reference add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17499,7 +17499,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSDisk\" : {\r\n    \"caching\":\"\",\r\n    \"createOption\":\"\",\r\n    \"name\":\"\",\r\n    \"operatingSystemType\":\"\",\r\n    \"sourceImage\":{\r\n      \"uri\":\"\"\r\n    },\r\n    \"virtualHardDiskContainers\":[\r\n      \"\"\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17605,7 +17605,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSDisk\" : {\r\n    \"caching\":\"\",\r\n    \"createOption\":\"\",\r\n    \"name\":\"\",\r\n    \"operatingSystemType\":\"\",\r\n    \"sourceImage\":{\r\n      \"uri\":\"\"\r\n    },\r\n    \"virtualHardDiskContainers\":[\r\n      \"\"\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17695,7 +17695,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"caching\" : \"__input_value__\"\r\n  \"createOption\" : \"__input_value__\"\r\n  \"name\" : \"__input_value__\"\r\n  \"operatingSystemType\" : \"__input_value__\"\r\n  \"sourceImage\" : \"__input_value__\"\r\n  \"virtualHardDiskContainers\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add os-disk in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"oSDisk\" : {\r\n    \"caching\":\"\",\r\n    \"createOption\":\"\",\r\n    \"name\":\"\",\r\n    \"operatingSystemType\":\"\",\r\n    \"sourceImage\":{\r\n      \"uri\":\"\"\r\n    },\r\n    \"virtualHardDiskContainers\":[\r\n      \"\"\r\n    ]\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters os-disk add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17819,7 +17819,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Set source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceImage\" : {\r\n    \"uri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17885,7 +17885,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Remove source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceImage\" : {\r\n    \"uri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -17935,7 +17935,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n  \"uri\" : \"__input_value__\"\r\n...\r\n}\r\n",
+                  "description": "Add source-image in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"sourceImage\" : {\r\n    \"uri\":\"\"\r\n  }\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters source-image add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18019,7 +18019,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
+                  "description": "Set virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualHardDiskContainers\" : \"\"\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18085,7 +18085,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
+                  "description": "Remove virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualHardDiskContainers\" : \"\"\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -18135,7 +18135,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n...\r\n...\r\n}\r\n",
+                  "description": "Add virtual-hard-disk-containers in create-or-update-parameters string or files, e.g. \r\n{\r\n  ...\r\n  \"virtualHardDiskContainers\" : \"\"\r\n  ...\r\n}\r\n",
                   "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
