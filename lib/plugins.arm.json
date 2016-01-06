@@ -10846,7 +10846,7 @@
           "commands": [
             {
               "name": "patch",
-              "description": "Command to patch virtualMachineScaleSetListAll parameter JSON file.",
+              "description": "Command to patch virtualMachineScaleSetCreateOrUpdate parameter JSON file.",
               "fullName": "vmss parameters patch",
               "usage": "[options]",
               "filePath": "commands/arm/compute/compute._js",
@@ -10931,48 +10931,6 @@
                   "name": "create-or-update",
                   "description": "Generate virtualMachineScaleSetCreateOrUpdate parameter string or files.",
                   "fullName": "vmss parameters generate create-or-update",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    }
-                  ]
-                },
-                {
-                  "name": "list-all",
-                  "description": "Generate virtualMachineScaleSetListAll parameter string or files.",
-                  "fullName": "vmss parameters generate list-all",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
                   "options": [
@@ -15478,48 +15436,6 @@
                       "description": "Indexer: index."
                     }
                   ]
-                },
-                {
-                  "name": "list-parameters",
-                  "description": "Remove catparametersListAllVirtualMachineScaleSetListParameters1 parameter string or files.",
-                  "fullName": "vmss parameters remove list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    }
-                  ]
                 }
               ],
               "categories": {}
@@ -18042,72 +17958,6 @@
                       "description": "Parse the JSON value to object."
                     }
                   ]
-                },
-                {
-                  "name": "list-parameters",
-                  "description": "Remove catparametersListAllVirtualMachineScaleSetListParameters2 parameter string or files.",
-                  "fullName": "vmss parameters add list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--key <key>",
-                      "required": -7,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--key",
-                      "description": "The JSON key."
-                    },
-                    {
-                      "flags": "--value <value>",
-                      "required": -9,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--value",
-                      "description": "The JSON value."
-                    },
-                    {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    }
-                  ]
                 }
               ],
               "categories": {}
@@ -18468,18 +18318,20 @@
               "description": "use json output"
             },
             {
-              "flags": "--expand-expression <expand-expression>",
-              "required": -21,
+              "flags": "-e, --expand-expression <expand-expression>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-e",
               "long": "--expand-expression",
               "description": "expand-expression"
             },
             {
-              "flags": "--filter-expression <filter-expression>",
-              "required": -21,
+              "flags": "-t, --filter-expression <filter-expression>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-t",
               "long": "--filter-expression",
               "description": "filter-expression"
             },
@@ -18493,18 +18345,20 @@
               "description": "resource-group-name"
             },
             {
-              "flags": "--select-expression <select-expression>",
-              "required": -21,
+              "flags": "-c, --select-expression <select-expression>",
+              "required": -25,
               "optional": 0,
               "bool": true,
+              "short": "-c",
               "long": "--select-expression",
               "description": "select-expression"
             },
             {
-              "flags": "--virtual-machine-scale-set-name <virtual-machine-scale-set-name>",
-              "required": -34,
+              "flags": "-n, --virtual-machine-scale-set-name <virtual-machine-scale-set-name>",
+              "required": -38,
               "optional": 0,
               "bool": true,
+              "short": "-n",
               "long": "--virtual-machine-scale-set-name",
               "description": "virtual-machine-scale-set-name"
             },
@@ -18762,461 +18616,7 @@
           ]
         }
       ],
-      "categories": {
-        "parameters": {
-          "name": "parameters",
-          "description": "Commands to add parameter for your virtual-machine-scale-set-vm.",
-          "fullName": "vmssvm parameters",
-          "usage": "[options] [command]",
-          "options": [],
-          "commands": [
-            {
-              "name": "patch",
-              "description": "Command to patch virtualMachineScaleSetVMList parameter JSON file.",
-              "fullName": "vmssvm parameters patch",
-              "usage": "[options]",
-              "filePath": "commands/arm/compute/compute._js",
-              "options": [
-                {
-                  "flags": "-v, --verbose",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "short": "-v",
-                  "long": "--verbose",
-                  "description": "use verbose output"
-                },
-                {
-                  "flags": "-vv",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "-vv",
-                  "description": "more verbose with debug output"
-                },
-                {
-                  "flags": "--json",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--json",
-                  "description": "use json output"
-                },
-                {
-                  "flags": "--parameter-file <parameter-file>",
-                  "required": -18,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--parameter-file",
-                  "description": "The parameter file path."
-                },
-                {
-                  "flags": "--operation <operation>",
-                  "required": -13,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--operation",
-                  "description": "The JSON patch operation: add, remove, or replace."
-                },
-                {
-                  "flags": "--path <path>",
-                  "required": -8,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--path",
-                  "description": "The JSON data path, e.g.: \"foo/1\"."
-                },
-                {
-                  "flags": "--value <value>",
-                  "required": -9,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--value",
-                  "description": "The JSON value."
-                },
-                {
-                  "flags": "--parse",
-                  "required": 0,
-                  "optional": 0,
-                  "bool": true,
-                  "long": "--parse",
-                  "description": "Parse the JSON value to object."
-                }
-              ]
-            }
-          ],
-          "categories": {
-            "generate": {
-              "name": "generate",
-              "description": "Commands to generate parameter file for your virtual machine scale set vm.",
-              "fullName": "vmssvm parameters generate",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "list",
-                  "description": "Generate virtualMachineScaleSetVMList parameter string or files.",
-                  "fullName": "vmssvm parameters generate list",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "set": {
-              "name": "set",
-              "description": "Commands to set parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters set",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Set catparametersListVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters0 parameter string or files.",
-                  "fullName": "vmssvm parameters set virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--value <value>",
-                      "required": -9,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--value",
-                      "description": "The JSON value."
-                    },
-                    {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
-                      "flags": "--expand-expression <expandExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--expand-expression",
-                      "description": "Set the expand-expression value."
-                    },
-                    {
-                      "flags": "--filter-expression <filterExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--filter-expression",
-                      "description": "Set the filter-expression value."
-                    },
-                    {
-                      "flags": "--resource-group-name <resourceGroupName>",
-                      "required": -23,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--resource-group-name",
-                      "description": "Set the resource-group-name value."
-                    },
-                    {
-                      "flags": "--select-expression <selectExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--select-expression",
-                      "description": "Set the select-expression value."
-                    },
-                    {
-                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
-                      "required": -34,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--virtual-machine-scale-set-name",
-                      "description": "Set the virtual-machine-scale-set-name value."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "remove": {
-              "name": "remove",
-              "description": "Commands to remove values in the parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters remove",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Remove catparametersListVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters1 parameter string or files.",
-                  "fullName": "vmssvm parameters remove virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--expand-expression",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--expand-expression",
-                      "description": "Remove the expand-expression value."
-                    },
-                    {
-                      "flags": "--filter-expression",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--filter-expression",
-                      "description": "Remove the filter-expression value."
-                    },
-                    {
-                      "flags": "--resource-group-name",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--resource-group-name",
-                      "description": "Remove the resource-group-name value."
-                    },
-                    {
-                      "flags": "--select-expression",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--select-expression",
-                      "description": "Remove the select-expression value."
-                    },
-                    {
-                      "flags": "--virtual-machine-scale-set-name",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--virtual-machine-scale-set-name",
-                      "description": "Remove the virtual-machine-scale-set-name value."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            },
-            "add": {
-              "name": "add",
-              "description": "Commands to add values in the parameter file for your virtual-machine-scale-set-vm.",
-              "fullName": "vmssvm parameters add",
-              "usage": "[options] [command]",
-              "options": [],
-              "commands": [
-                {
-                  "name": "virtual-machine-scale-set-vm-list-parameters",
-                  "description": "Remove catparametersListVirtualMachineScaleSetVMVirtualMachineScaleSetVMListParameters2 parameter string or files.",
-                  "fullName": "vmssvm parameters add virtual-machine-scale-set-vm-list-parameters",
-                  "usage": "[options]",
-                  "filePath": "commands/arm/compute/compute._js",
-                  "options": [
-                    {
-                      "flags": "-v, --verbose",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "short": "-v",
-                      "long": "--verbose",
-                      "description": "use verbose output"
-                    },
-                    {
-                      "flags": "-vv",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "-vv",
-                      "description": "more verbose with debug output"
-                    },
-                    {
-                      "flags": "--json",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--json",
-                      "description": "use json output"
-                    },
-                    {
-                      "flags": "--parameter-file <parameter-file>",
-                      "required": -18,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parameter-file",
-                      "description": "The parameter file path."
-                    },
-                    {
-                      "flags": "--key <key>",
-                      "required": -7,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--key",
-                      "description": "The JSON key."
-                    },
-                    {
-                      "flags": "--value <value>",
-                      "required": -9,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--value",
-                      "description": "The JSON value."
-                    },
-                    {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
-                      "flags": "--expand-expression <expandExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--expand-expression",
-                      "description": "Add the expand-expression value."
-                    },
-                    {
-                      "flags": "--filter-expression <filterExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--filter-expression",
-                      "description": "Add the filter-expression value."
-                    },
-                    {
-                      "flags": "--resource-group-name <resourceGroupName>",
-                      "required": -23,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--resource-group-name",
-                      "description": "Add the resource-group-name value."
-                    },
-                    {
-                      "flags": "--select-expression <selectExpression>",
-                      "required": -21,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--select-expression",
-                      "description": "Add the select-expression value."
-                    },
-                    {
-                      "flags": "--virtual-machine-scale-set-name <virtualMachineScaleSetName>",
-                      "required": -34,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--virtual-machine-scale-set-name",
-                      "description": "Add the virtual-machine-scale-set-name value."
-                    }
-                  ]
-                }
-              ],
-              "categories": {}
-            }
-          }
-        }
-      }
+      "categories": {}
     },
     "datalake": {
       "name": "datalake",
