@@ -1,1 +1,2 @@
+commands/arm/vm/arm.vmss-parameter-create-tests.js
 commands/arm/vm/arm.vmss-create-tests.js
