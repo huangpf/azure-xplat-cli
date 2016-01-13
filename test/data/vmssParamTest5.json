@@ -15,7 +15,7 @@
             {
               "name": "test",
               "subnet": {
-                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate9865/providers/Microsoft.Network/VirtualNetworks/xplattestvnet6636/subnets/xplattestsubnet8948"
+                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate6414/providers/Microsoft.Network/VirtualNetworks/xplattestvnet8337/subnets/xplattestsubnet6228"
               }
             }
           ],
@@ -41,7 +41,7 @@
         "createOption": "fromImage",
         "name": "test",
         "virtualHardDiskContainers": [
-          "https://xplatteststorage12785.blob.core.windows.net/xplatteststoragecnt16187"
+          "https://xplatteststorage1119.blob.core.windows.net/xplatteststoragecnt18792"
         ]
       }
     }
