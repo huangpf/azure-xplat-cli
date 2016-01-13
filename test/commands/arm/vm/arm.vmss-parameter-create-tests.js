@@ -1,0 +1,230 @@
+/**
+ * Copyright (c) Microsoft.  All rights reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+'use strict';
+
+var should = require('should');
+var path = require('path');
+var fs = require('fs');
+var util = require('util');
+var profile = require('../../../../lib/util/profile');
+var testUtils = require('../../../util/util');
+var CLITest = require('../../../framework/arm-cli-test');
+var testprefix = 'arm-cli-vmss-parameter-create-tests';
+var groupPrefix = 'xplatTstVmssGCreate';
+var VMTestUtil = require('../../../util/vmTestUtil');
+var requiredEnvironment = [{
+  name: 'AZURE_VM_TEST_LOCATION',
+  defaultValue: 'southeastasia'
+}];
+
+var groupName,
+  vmssPrefix5 = 'xplattestvmss5',
+  nicName = 'xplattestnic',
+  location,
+  imageUrn = 'MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:2.0.20151022',
+  linuxImageUrn = 'SUSE:openSUSE:13.2:latest',
+  username = 'azureuser',
+  password = 'Brillio@2015',
+  storageAccount = 'xplatteststorage1',
+  storageCont = 'xplatteststoragecnt1',
+  osdiskvhd = 'xplattestvhd',
+  vNetPrefix = 'xplattestvnet',
+  subnetName = 'xplattestsubnet',
+  publicipName = 'xplattestip',
+  dnsPrefix = 'xplattestipdns',
+  tags = 'a=b;b=c;d=',
+  IaasDiagPublisher,
+  IaasDiagExtName,
+  IaasDiagVersion,
+  datafile = 'test/data/testdata.json',
+  paramFileName = 'test/data/vmssParamTest5.json'
+
+describe('arm', function() {
+  describe('compute', function() {
+    var suite, retry = 5;
+    var vmTest = new VMTestUtil();
+    before(function(done) {
+      suite = new CLITest(this, testprefix, requiredEnvironment);
+      suite.setupSuite(function() {
+        location = process.env.AZURE_VM_TEST_LOCATION;
+        groupName = suite.generateId(groupPrefix, null);
+        vmssPrefix5 = suite.isMocked ? vmssPrefix5 : suite.generateId(vmssPrefix5, null);
+        nicName = suite.generateId(nicName, null);
+        storageAccount = suite.generateId(storageAccount, null);
+        storageCont = suite.generateId(storageCont, null);
+        osdiskvhd = suite.isMocked ? osdiskvhd : suite.generateId(osdiskvhd, null);
+        vNetPrefix = suite.generateId(vNetPrefix, null);
+        subnetName = suite.generateId(subnetName, null);
+        publicipName = suite.isMocked ? publicipName : suite.generateId(publicipName, null);
+        dnsPrefix = suite.generateId(dnsPrefix, null);
+        tags = 'a=b;b=c;d=';
+
+        // Get real values from test/data/testdata.json file and assign to the local variables
+        var data = fs.readFileSync(datafile, 'utf8');
+        var variables = JSON.parse(data);
+        IaasDiagPublisher = variables.IaasDiagPublisher_Linux.value;
+        IaasDiagExtName = variables.IaasDiagExtName_Linux.value;
+        IaasDiagVersion = variables.IaasDiagVersion_Linux.value;
+        done();
+      });
+    });
+
+    after(function(done) {
+      vmTest.deleteUsedGroup(groupName, suite, function(result) {
+        suite.teardownSuite(done);
+      });
+    });
+
+    beforeEach(function(done) {
+      suite.setupTest(done);
+    });
+
+    afterEach(function(done) {
+      suite.teardownTest(done);
+    });
+
+    describe('vmss', function() {
+
+      it('required resources (group, vnet, subnet, nic) create should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        vmTest.checkImagefile(function() {
+          vmTest.createGroup(groupName, location, suite, function(result) {
+            var cmd = util.format('storage account create -g %s --type GRS --location %s %s --json', groupName, location, storageAccount).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              var cmd = util.format('network vnet create %s %s %s -a 10.0.0.0/16 --json', groupName, vNetPrefix, location).split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                var cmd = util.format('network vnet subnet create -a 10.0.0.0/24 %s %s %s --json', groupName, vNetPrefix, subnetName).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  var cmd = util.format('network nic create %s %s %s --subnet-vnet-name %s --subnet-name %s --json', groupName, nicName, location, vNetPrefix, subnetName).split(' ');
+                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                    result.exitStatus.should.equal(0);
+                    done();
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+
+      it('create-or-update-parameter generate set and remove should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmdFormat = 'vmss create-or-update-parameters %s %s --parameter-file %s --json ';
+        var subscription = profile.current.getSubscription();
+        var subnetId = '/subscriptions/' + subscription.id + '/resourceGroups/' + groupName + '/providers/Microsoft.Network/VirtualNetworks/' + vNetPrefix + '/subnets/' + subnetName;
+        var cmd = util.format('vmss create-or-update-parameters generate --parameter-file %s', paramFileName).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          var cmd = util.format(cmdFormat + '--name %s --location %s', 'virtual-machine-scale-set', 'set', paramFileName, vmssPrefix5, location).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            var cmd = util.format(cmdFormat + '--type --tags --provisioning-state', 'virtual-machine-scale-set', 'remove', paramFileName).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              var cmd = util.format(cmdFormat + '--capacity 2 --name Standard_A1 --tier Standard', 'sku', 'set', paramFileName).split(' ');
+              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                var cmd = util.format(cmdFormat + '--mode Manual', 'upgrade-policy', 'set', paramFileName).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  var cmd = util.format(cmdFormat + '--extension-profile', 'virtual-machine-profile', 'remove', paramFileName).split(' ');
+                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                    result.exitStatus.should.equal(0);
+                    var cmd = util.format(cmdFormat + '--index 0 --name test --primary true', 'network-interface-configurations', 'set', paramFileName).split(' ');
+                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                      result.exitStatus.should.equal(0);
+                      var cmd = util.format(cmdFormat + '--network-interface-configurations-index 0 --index 0 --name test', 'ip-configurations', 'set', paramFileName).split(' ');
+                      testUtils.executeCommand(suite, retry, cmd, function(result) {
+                        result.exitStatus.should.equal(0);
+                        var cmd = util.format(cmdFormat + '--network-interface-configurations-index 0 --ip-configurations-index 0 --reference-uri %s', 'subnet', 'set', paramFileName, subnetId).split(' ');
+                        testUtils.executeCommand(suite, retry, cmd, function(result) {
+                          result.exitStatus.should.equal(0);
+                          var cmd = util.format(cmdFormat + '--network-interface-configurations-index 0 --index 0 --load-balancer-backend-address-pools --load-balancer-inbound-nat-pools', 'ip-configurations', 'remove', paramFileName).split(' ');
+                          testUtils.executeCommand(suite, retry, cmd, function(result) {
+                            result.exitStatus.should.equal(0);
+                            var cmd = util.format(cmdFormat + '--secrets --linux-configuration --windows-configuration --custom-data', 'os-profile', 'remove', paramFileName).split(' ');
+                            testUtils.executeCommand(suite, retry, cmd, function(result) {
+                              result.exitStatus.should.equal(0);
+                              var cmd = util.format(cmdFormat + '--computer-name-prefix test --admin-username %s --admin-password %s', 'os-profile', 'set', paramFileName, username, password).split(' ');
+                              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                result.exitStatus.should.equal(0);
+                                var cmd = util.format(cmdFormat + '--publisher MicrosoftWindowsServer --offer WindowsServer --sku 2012-R2-Datacenter --version latest', 'image-reference', 'set', paramFileName).split(' ');
+                                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                  result.exitStatus.should.equal(0);
+                                  var cmd = util.format(cmdFormat + '--caching None --create-option fromImage --name test', 'os-disk', 'set', paramFileName).split(' ');
+                                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                    result.exitStatus.should.equal(0);
+                                    var cmd = util.format(cmdFormat + '--operating-system-type --source-image', 'os-disk', 'remove', paramFileName).split(' ');
+                                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                      result.exitStatus.should.equal(0);
+                                      var cmd = util.format(cmdFormat + '--parse --virtual-hard-disk-containers [\"https://%s.blob.core.windows.net/%s\"]', 'os-disk', 'set', paramFileName, storageAccount, storageCont).split(' ');
+                                      testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                        result.exitStatus.should.equal(0);
+                                        var cmd = util.format('vmss create-or-update -g %s --parameter-file %s --json', groupName, paramFileName).split(' ');
+                                        testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                        result.exitStatus.should.equal(0);
+                                          done();
+                                        });
+                                      });
+                                    });
+                                  });
+                                });
+                              });
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      });
+
+      it.skip('get instance view should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss get-instance-view --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix5).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+      it.skip('update instances should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --vm-instance-ids 0,1 --json', groupName, vmssPrefix5).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+      it.skip('delete command should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix5).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+
+    });
+  });
+});

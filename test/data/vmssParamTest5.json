@@ -1,0 +1,52 @@
+{
+  "sku": {
+    "capacity": "2",
+    "name": "Standard_A1",
+    "tier": "Standard"
+  },
+  "upgradePolicy": {
+    "mode": "Manual"
+  },
+  "virtualMachineProfile": {
+    "networkProfile": {
+      "networkInterfaceConfigurations": [
+        {
+          "iPConfigurations": [
+            {
+              "name": "test",
+              "subnet": {
+                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate9865/providers/Microsoft.Network/VirtualNetworks/xplattestvnet6636/subnets/xplattestsubnet8948"
+              }
+            }
+          ],
+          "name": "test",
+          "primary": "true"
+        }
+      ]
+    },
+    "oSProfile": {
+      "computerNamePrefix": "test",
+      "adminPassword": "Brillio@2015",
+      "adminUsername": "azureuser"
+    },
+    "storageProfile": {
+      "imageReference": {
+        "offer": "WindowsServer",
+        "publisher": "MicrosoftWindowsServer",
+        "sku": "2012-R2-Datacenter",
+        "version": "latest"
+      },
+      "oSDisk": {
+        "caching": "None",
+        "createOption": "fromImage",
+        "name": "test",
+        "virtualHardDiskContainers": [
+          "https://xplatteststorage12785.blob.core.windows.net/xplatteststoragecnt16187"
+        ]
+      }
+    }
+  },
+  "id": "",
+  "name": "xplattestvmss5",
+  "location": "southeastasia"
+}
