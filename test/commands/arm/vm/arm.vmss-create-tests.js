@@ -128,13 +128,13 @@ describe('arm', function() {
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
             var cmd = util.format(
-              'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s --json',
+              'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s -z Standard_D1 --json',
               groupName, vmssPrefix, location, imageUrn, username, password).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
               var cmd = util.format(
-                'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s --json',
-                groupName, vmssPrefix1, location, linuxImageUrn, username, password).split(' ');
+                'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -p %s -z Standard_D1 -M %s --json',
+                groupName, vmssPrefix1, location, linuxImageUrn, username, password, sshcert).split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 done();
