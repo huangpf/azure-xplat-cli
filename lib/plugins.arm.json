@@ -104,7 +104,7 @@
           "bool": true,
           "short": "-p",
           "long": "--password",
-          "description": "user password or service principal key, will prompt if not given."
+          "description": "user password or service principal secret, will prompt if not given."
         },
         {
           "flags": "--service-principal",
@@ -113,6 +113,22 @@
           "bool": true,
           "long": "--service-principal",
           "description": "If given, log in as a service principal rather than a user."
+        },
+        {
+          "flags": "--certificate-file <certificateFile>",
+          "required": -20,
+          "optional": 0,
+          "bool": true,
+          "long": "--certificate-file",
+          "description": "A PEM encoded certificate private key file."
+        },
+        {
+          "flags": "--thumbprint <thumbprint>",
+          "required": -14,
+          "optional": 0,
+          "bool": true,
+          "long": "--thumbprint",
+          "description": "A hex encoded thumbprint of the certificate."
         },
         {
           "flags": "--tenant <tenant>",
@@ -11015,7 +11031,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--provisioning-state <provisioningState>",
@@ -11267,7 +11283,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--provisioning-state <provisioningState>",
@@ -11399,7 +11415,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--capacity <capacity>",
@@ -11555,7 +11571,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--capacity <capacity>",
@@ -11639,7 +11655,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--mode <mode>",
@@ -11763,7 +11779,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--mode <mode>",
@@ -11831,7 +11847,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--extension-profile <extensionProfile>",
@@ -12003,7 +12019,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--extension-profile <extensionProfile>",
@@ -12095,7 +12111,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--extensions <extensions>",
@@ -12219,7 +12235,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--extensions <extensions>",
@@ -12282,20 +12298,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--auto-upgrade-minor-version <autoUpgradeMinorVersion>",
@@ -12603,7 +12627,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--auto-upgrade-minor-version <autoUpgradeMinorVersion>",
@@ -12759,7 +12783,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
@@ -12883,7 +12907,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
@@ -12946,20 +12970,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--ip-configurations <ipConfigurations>",
@@ -13123,7 +13155,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--ip-configurations <ipConfigurations>",
@@ -13202,14 +13234,6 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
@@ -13224,6 +13248,22 @@
                       "bool": true,
                       "long": "--network-interface-configurations-index",
                       "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
@@ -13411,7 +13451,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--load-balancer-backend-address-pools <loadBalancerBackendAddressPools>",
@@ -13498,14 +13538,6 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
@@ -13528,6 +13560,22 @@
                       "bool": true,
                       "long": "--network-interface-configurations-index",
                       "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -13675,7 +13723,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -13738,14 +13786,6 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
@@ -13768,6 +13808,22 @@
                       "bool": true,
                       "long": "--network-interface-configurations-index",
                       "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -13915,7 +13971,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -13978,14 +14034,6 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--ip-configurations-index <ip-configurations-index>",
                       "required": -27,
                       "optional": 0,
@@ -14000,6 +14048,14 @@
                       "bool": true,
                       "long": "--network-interface-configurations-index",
                       "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -14139,7 +14195,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -14207,7 +14263,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--computer-name-prefix <computerNamePrefix>",
@@ -14427,7 +14483,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--computer-name-prefix <computerNamePrefix>",
@@ -14543,7 +14599,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--disable-password-authentication <disablePasswordAuthentication>",
@@ -14683,7 +14739,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--disable-password-authentication <disablePasswordAuthentication>",
@@ -14759,7 +14815,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--public-keys <publicKeys>",
@@ -14883,7 +14939,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--public-keys <publicKeys>",
@@ -14946,20 +15002,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--key-data <keyData>",
@@ -15107,7 +15171,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--key-data <keyData>",
@@ -15178,20 +15242,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--source-vault <sourceVault>",
@@ -15339,7 +15411,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--source-vault <sourceVault>",
@@ -15410,20 +15482,20 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--secrets-index <secrets-index>",
                       "required": -17,
                       "optional": 0,
                       "bool": true,
                       "long": "--secrets-index",
                       "description": "Indexer: secrets-index."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -15555,7 +15627,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--reference-uri <referenceUri>",
@@ -15618,14 +15690,6 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
@@ -15640,6 +15704,22 @@
                       "bool": true,
                       "long": "--secrets-index",
                       "description": "Indexer: secrets-index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--certificate-store <certificateStore>",
@@ -15795,7 +15875,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--certificate-store <certificateStore>",
@@ -15871,7 +15951,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--additional-unattend-contents <additionalUnattendContents>",
@@ -16059,7 +16139,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--additional-unattend-contents <additionalUnattendContents>",
@@ -16154,20 +16234,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--component-name <componentName>",
@@ -16347,7 +16435,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--component-name <componentName>",
@@ -16439,7 +16527,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--listeners <listeners>",
@@ -16563,7 +16651,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--listeners <listeners>",
@@ -16626,20 +16714,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--certificate-url <certificateUrl>",
@@ -16787,7 +16883,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--certificate-url <certificateUrl>",
@@ -16863,7 +16959,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--image-reference <imageReference>",
@@ -17003,7 +17099,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--image-reference <imageReference>",
@@ -17079,7 +17175,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--offer <offer>",
@@ -17251,7 +17347,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--offer <offer>",
@@ -17343,7 +17439,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--caching <caching>",
@@ -17547,7 +17643,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--caching <caching>",
@@ -17655,7 +17751,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--uri <uri>",
@@ -17779,7 +17875,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     },
                     {
                       "flags": "--uri <uri>",
@@ -17842,20 +17938,28 @@
                       "description": "The parameter file path."
                     },
                     {
-                      "flags": "--parse",
-                      "required": 0,
-                      "optional": 0,
-                      "bool": true,
-                      "long": "--parse",
-                      "description": "Parse the JSON value to object."
-                    },
-                    {
                       "flags": "--index <index>",
                       "required": -9,
                       "optional": 0,
                       "bool": true,
                       "long": "--index",
                       "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
                     }
                   ]
                 },
@@ -17971,7 +18075,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the JSON value to object."
+                      "description": "Parse the input value string to a JSON object."
                     }
                   ]
                 }
@@ -41387,7 +41491,7 @@
               "bool": true,
               "short": "-Q",
               "long": "--image-urn",
-              "description": "the image URN in the form \"publisherName:offer:skus:version\".\n      Or the VHD link of a user image, e.g. https://foo.blob.core.windows.net/system/Microsoft.Compute/Images/vhds/snap-bar.vhd"
+              "description": "the image URN in the form \"publisherName:offer:skus:version\",\n                                               or the VHD link of a user image,\n                                               e.g. https://foo.blob.core.windows.net/bar/vhds/baz.vhd"
             },
             {
               "flags": "-u, --admin-username <admin-username>",
@@ -41405,7 +41509,16 @@
               "bool": true,
               "short": "-p",
               "long": "--admin-password",
-              "description": "the password"
+              "description": "the password, skipped if SSH public key file is specified for Linux VMs"
+            },
+            {
+              "flags": "-M, --ssh-publickey-file <ssh-publickey-file>",
+              "required": -26,
+              "optional": 0,
+              "bool": true,
+              "short": "-M",
+              "long": "--ssh-publickey-file",
+              "description": "the path to public key file for SSH authentication,\n                                               & this parameter is valid only when os-type is Linux."
             },
             {
               "flags": "-s, --subscription <subscription>",
