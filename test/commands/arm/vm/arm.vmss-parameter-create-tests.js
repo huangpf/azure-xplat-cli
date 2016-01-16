@@ -176,13 +176,21 @@ describe('arm', function() {
                                     var cmd = makeCommandStr('os-disk', 'remove', paramFileName, '--operating-system-type --source-image').split(' ');
                                     testUtils.executeCommand(suite, retry, cmd, function(result) {
                                       result.exitStatus.should.equal(0);
-                                      var cmd = makeCommandStr('os-disk', 'set', paramFileName, util.format('--parse --virtual-hard-disk-containers [\"https://%s.blob.core.windows.net/%s\"]', storageAccount, storageCont)).split(' ');
+                                      var cmd = makeCommandStr('virtual-hard-disk-containers', 'remove', paramFileName, '--index 0').split(' ');
                                       testUtils.executeCommand(suite, retry, cmd, function(result) {
                                         result.exitStatus.should.equal(0);
-                                        var cmd = util.format('vmss create-or-update -g %s --parameter-file %s --json', groupName, paramFileName).split(' ');
+                                        var cmd = makeCommandStr('virtual-hard-disk-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test')).split(' ');
                                         testUtils.executeCommand(suite, retry, cmd, function(result) {
-                                        result.exitStatus.should.equal(0);
-                                          done();
+                                          result.exitStatus.should.equal(0);
+                                          var cmd = makeCommandStr('virtual-hard-disk-containers', 'set', paramFileName, util.format('--index 0 --value https://%s.blob.core.windows.net/%s', storageAccount, storageCont)).split(' ');
+                                          testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                            result.exitStatus.should.equal(0);
+                                            var cmd = util.format('vmss create-or-update -g %s --parameter-file %s --json', groupName, paramFileName).split(' ');
+                                            testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                              result.exitStatus.should.equal(0);
+                                              done();
+                                            });
+                                          });
                                         });
                                       });
                                     });
