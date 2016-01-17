@@ -27,4 +27,4 @@ exports.setEnvironment = function() {
 
 exports.scopes = [];
 
- exports.randomTestIdsGenerated = function() { return ['xplatTstVmssGCreate6414','xplattestnic89','xplatteststorage1119','xplatteststoragecnt18792','xplattestvnet8337','xplattestsubnet6228','xplattestipdns4280'];};
+ exports.randomTestIdsGenerated = function() { return ['xplatTstVmssGCreate5940','xplattestnic6420','xplatteststorage16792','xplatteststoragecnt17439','xplattestvnet8039','xplattestsubnet8785','xplattestipdns3439'];};
