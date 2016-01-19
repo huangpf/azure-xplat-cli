@@ -9490,14 +9490,14 @@
     },
     "vmss": {
       "name": "vmss",
-      "description": "Commands to manage your virtual machine scale set.",
+      "description": "Commands to manage your virtual machine scale set.\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.  ",
       "fullName": "vmss",
       "usage": "[options] [command]",
       "options": [],
       "commands": [
         {
           "name": "create-or-update",
-          "description": "create-or-update method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the create-or-update method.",
           "fullName": "vmss create-or-update",
           "usage": "[options] <resource-group-name> <parameters>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9566,7 +9566,7 @@
         },
         {
           "name": "deallocate",
-          "description": "deallocate method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the deallocate method.",
           "fullName": "vmss deallocate",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9635,7 +9635,7 @@
         },
         {
           "name": "deallocate-instances",
-          "description": "deallocate-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the deallocate-instances method.",
           "fullName": "vmss deallocate-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9713,7 +9713,7 @@
         },
         {
           "name": "delete",
-          "description": "delete method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the delete method.",
           "fullName": "vmss delete",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9782,7 +9782,7 @@
         },
         {
           "name": "delete-instances",
-          "description": "delete-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the delete-instances method.",
           "fullName": "vmss delete-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9860,7 +9860,7 @@
         },
         {
           "name": "get",
-          "description": "get method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the get method.",
           "fullName": "vmss get",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9929,7 +9929,7 @@
         },
         {
           "name": "get-instance-view",
-          "description": "get-instance-view method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the get-instance-view method.",
           "fullName": "vmss get-instance-view",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9998,7 +9998,7 @@
         },
         {
           "name": "list",
-          "description": "list method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the list method.",
           "fullName": "vmss list",
           "usage": "[options] <resource-group-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10058,7 +10058,7 @@
         },
         {
           "name": "list-all",
-          "description": "list-all method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the list-all method.",
           "fullName": "vmss list-all",
           "usage": "[options]",
           "filePath": "commands/arm/compute/compute._js",
@@ -10109,7 +10109,7 @@
         },
         {
           "name": "list-next",
-          "description": "list-next method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the list-next method.",
           "fullName": "vmss list-next",
           "usage": "[options] <next-link>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10168,7 +10168,7 @@
         },
         {
           "name": "list-skus",
-          "description": "list-skus method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the list-skus method.",
           "fullName": "vmss list-skus",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10237,7 +10237,7 @@
         },
         {
           "name": "power-off",
-          "description": "power-off method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the power-off method.",
           "fullName": "vmss power-off",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10306,7 +10306,7 @@
         },
         {
           "name": "power-off-instances",
-          "description": "power-off-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the power-off-instances method.",
           "fullName": "vmss power-off-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10384,7 +10384,7 @@
         },
         {
           "name": "restart",
-          "description": "restart method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the restart method.",
           "fullName": "vmss restart",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10453,7 +10453,7 @@
         },
         {
           "name": "restart-instances",
-          "description": "restart-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the restart-instances method.",
           "fullName": "vmss restart-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10531,7 +10531,7 @@
         },
         {
           "name": "start",
-          "description": "start method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the start method.",
           "fullName": "vmss start",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10600,7 +10600,7 @@
         },
         {
           "name": "start-instances",
-          "description": "start-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the start-instances method.",
           "fullName": "vmss start-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10678,7 +10678,7 @@
         },
         {
           "name": "update-instances",
-          "description": "update-instances method to manage your virtual machine scale set.",
+          "description": "Commands to manage your virtual machine scale set by the update-instances method.",
           "fullName": "vmss update-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <vm-instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10756,7 +10756,7 @@
         },
         {
           "name": "quick-create",
-          "description": "Create a virtual machine scale set with default resources in a resource group",
+          "description": "Commands to create a virtual machine scale set with default resources in a group.",
           "fullName": "vmss quick-create",
           "usage": "[options] <resource-group-name> <name> <location> <image-urn> <admin-username> <admin-password>",
           "filePath": "commands/arm/vmss/vmss._js",
@@ -10839,6 +10839,24 @@
               "short": "-p",
               "long": "--admin-password",
               "description": "the password"
+            },
+            {
+              "flags": "-z, --vm-size <vm-size>",
+              "required": -15,
+              "optional": 0,
+              "bool": true,
+              "short": "-z",
+              "long": "--vm-size",
+              "description": "the virtual machine size [Standard_D1]"
+            },
+            {
+              "flags": "-M, --ssh-publickey-file <ssh-publickey-file>",
+              "required": -26,
+              "optional": 0,
+              "bool": true,
+              "short": "-M",
+              "long": "--ssh-publickey-file",
+              "description": "the path to public key file for SSH authentication,\n                                               & this parameter is valid only when os-type is Linux."
             },
             {
               "flags": "-s, --subscription <subscription>",
@@ -10980,7 +10998,7 @@
           "categories": {
             "virtual-machine-scale-set": {
               "name": "virtual-machine-scale-set",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add virtual-machine-scale-set of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters virtual-machine-scale-set",
               "usage": "[options] [command]",
               "options": [],
@@ -11364,7 +11382,7 @@
             },
             "sku": {
               "name": "sku",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add sku of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters sku",
               "usage": "[options] [command]",
               "options": [],
@@ -11604,7 +11622,7 @@
             },
             "upgrade-policy": {
               "name": "upgrade-policy",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add upgrade-policy of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters upgrade-policy",
               "usage": "[options] [command]",
               "options": [],
@@ -11796,7 +11814,7 @@
             },
             "virtual-machine-profile": {
               "name": "virtual-machine-profile",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add virtual-machine-profile of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters virtual-machine-profile",
               "usage": "[options] [command]",
               "options": [],
@@ -12060,7 +12078,7 @@
             },
             "extension-profile": {
               "name": "extension-profile",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add extension-profile of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters extension-profile",
               "usage": "[options] [command]",
               "options": [],
@@ -12252,7 +12270,7 @@
             },
             "extensions": {
               "name": "extensions",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add extensions of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters extensions",
               "usage": "[options] [command]",
               "options": [],
@@ -12732,7 +12750,7 @@
             },
             "network-profile": {
               "name": "network-profile",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add network-profile of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters network-profile",
               "usage": "[options] [command]",
               "options": [],
@@ -12924,7 +12942,7 @@
             },
             "network-interface-configurations": {
               "name": "network-interface-configurations",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add network-interface-configurations of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters network-interface-configurations",
               "usage": "[options] [command]",
               "options": [],
@@ -13188,7 +13206,7 @@
             },
             "ip-configurations": {
               "name": "ip-configurations",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add ip-configurations of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters ip-configurations",
               "usage": "[options] [command]",
               "options": [],
@@ -13492,7 +13510,7 @@
             },
             "load-balancer-backend-address-pools": {
               "name": "load-balancer-backend-address-pools",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add load-balancer-backend-address-pools of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools",
               "usage": "[options] [command]",
               "options": [],
@@ -13740,7 +13758,7 @@
             },
             "load-balancer-inbound-nat-pools": {
               "name": "load-balancer-inbound-nat-pools",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add load-balancer-inbound-nat-pools of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools",
               "usage": "[options] [command]",
               "options": [],
@@ -13988,7 +14006,7 @@
             },
             "subnet": {
               "name": "subnet",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add subnet of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters subnet",
               "usage": "[options] [command]",
               "options": [],
@@ -14212,7 +14230,7 @@
             },
             "os-profile": {
               "name": "os-profile",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add os-profile of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters os-profile",
               "usage": "[options] [command]",
               "options": [],
@@ -14548,7 +14566,7 @@
             },
             "linux-configuration": {
               "name": "linux-configuration",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add linux-configuration of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters linux-configuration",
               "usage": "[options] [command]",
               "options": [],
@@ -14764,7 +14782,7 @@
             },
             "ssh-configuration": {
               "name": "ssh-configuration",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add ssh-configuration of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters ssh-configuration",
               "usage": "[options] [command]",
               "options": [],
@@ -14956,7 +14974,7 @@
             },
             "public-keys": {
               "name": "public-keys",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add public-keys of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters public-keys",
               "usage": "[options] [command]",
               "options": [],
@@ -15196,7 +15214,7 @@
             },
             "secrets": {
               "name": "secrets",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add secrets of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters secrets",
               "usage": "[options] [command]",
               "options": [],
@@ -15436,7 +15454,7 @@
             },
             "source-vault": {
               "name": "source-vault",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add source-vault of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters source-vault",
               "usage": "[options] [command]",
               "options": [],
@@ -15644,7 +15662,7 @@
             },
             "vault-certificates": {
               "name": "vault-certificates",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add vault-certificates of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters vault-certificates",
               "usage": "[options] [command]",
               "options": [],
@@ -15900,7 +15918,7 @@
             },
             "windows-configuration": {
               "name": "windows-configuration",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add windows-configuration of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters windows-configuration",
               "usage": "[options] [command]",
               "options": [],
@@ -16188,7 +16206,7 @@
             },
             "additional-unattend-contents": {
               "name": "additional-unattend-contents",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add additional-unattend-contents of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters additional-unattend-contents",
               "usage": "[options] [command]",
               "options": [],
@@ -16476,7 +16494,7 @@
             },
             "win-rm-configuration": {
               "name": "win-rm-configuration",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add win-rm-configuration of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters win-rm-configuration",
               "usage": "[options] [command]",
               "options": [],
@@ -16668,7 +16686,7 @@
             },
             "listeners": {
               "name": "listeners",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add listeners of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters listeners",
               "usage": "[options] [command]",
               "options": [],
@@ -16908,7 +16926,7 @@
             },
             "storage-profile": {
               "name": "storage-profile",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add storage-profile of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters storage-profile",
               "usage": "[options] [command]",
               "options": [],
@@ -17124,7 +17142,7 @@
             },
             "image-reference": {
               "name": "image-reference",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add image-reference of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters image-reference",
               "usage": "[options] [command]",
               "options": [],
@@ -17388,7 +17406,7 @@
             },
             "os-disk": {
               "name": "os-disk",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add os-disk of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters os-disk",
               "usage": "[options] [command]",
               "options": [],
@@ -17700,7 +17718,7 @@
             },
             "source-image": {
               "name": "source-image",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add source-image of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters source-image",
               "usage": "[options] [command]",
               "options": [],
@@ -17892,7 +17910,7 @@
             },
             "virtual-hard-disk-containers": {
               "name": "virtual-hard-disk-containers",
-              "description": "Commands to add values in the parameter input file for your virtual-machine-scale-set.",
+              "description": "Commands to set/remove/add virtual-hard-disk-containers of virtual-machine-scale-set in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters virtual-hard-disk-containers",
               "usage": "[options] [command]",
               "options": [],
@@ -18088,14 +18106,14 @@
     },
     "vmssvm": {
       "name": "vmssvm",
-      "description": "Commands to manage your virtual machine scale set vm.",
+      "description": "Commands to manage your virtual machine scale set vm.\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.  ",
       "fullName": "vmssvm",
       "usage": "[options] [command]",
       "options": [],
       "commands": [
         {
           "name": "deallocate",
-          "description": "deallocate method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the deallocate method.",
           "fullName": "vmssvm deallocate",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18173,7 +18191,7 @@
         },
         {
           "name": "delete",
-          "description": "delete method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the delete method.",
           "fullName": "vmssvm delete",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18251,7 +18269,7 @@
         },
         {
           "name": "get",
-          "description": "get method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the get method.",
           "fullName": "vmssvm get",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18329,7 +18347,7 @@
         },
         {
           "name": "get-instance-view",
-          "description": "get-instance-view method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the get-instance-view method.",
           "fullName": "vmssvm get-instance-view",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18407,7 +18425,7 @@
         },
         {
           "name": "list",
-          "description": "list method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the list method.",
           "fullName": "vmssvm list",
           "usage": "[options] <expand-expression> <filter-expression> <resource-group-name> <select-expression> <virtual-machine-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18503,7 +18521,7 @@
         },
         {
           "name": "power-off",
-          "description": "power-off method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the power-off method.",
           "fullName": "vmssvm power-off",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18581,7 +18599,7 @@
         },
         {
           "name": "restart",
-          "description": "restart method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the restart method.",
           "fullName": "vmssvm restart",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18659,7 +18677,7 @@
         },
         {
           "name": "start",
-          "description": "start method to manage your virtual machine scale set vm.",
+          "description": "Commands to manage your virtual machine scale set vm by the start method.",
           "fullName": "vmssvm start",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
