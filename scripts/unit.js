@@ -38,7 +38,7 @@ function buildFileList(testFiles, testList, root) {
   var includeMark = 'include:';
   for (var i = 0; i < files.length ; i++) {
     if (files[i].indexOf(includeMark) === 0) {
-      var fileToInclude = files[i].substring(includeMark.length).replace(/\s+$/g, '');
+      var fileToInclude = files[i].substring(includeMark.length).replace('\r', '');
       buildFileList(testFiles, fileToInclude, root);
     } else {
       testFiles.push(files[i]);
@@ -67,15 +67,13 @@ allFiles.forEach(function (file) {
 
 args.push('-R');
 args.push(reporter);
-//for clean shutdown of the event loop, so silly log gets drained to disk.
-args.push('--no-exit');
 
-console.log("Start:" + new Date());
+console.log("Start:" + new Date().toISOString());
 
 //console.log(JSON.stringify(args, null, 2));
 
 process.on('exit', function (err) {
-  console.log("End:" + new Date());
+  console.log("End:" + new Date().toISOString());
 })
 
 require('../node_modules/mocha/bin/mocha');
