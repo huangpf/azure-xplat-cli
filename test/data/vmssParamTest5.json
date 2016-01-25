@@ -15,7 +15,7 @@
             {
               "name": "test",
               "subnet": {
-                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate5940/providers/Microsoft.Network/VirtualNetworks/xplattestvnet8039/subnets/xplattestsubnet8785"
+                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate5609/providers/Microsoft.Network/VirtualNetworks/xplattestvnet1590/subnets/xplattestsubnet7255"
               }
             }
           ],
@@ -41,12 +41,12 @@
         "createOption": "fromImage",
         "name": "test",
         "virtualHardDiskContainers": [
-          "https://xplatteststorage16792.blob.core.windows.net/xplatteststoragecnt17439"
+          "https://xplatteststorage15993.blob.core.windows.net/xplatteststoragecnt19528"
         ]
       }
     }
   },
   "id": "",
   "name": "xplattestvmss5",
-  "location": "southeastasia"
+  "location": "eastus2"
 }
