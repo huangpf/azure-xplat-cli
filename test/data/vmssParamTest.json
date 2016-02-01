@@ -1,70 +1,46 @@
 {
-  "provisioningState": "",
   "sku": {
-    "capacity": null,
     "name": "",
-    "tier": ""
+    "tier": "",
+    "capacity": null
   },
   "upgradePolicy": {
     "mode": ""
   },
   "virtualMachineProfile": {
-    "extensionProfile": {
-      "extensions": [
-        {
-          "autoUpgradeMinorVersion": false,
-          "extensionType": "",
-          "protectedSettings": "",
-          "provisioningState": "",
-          "publisher": "",
-          "settings": "",
-          "typeHandlerVersion": "",
-          "id": "",
-          "name": "",
-          "type": "",
-          "location": "",
-          "tags": {}
-        }
-      ]
-    },
-    "networkProfile": {
-      "networkInterfaceConfigurations": [
-        {
-          "iPConfigurations": [
-            {
-              "loadBalancerBackendAddressPools": [
-                {
-                  "referenceUri": ""
-                }
-              ],
-              "loadBalancerInboundNatPools": [
-                {
-                  "referenceUri": ""
-                }
-              ],
-              "name": "",
-              "subnet": {
-                "referenceUri": ""
-              }
-            }
-          ],
-          "name": "",
-          "primary": null
-        }
-      ]
-    },
-    "oSProfile": {
+    "osProfile": {
       "computerNamePrefix": "",
-      "adminPassword": "",
       "adminUsername": "",
+      "adminPassword": "",
       "customData": "",
+      "windowsConfiguration": {
+        "provisionVMAgent": null,
+        "enableAutomaticUpdates": null,
+        "timeZone": "",
+        "additionalUnattendContent": [
+          {
+            "passName": "",
+            "componentName": "",
+            "settingName": "",
+            "content": ""
+          }
+        ],
+        "winRM": {
+          "listeners": [
+            {
+              "protocol": "",
+              "certificateUrl": ""
+            }
+          ]
+        }
+      },
       "linuxConfiguration": {
         "disablePasswordAuthentication": null,
-        "sshConfiguration": {
+        "ssh": {
           "publicKeys": [
             {
-              "keyData": "",
-              "path": ""
+              "path": "",
+              "keyData": ""
             }
           ]
         }
@@ -72,62 +48,80 @@
       "secrets": [
         {
           "sourceVault": {
-            "referenceUri": ""
+            "id": ""
           },
           "vaultCertificates": [
             {
-              "certificateStore": "",
-              "certificateUrl": ""
-            }
-          ]
-        }
-      ],
-      "windowsConfiguration": {
-        "additionalUnattendContents": [
-          {
-            "componentName": "",
-            "content": "",
-            "passName": "",
-            "settingName": ""
-          }
-        ],
-        "enableAutomaticUpdates": null,
-        "provisionVMAgent": null,
-        "timeZone": "",
-        "winRMConfiguration": {
-          "listeners": [
-            {
               "certificateUrl": "",
-              "protocol": ""
+              "certificateStore": ""
             }
           ]
         }
-      }
+      ]
     },
     "storageProfile": {
       "imageReference": {
-        "offer": "",
         "publisher": "",
+        "offer": "",
         "sku": "",
         "version": ""
       },
-      "oSDisk": {
+      "osDisk": {
+        "name": "",
         "caching": "",
         "createOption": "",
-        "name": "",
-        "operatingSystemType": "",
-        "sourceImage": {
+        "osType": "",
+        "image": {
           "uri": ""
         },
-        "virtualHardDiskContainers": [
+        "vhdContainers": [
           ""
         ]
       }
+    },
+    "networkProfile": {
+      "networkInterfaceConfigurations": [
+        {
+          "name": "",
+          "primary": null,
+          "ipConfigurations": [
+            {
+              "name": "",
+              "subnet": {
+                "id": ""
+              },
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": ""
+                }
+              ],
+              "id": ""
+            }
+          ],
+          "id": ""
+        }
+      ]
+    },
+    "extensionProfile": {
+      "extensions": [
+        {
+          "name": "",
+          "publisher": "",
+          "virtualMachineScaleSetExtensionType": "",
+          "typeHandlerVersion": "",
+          "autoUpgradeMinorVersion": null,
+          "settings": {},
+          "protectedSettings": {},
+          "provisioningState": "",
+          "id": ""
+        }
+      ]
     }
   },
-  "id": "",
-  "name": "",
-  "type": "",
+  "provisioningState": "",
+  "id": null,
+  "name": null,
+  "type": null,
   "location": "",
   "tags": {}
 }

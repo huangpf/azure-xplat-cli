@@ -1,52 +1,54 @@
 {
   "sku": {
-    "capacity": "2",
     "name": "Standard_A1",
-    "tier": "Standard"
+    "tier": "Standard",
+    "capacity": 2
   },
   "upgradePolicy": {
     "mode": "Manual"
   },
   "virtualMachineProfile": {
-    "networkProfile": {
-      "networkInterfaceConfigurations": [
-        {
-          "iPConfigurations": [
-            {
-              "name": "test",
-              "subnet": {
-                "referenceUri": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate5773/providers/Microsoft.Network/VirtualNetworks/xplattestvnet2881/subnets/xplattestsubnet7034"
-              }
-            }
-          ],
-          "name": "test",
-          "primary": "true"
-        }
-      ]
-    },
-    "oSProfile": {
+    "osProfile": {
       "computerNamePrefix": "test",
-      "adminPassword": "Brillio@2015",
-      "adminUsername": "azureuser"
+      "adminUsername": "azureuser",
+      "adminPassword": "Brillio@2015"
     },
     "storageProfile": {
       "imageReference": {
-        "offer": "WindowsServer",
         "publisher": "MicrosoftWindowsServer",
+        "offer": "WindowsServer",
         "sku": "2012-R2-Datacenter",
         "version": "latest"
       },
-      "oSDisk": {
+      "osDisk": {
+        "name": "test",
         "caching": "None",
         "createOption": "fromImage",
-        "name": "test",
-        "virtualHardDiskContainers": [
-          "https://xplatteststorage16097.blob.core.windows.net/xplatteststoragecnt14125"
+        "vhdContainers": [
+          "https://xplatteststorage19348.blob.core.windows.net/xplatteststoragecnt1318"
         ]
       }
+    },
+    "networkProfile": {
+      "networkInterfaceConfigurations": [
+        {
+          "name": "test",
+          "primary": true,
+          "ipConfigurations": [
+            {
+              "name": "test",
+              "subnet": {
+                "id": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate7100/providers/Microsoft.Network/VirtualNetworks/xplattestvnet6084/subnets/xplattestsubnet2735"
+              },
+              "id": ""
+            }
+          ],
+          "id": ""
+        }
+      ]
     }
   },
-  "id": "",
+  "id": null,
   "name": "xplattestvmss5",
   "location": "southeastasia"
 }
