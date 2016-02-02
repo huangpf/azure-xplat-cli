@@ -29,34 +29,38 @@ exports.setEnvironment = function() {
 exports.scopes = [[function (nock) { 
 var result = 
 nock('http://management.azure.com:443')
-  .get('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTestVMSSCreate5733/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss/instanceView?api-version=2015-06-15')
-  .reply(404, "{\"error\":{\"code\":\"ResourceNotFound\",\"message\":\"The Resource 'Microsoft.Compute/virtualMachineScaleSets/xplattestvmss' under resource group 'xplatTestVMSSCreate5733' was not found.\"}}", { 'cache-control': 'no-cache',
+  .get('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTestVMSSCreate2997/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss/instanceView?api-version=2015-06-15')
+  .reply(200, "{\r\n  \"virtualMachine\": {\r\n    \"statusesSummary\": [\r\n      {\r\n        \"code\": \"ProvisioningState/succeeded\",\r\n        \"count\": 2\r\n      }\r\n    ]\r\n  },\r\n  \"statuses\": [\r\n    {\r\n      \"code\": \"ProvisioningState/succeeded\",\r\n      \"level\": \"Info\",\r\n      \"displayStatus\": \"Provisioning succeeded\",\r\n      \"time\": \"2016-02-02T01:55:36.1770801+00:00\"\r\n    }\r\n  ]\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
+  'content-length': '359',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
-  'x-ms-failure-cause': 'gateway',
-  'x-ms-request-id': '27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
-  'x-ms-correlation-request-id': '27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
-  'x-ms-routing-request-id': 'CENTRALUS:20160202T004715Z:27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Tue, 02 Feb 2016 00:47:14 GMT',
-  connection: 'close',
-  'content-length': '182' });
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130923832742225921',
+  'x-ms-request-id': '321cdde5-ff60-47d5-aa08-3a391922496e',
+  server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
+  'x-ms-ratelimit-remaining-subscription-reads': '14991',
+  'x-ms-correlation-request-id': '21f09b23-4109-4071-8a2f-babc81f79d8a',
+  'x-ms-routing-request-id': 'CENTRALUS:20160202T015608Z:21f09b23-4109-4071-8a2f-babc81f79d8a',
+  date: 'Tue, 02 Feb 2016 01:56:07 GMT',
+  connection: 'close' });
  return result; },
 function (nock) { 
 var result = 
 nock('https://management.azure.com:443')
-  .get('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTestVMSSCreate5733/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss/instanceView?api-version=2015-06-15')
-  .reply(404, "{\"error\":{\"code\":\"ResourceNotFound\",\"message\":\"The Resource 'Microsoft.Compute/virtualMachineScaleSets/xplattestvmss' under resource group 'xplatTestVMSSCreate5733' was not found.\"}}", { 'cache-control': 'no-cache',
+  .get('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTestVMSSCreate2997/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss/instanceView?api-version=2015-06-15')
+  .reply(200, "{\r\n  \"virtualMachine\": {\r\n    \"statusesSummary\": [\r\n      {\r\n        \"code\": \"ProvisioningState/succeeded\",\r\n        \"count\": 2\r\n      }\r\n    ]\r\n  },\r\n  \"statuses\": [\r\n    {\r\n      \"code\": \"ProvisioningState/succeeded\",\r\n      \"level\": \"Info\",\r\n      \"displayStatus\": \"Provisioning succeeded\",\r\n      \"time\": \"2016-02-02T01:55:36.1770801+00:00\"\r\n    }\r\n  ]\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
+  'content-length': '359',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
-  'x-ms-failure-cause': 'gateway',
-  'x-ms-request-id': '27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
-  'x-ms-correlation-request-id': '27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
-  'x-ms-routing-request-id': 'CENTRALUS:20160202T004715Z:27f8a6c2-d46a-4e3a-9b5a-690a6b0aaee6',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Tue, 02 Feb 2016 00:47:14 GMT',
-  connection: 'close',
-  'content-length': '182' });
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130923832742225921',
+  'x-ms-request-id': '321cdde5-ff60-47d5-aa08-3a391922496e',
+  server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
+  'x-ms-ratelimit-remaining-subscription-reads': '14991',
+  'x-ms-correlation-request-id': '21f09b23-4109-4071-8a2f-babc81f79d8a',
+  'x-ms-routing-request-id': 'CENTRALUS:20160202T015608Z:21f09b23-4109-4071-8a2f-babc81f79d8a',
+  date: 'Tue, 02 Feb 2016 01:56:07 GMT',
+  connection: 'close' });
  return result; }]];
