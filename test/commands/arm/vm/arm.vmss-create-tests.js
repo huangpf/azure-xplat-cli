@@ -155,7 +155,7 @@ describe('arm', function() {
 
       it('vmss update instances should pass', function(done) {
         this.timeout(vmTest.timeoutLarge);
-        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --vm-instance-ids 0,1 --json', groupName, vmssPrefix1).split(' ');
+        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --instance-ids 0,1 --json', groupName, vmssPrefix1).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
