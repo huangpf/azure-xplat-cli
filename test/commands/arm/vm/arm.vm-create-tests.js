@@ -160,9 +160,9 @@ describe('arm', function() {
               var cmd = util.format('vm delete %s %s --quiet --json', groupName, vm3Prefix).split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
-                var cmd = util.format('vm create %s %s %s Linux -f %s -Q %s -u %s -p %s -o %s -R %s -F %s -P %s -j %s -k %s -i %s -w %s -M %s --tags %s --json',
+                var cmd = util.format('vm create %s %s %s Linux -f %s -Q %s -u %s -p %s -o %s -R %s -F %s -P %s -j %s -k %s -i %s -w %s -M %s --tags %s -r %s --json',
                   groupName, vmPrefix, location, nicName, userImage, username, password, storageAccount, storageCont,
-                  vNetPrefix, '10.0.0.0/16', subnetName, '10.0.0.0/24', publicipName, dnsPrefix, sshcert, tags).split(' ');
+                  vNetPrefix, '10.0.0.0/16', subnetName, '10.0.0.0/24', publicipName, dnsPrefix, sshcert, tags, availprefix).split(' ');
                 testUtils.executeCommand(suite, retry, cmd, function(result) {
                   result.exitStatus.should.equal(0);
                   done();
@@ -236,7 +236,15 @@ describe('arm', function() {
           result.exitStatus.should.equal(0);
           var allResources = JSON.parse(result.text);
           allResources.name.should.equal(vmPrefix);
-          done();
+          allResources.availabilitySet.id.toLowerCase().should.containEql(availprefix.toLowerCase());
+          var cmd = util.format('availset show %s %s --json', groupName, availprefix).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            var avSetResult = JSON.parse(result.text);
+            avSetResult.name.should.equal(availprefix);
+            avSetResult.virtualMachines[0].id.toLowerCase().should.containEql(vmPrefix.toLowerCase());
+            done();
+          });
         });
       });
 
