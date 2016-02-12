@@ -56,7 +56,7 @@ describe('arm', function () {
       });
     });
     after(function (done) {
-      networkUtil.deleteUsedGroup(groupName, suite, function () {
+      networkUtil.deleteGroup(groupName, suite, function () {
         suite.teardownSuite(done);
       });
     });
@@ -77,6 +77,7 @@ describe('arm', function () {
             result.exitStatus.should.equal(0);
             var ip = JSON.parse(result.text);
             ip.name.should.equal(publicIpName);
+            networkUtil.shouldBeSucceeded(ip);
             done();
           });
         });
@@ -92,6 +93,7 @@ describe('arm', function () {
           ip.publicIPAllocationMethod.should.equal(dynamicMethod);
           ip.idleTimeoutInMinutes.should.equal(newTimeout);
           networkUtil.shouldAppendTags(ip);
+          networkUtil.shouldBeSucceeded(ip);
           done();
         });
       });
