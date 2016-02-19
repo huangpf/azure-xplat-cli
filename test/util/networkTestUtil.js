@@ -40,6 +40,9 @@ function NetworkTestUtil() {
 }
 
 _.extend(NetworkTestUtil.prototype, {
+  /**
+   * Networking
+   */
   createGroup: function (groupName, location, suite, callback) {
     var cmd = util.format('group create %s --location %s --json', groupName, location);
     testUtils.executeCommand(suite, retry, cmd, function (result) {
@@ -180,6 +183,9 @@ _.extend(NetworkTestUtil.prototype, {
     });
   },
 
+  /**
+   * DNS & TrafficManager
+   */
   createDnszone: function (groupName, dnszonePrefix, suite, callback) {
     var cmd = util.format('network dns zone create %s %s --json', groupName, dnszonePrefix).split(' ');
     testUtils.executeCommand(suite, retry, cmd, function (result) {
@@ -197,11 +203,22 @@ _.extend(NetworkTestUtil.prototype, {
     } else
       callback();
   },
-  createTrafficManagerProfile: function (groupName, trafficMPPrefix, profile_status, routing_method, reldns, time_to_live, monitor_protocol, monitor_port, monitor_path, suite, callback) {
-    var cmd = util.format('network traffic-manager profile create %s %s -u %s -m %s -r %s -l %s -p %s -o %s -a %s --json', groupName, trafficMPPrefix, profile_status, routing_method, reldns, time_to_live, monitor_protocol, monitor_port, monitor_path).split(' ');
+  createTrafficManagerProfile: function (profileProp, suite, callback) {
+    var cmd = 'network traffic-manager profile create -g {group} -n {name} -u {profileStatus} -m {trafficRoutingMethod} -r {relativeDnsName} -l {ttl} -p {monitorProtocol} -o {monitorPort} -a {monitorPath} -t {tags} --json'
+      .formatArgs(profileProp);
+
     testUtils.executeCommand(suite, retry, cmd, function (result) {
       result.exitStatus.should.equal(0);
-      callback();
+      var profile = JSON.parse(result.text);
+      profile.name.should.equal(profileProp.name);
+      profile.properties.profileStatus.should.equal(profileProp.profileStatus);
+      profile.properties.trafficRoutingMethod.should.equal(profileProp.trafficRoutingMethod);
+      profile.properties.dnsConfig.relativeName.should.equal(profileProp.relativeDnsName);
+      profile.properties.dnsConfig.ttl.should.equal(profileProp.ttl);
+      profile.properties.monitorConfig.protocol.should.equal(profileProp.monitorProtocol);
+      profile.properties.monitorConfig.port.should.equal(profileProp.monitorPort);
+      profile.properties.monitorConfig.path.should.equal(profileProp.monitorPath);
+      callback(profile);
     });
   },
   createVnetWithAddress: function (groupName, vnetPrefix, location, vnetAddressPrefix, suite, callback) {
@@ -233,6 +250,12 @@ _.extend(NetworkTestUtil.prototype, {
     });
   },
 
+  /**
+   * Assertions
+   */
+  shouldHaveTags: function (obj) {
+    tagUtils.getTagsInfo(obj.tags).should.equal(this.tags);
+  },
   shouldAppendTags: function (obj) {
     var pattern = this.tags + ';' + this.newTags;
     tagUtils.getTagsInfo(obj.tags).should.equal(pattern);
