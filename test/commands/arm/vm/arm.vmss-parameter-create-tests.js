@@ -33,7 +33,7 @@ var groupName,
   vmssPrefix5 = 'xplattestvmss5',
   nicName = 'xplattestnic',
   location,
-  imageUrn = 'MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:2.0.20151022',
+  imageUrn = 'MicrosoftWindowsServer:WindowsServer:2008-R2-SP1:latest',
   linuxImageUrn = 'SUSE:openSUSE:13.2:latest',
   username = 'azureuser',
   password = 'Brillio@2015',
@@ -225,6 +225,45 @@ describe('arm', function() {
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           done();
+        });
+      });
+
+      it('update wrong instances should fail', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var wrongId = '999';
+        var cmd = util.format('vmss update-instances --resource-group-name %s --vm-scale-set-name %s --instance-ids 0,1,%s', groupName, vmssPrefix5, wrongId).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.not.equal(0);
+          result.errorText.should.containEql('The provided instanceId ' + wrongId + ' is not an active Virtual Machine Scale Set VM instanceId.');
+          done();
+        });
+      });
+
+      it('delete wrong instances should fail', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var wrongId = '999';
+        var cmd = util.format('vmss delete-instances --resource-group-name %s --vm-scale-set-name %s --instance-ids 0,1,%s', groupName, vmssPrefix5, wrongId).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.not.equal(0);
+          result.errorText.should.containEql('The provided instanceId ' + wrongId + ' is not an active Virtual Machine Scale Set VM instanceId.');
+          done();
+        });
+      });
+      
+      it('vmssvm get should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var id0 = '0';
+        var cmd = util.format('vmssvm get --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix5, id0).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          result.text.should.containEql(vmssPrefix5 + '_' + id0);
+          var id1 = '1';
+          var cmd = util.format('vmssvm get --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix5, id1).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            result.text.should.containEql(vmssPrefix5 + '_' + id1);
+            done();
+          });
         });
       });
 
