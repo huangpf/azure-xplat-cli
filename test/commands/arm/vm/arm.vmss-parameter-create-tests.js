@@ -38,7 +38,11 @@ var groupName,
   username = 'azureuser',
   password = 'Brillio@2015',
   storageAccount = 'xplatteststorage1',
+  storageAccount2 = 'xplatteststorage2',
+  storageAccount3 = 'xplatteststorage3',
   storageCont = 'xplatteststoragecnt1',
+  storageCont2 = 'xplatteststoragecnt2',
+  storageCont3 = 'xplatteststoragecnt3',
   osdiskvhd = 'xplattestvhd',
   vNetPrefix = 'xplattestvnet',
   subnetName = 'xplattestsubnet',
@@ -49,7 +53,8 @@ var groupName,
   IaasDiagExtName,
   IaasDiagVersion,
   datafile = 'test/data/testdata.json',
-  paramFileName = 'test/data/vmssParamTest5.json'
+  paramFileName = 'test/data/vmssParamTest5.json',
+  vmssCapacity = 100
 
 describe('arm', function() {
   describe('compute', function() {
@@ -63,7 +68,11 @@ describe('arm', function() {
         vmssPrefix5 = suite.isMocked ? vmssPrefix5 : suite.generateId(vmssPrefix5, null);
         nicName = suite.generateId(nicName, null);
         storageAccount = suite.generateId(storageAccount, null);
+        storageAccount2 = suite.generateId(storageAccount2, null);
+        storageAccount3 = suite.generateId(storageAccount3, null);
         storageCont = suite.generateId(storageCont, null);
+        storageCont2 = suite.generateId(storageCont2, null);
+        storageCont3 = suite.generateId(storageCont3, null);
         osdiskvhd = suite.isMocked ? osdiskvhd : suite.generateId(osdiskvhd, null);
         vNetPrefix = suite.generateId(vNetPrefix, null);
         subnetName = suite.generateId(subnetName, null);
@@ -104,16 +113,24 @@ describe('arm', function() {
             var cmd = util.format('storage account create -g %s --type GRS --location %s %s --json', groupName, location, storageAccount).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
-              var cmd = util.format('network vnet create %s %s %s -a 10.0.0.0/16 --json', groupName, vNetPrefix, location).split(' ');
+              var cmd = util.format('storage account create -g %s --type GRS --location %s %s --json', groupName, location, storageAccount2).split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
-                var cmd = util.format('network vnet subnet create -a 10.0.0.0/24 %s %s %s --json', groupName, vNetPrefix, subnetName).split(' ');
+                var cmd = util.format('storage account create -g %s --type GRS --location %s %s --json', groupName, location, storageAccount3).split(' ');
                 testUtils.executeCommand(suite, retry, cmd, function(result) {
                   result.exitStatus.should.equal(0);
-                  var cmd = util.format('network nic create %s %s %s --subnet-vnet-name %s --subnet-name %s --json', groupName, nicName, location, vNetPrefix, subnetName).split(' ');
+                  var cmd = util.format('network vnet create %s %s %s -a 10.0.0.0/16 --json', groupName, vNetPrefix, location).split(' ');
                   testUtils.executeCommand(suite, retry, cmd, function(result) {
                     result.exitStatus.should.equal(0);
-                    done();
+                    var cmd = util.format('network vnet subnet create -a 10.0.0.0/24 %s %s %s --json', groupName, vNetPrefix, subnetName).split(' ');
+                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                      result.exitStatus.should.equal(0);
+                      var cmd = util.format('network nic create %s %s %s --subnet-vnet-name %s --subnet-name %s --json', groupName, nicName, location, vNetPrefix, subnetName).split(' ');
+                      testUtils.executeCommand(suite, retry, cmd, function(result) {
+                        result.exitStatus.should.equal(0);
+                        done();
+                      });
+                    });
                   });
                 });
               });
@@ -140,7 +157,7 @@ describe('arm', function() {
             var cmd = makeCommandStr('virtual-machine-scale-set', 'remove', paramFileName, '--type --tags --provisioning-state').split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);
-              var cmd = makeCommandStr('sku', 'set', paramFileName, '--capacity 2 --name Standard_A1 --tier Standard').split(' ');
+              var cmd = makeCommandStr('sku', 'set', paramFileName, '--capacity ' + vmssCapacity + ' --name Standard_A1 --tier Standard').split(' ');
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 var cmd = makeCommandStr('upgrade-policy', 'set', paramFileName, '--mode Manual').split(' ');
@@ -182,13 +199,29 @@ describe('arm', function() {
                                         var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test')).split(' ');
                                         testUtils.executeCommand(suite, retry, cmd, function(result) {
                                           result.exitStatus.should.equal(0);
-                                          var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 0 --value https://%s.blob.core.windows.net/%s', storageAccount, storageCont)).split(' ');
-                                          testUtils.executeCommand(suite, retry, cmd, function(result) {
-                                            result.exitStatus.should.equal(0);
-                                            var cmd = util.format('vmss create-or-update -g %s -n %s --parameter-file %s --json', groupName, vmssPrefix5, paramFileName).split(' ');
+                                          var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test1')).split(' ');
                                             testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                            result.exitStatus.should.equal(0);
+                                            var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test2')).split(' ');
+                                              testUtils.executeCommand(suite, retry, cmd, function(result) {
                                               result.exitStatus.should.equal(0);
-                                              done();
+                                              var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 0 --value https://%s.blob.core.windows.net/%s', storageAccount, storageCont)).split(' ');
+                                                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                                result.exitStatus.should.equal(0);
+                                                var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 1 --value https://%s.blob.core.windows.net/%s', storageAccount2, storageCont2)).split(' ');
+                                                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                                  result.exitStatus.should.equal(0);
+                                                  var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 2 --value https://%s.blob.core.windows.net/%s', storageAccount3, storageCont3)).split(' ');
+                                                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                                    result.exitStatus.should.equal(0);
+                                                    var cmd = util.format('vmss create-or-update -g %s -n %s --parameter-file %s --json', groupName, vmssPrefix5, paramFileName).split(' ');
+                                                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                                      result.exitStatus.should.equal(0);
+                                                      done();
+                                                    });
+                                                  });
+                                                });
+                                              });
                                             });
                                           });
                                         });
@@ -206,6 +239,31 @@ describe('arm', function() {
                 });
               });
             });
+          });
+        });
+      });
+
+      it('vmssvm list should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmssvm list --resource-group-name %s --virtual-machine-scale-set-name %s', groupName, vmssPrefix5).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          result.text.should.containEql(vmssPrefix5 + '_0');
+          result.text.should.containEql(vmssPrefix5 + '_' + (vmssCapacity - 1).toString());
+          done();
+        });
+      });
+
+      it('vmss list should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var cmd = util.format('vmss list-all').split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          var cmd = util.format('vmss list --resource-group-name %s', groupName).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            result.text.should.containEql(vmssPrefix5);
+            done();
           });
         });
       });

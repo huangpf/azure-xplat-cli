@@ -17799,7 +17799,7 @@
           "name": "list",
           "description": "Commands to manage your virtual machine scale set vm by the list method.",
           "fullName": "vmssvm list",
-          "usage": "[options] <resource-group-name> <virtual-machine-scale-set-name> <odata-query> <select>",
+          "usage": "[options] <resource-group-name> <virtual-machine-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -17844,22 +17844,6 @@
               "short": "-n",
               "long": "--virtual-machine-scale-set-name",
               "description": "virtual-machine-scale-set-name"
-            },
-            {
-              "flags": "--odata-query <odata-query>",
-              "required": -15,
-              "optional": 0,
-              "bool": true,
-              "long": "--odata-query",
-              "description": "odata-query"
-            },
-            {
-              "flags": "--select <select>",
-              "required": -10,
-              "optional": 0,
-              "bool": true,
-              "long": "--select",
-              "description": "select"
             },
             {
               "flags": "--parameter-file <parameter-file>",
