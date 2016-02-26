@@ -33,39 +33,39 @@ exports.scopes = [[function (nock) {
 var result = 
 nock('http://management.azure.com:443')
   .filteringRequestBody(function (path) { return '*';})
-.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate473/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/manualupgrade?api-version=2015-06-15', '*')
+.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/manualupgrade?api-version=2015-06-15', '*')
   .reply(400, "{\r\n  \"error\": {\r\n    \"code\": \"InvalidParameter\",\r\n    \"target\": \"upgradePolicies.instanceIds\",\r\n    \"message\": \"The provided instanceId 999 is not an active Virtual Machine Scale Set VM instanceId.\"\r\n  }\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
   'content-length': '206',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130923832742225921',
-  'x-ms-request-id': 'ecda263d-54c0-4f65-963f-1899d9d56796',
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130979641115900750',
+  'x-ms-request-id': '7baa6019-62f4-48ae-bfcc-4881895fbc52',
   server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
-  'x-ms-ratelimit-remaining-subscription-writes': '1195',
-  'x-ms-correlation-request-id': '9abc54af-f237-4c54-a212-8283a53f85ea',
-  'x-ms-routing-request-id': 'CENTRALUS:20160223T002214Z:9abc54af-f237-4c54-a212-8283a53f85ea',
-  date: 'Tue, 23 Feb 2016 00:22:13 GMT',
+  'x-ms-ratelimit-remaining-subscription-writes': '1199',
+  'x-ms-correlation-request-id': '0b8405ad-4d2c-498a-a01e-dff28656b17d',
+  'x-ms-routing-request-id': 'CENTRALUS:20160226T000901Z:0b8405ad-4d2c-498a-a01e-dff28656b17d',
+  date: 'Fri, 26 Feb 2016 00:09:01 GMT',
   connection: 'close' });
  return result; },
 function (nock) { 
 var result = 
 nock('https://management.azure.com:443')
   .filteringRequestBody(function (path) { return '*';})
-.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate473/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/manualupgrade?api-version=2015-06-15', '*')
+.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/manualupgrade?api-version=2015-06-15', '*')
   .reply(400, "{\r\n  \"error\": {\r\n    \"code\": \"InvalidParameter\",\r\n    \"target\": \"upgradePolicies.instanceIds\",\r\n    \"message\": \"The provided instanceId 999 is not an active Virtual Machine Scale Set VM instanceId.\"\r\n  }\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
   'content-length': '206',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130923832742225921',
-  'x-ms-request-id': 'ecda263d-54c0-4f65-963f-1899d9d56796',
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130979641115900750',
+  'x-ms-request-id': '7baa6019-62f4-48ae-bfcc-4881895fbc52',
   server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
-  'x-ms-ratelimit-remaining-subscription-writes': '1195',
-  'x-ms-correlation-request-id': '9abc54af-f237-4c54-a212-8283a53f85ea',
-  'x-ms-routing-request-id': 'CENTRALUS:20160223T002214Z:9abc54af-f237-4c54-a212-8283a53f85ea',
-  date: 'Tue, 23 Feb 2016 00:22:13 GMT',
+  'x-ms-ratelimit-remaining-subscription-writes': '1199',
+  'x-ms-correlation-request-id': '0b8405ad-4d2c-498a-a01e-dff28656b17d',
+  'x-ms-routing-request-id': 'CENTRALUS:20160226T000901Z:0b8405ad-4d2c-498a-a01e-dff28656b17d',
+  date: 'Fri, 26 Feb 2016 00:09:01 GMT',
   connection: 'close' });
  return result; }]];

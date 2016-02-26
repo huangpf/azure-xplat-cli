@@ -10046,124 +10046,6 @@
           ]
         },
         {
-          "name": "list-all-next",
-          "description": "Commands to manage your virtual machine scale sets by the list-all-next method.",
-          "fullName": "vmss list-all-next",
-          "usage": "[options] <next-page-link>",
-          "filePath": "commands/arm/compute/compute._js",
-          "options": [
-            {
-              "flags": "-v, --verbose",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "short": "-v",
-              "long": "--verbose",
-              "description": "use verbose output"
-            },
-            {
-              "flags": "-vv",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "-vv",
-              "description": "more verbose with debug output"
-            },
-            {
-              "flags": "--json",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "--json",
-              "description": "use json output"
-            },
-            {
-              "flags": "--next-page-link <next-page-link>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--next-page-link",
-              "description": "next-page-link"
-            },
-            {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
-            },
-            {
-              "flags": "-s, --subscription <subscription>",
-              "required": -20,
-              "optional": 0,
-              "bool": true,
-              "short": "-s",
-              "long": "--subscription",
-              "description": "the subscription identifier"
-            }
-          ]
-        },
-        {
-          "name": "list-next",
-          "description": "Commands to manage your virtual machine scale sets by the list-next method.",
-          "fullName": "vmss list-next",
-          "usage": "[options] <next-page-link>",
-          "filePath": "commands/arm/compute/compute._js",
-          "options": [
-            {
-              "flags": "-v, --verbose",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "short": "-v",
-              "long": "--verbose",
-              "description": "use verbose output"
-            },
-            {
-              "flags": "-vv",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "-vv",
-              "description": "more verbose with debug output"
-            },
-            {
-              "flags": "--json",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "--json",
-              "description": "use json output"
-            },
-            {
-              "flags": "--next-page-link <next-page-link>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--next-page-link",
-              "description": "next-page-link"
-            },
-            {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
-            },
-            {
-              "flags": "-s, --subscription <subscription>",
-              "required": -20,
-              "optional": 0,
-              "bool": true,
-              "short": "-s",
-              "long": "--subscription",
-              "description": "the subscription identifier"
-            }
-          ]
-        },
-        {
           "name": "list-skus",
           "description": "Commands to manage your virtual machine scale sets by the list-skus method.",
           "fullName": "vmss list-skus",
@@ -10212,65 +10094,6 @@
               "short": "-n",
               "long": "--vm-scale-set-name",
               "description": "vm-scale-set-name"
-            },
-            {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
-            },
-            {
-              "flags": "-s, --subscription <subscription>",
-              "required": -20,
-              "optional": 0,
-              "bool": true,
-              "short": "-s",
-              "long": "--subscription",
-              "description": "the subscription identifier"
-            }
-          ]
-        },
-        {
-          "name": "list-skus-next",
-          "description": "Commands to manage your virtual machine scale sets by the list-skus-next method.",
-          "fullName": "vmss list-skus-next",
-          "usage": "[options] <next-page-link>",
-          "filePath": "commands/arm/compute/compute._js",
-          "options": [
-            {
-              "flags": "-v, --verbose",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "short": "-v",
-              "long": "--verbose",
-              "description": "use verbose output"
-            },
-            {
-              "flags": "-vv",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "-vv",
-              "description": "more verbose with debug output"
-            },
-            {
-              "flags": "--json",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "--json",
-              "description": "use json output"
-            },
-            {
-              "flags": "--next-page-link <next-page-link>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--next-page-link",
-              "description": "next-page-link"
             },
             {
               "flags": "--parameter-file <parameter-file>",
@@ -17976,7 +17799,7 @@
           "name": "list",
           "description": "Commands to manage your virtual machine scale set vm by the list method.",
           "fullName": "vmssvm list",
-          "usage": "[options] <resource-group-name> <virtual-machine-scale-set-name> <odata-query> <select>",
+          "usage": "[options] <resource-group-name> <virtual-machine-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
             {
@@ -18021,81 +17844,6 @@
               "short": "-n",
               "long": "--virtual-machine-scale-set-name",
               "description": "virtual-machine-scale-set-name"
-            },
-            {
-              "flags": "--odata-query <odata-query>",
-              "required": -15,
-              "optional": 0,
-              "bool": true,
-              "long": "--odata-query",
-              "description": "odata-query"
-            },
-            {
-              "flags": "--select <select>",
-              "required": -10,
-              "optional": 0,
-              "bool": true,
-              "long": "--select",
-              "description": "select"
-            },
-            {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
-            },
-            {
-              "flags": "-s, --subscription <subscription>",
-              "required": -20,
-              "optional": 0,
-              "bool": true,
-              "short": "-s",
-              "long": "--subscription",
-              "description": "the subscription identifier"
-            }
-          ]
-        },
-        {
-          "name": "list-next",
-          "description": "Commands to manage your virtual machine scale set vm by the list-next method.",
-          "fullName": "vmssvm list-next",
-          "usage": "[options] <next-page-link>",
-          "filePath": "commands/arm/compute/compute._js",
-          "options": [
-            {
-              "flags": "-v, --verbose",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "short": "-v",
-              "long": "--verbose",
-              "description": "use verbose output"
-            },
-            {
-              "flags": "-vv",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "-vv",
-              "description": "more verbose with debug output"
-            },
-            {
-              "flags": "--json",
-              "required": 0,
-              "optional": 0,
-              "bool": true,
-              "long": "--json",
-              "description": "use json output"
-            },
-            {
-              "flags": "--next-page-link <next-page-link>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--next-page-link",
-              "description": "next-page-link"
             },
             {
               "flags": "--parameter-file <parameter-file>",

@@ -2,7 +2,7 @@
   "sku": {
     "name": "Standard_A1",
     "tier": "Standard",
-    "capacity": 2
+    "capacity": 100
   },
   "upgradePolicy": {
     "mode": "Manual"
@@ -25,7 +25,9 @@
         "caching": "None",
         "createOption": "fromImage",
         "vhdContainers": [
-          "https://xplatteststorage12731.blob.core.windows.net/xplatteststoragecnt11009"
+          "https://xplatteststorage18567.blob.core.windows.net/xplatteststoragecnt16594",
+          "https://xplatteststorage28703.blob.core.windows.net/xplatteststoragecnt27094",
+          "https://xplatteststorage37937.blob.core.windows.net/xplatteststoragecnt39836"
         ]
       }
     },
@@ -38,7 +40,7 @@
             {
               "name": "test",
               "subnet": {
-                "id": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate473/providers/Microsoft.Network/VirtualNetworks/xplattestvnet3324/subnets/xplattestsubnet2057"
+                "id": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Network/VirtualNetworks/xplattestvnet4621/subnets/xplattestsubnet122"
               },
               "id": ""
             }
