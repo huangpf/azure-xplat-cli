@@ -42,6 +42,11 @@
               "subnet": {
                 "id": "/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Network/VirtualNetworks/xplattestvnet4621/subnets/xplattestsubnet122"
               },
+              "loadBalancerInboundNatPools": [
+                {
+                  "id": ""
+                }
+              ],
               "id": ""
             }
           ],

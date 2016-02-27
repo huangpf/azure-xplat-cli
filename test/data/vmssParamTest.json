@@ -95,6 +95,11 @@
                   "id": ""
                 }
               ],
+              "loadBalancerInboundNatPools": [
+                {
+                  "id": ""
+                }
+              ],
               "id": ""
             }
           ],

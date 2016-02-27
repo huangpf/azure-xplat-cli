@@ -10192,6 +10192,75 @@
           ]
         },
         {
+          "name": "reimage",
+          "description": "Commands to manage your virtual machine scale sets by the reimage method.",
+          "fullName": "vmss reimage",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name>",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "short": "-g",
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "short": "-n",
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
           "name": "restart",
           "description": "Commands to manage your virtual machine scale sets by the restart method.",
           "fullName": "vmss restart",
@@ -10673,7 +10742,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Set virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10795,7 +10864,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Remove virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -10909,7 +10978,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Add virtual-machine-scale-set in create-or-update-parameters string or files, e.g. \r\n{\r\n  \"sku\":{\r\n    \"name\":\"\",\r\n    \"tier\":\"\",\r\n    \"capacity\":null\r\n  },\r\n  \"upgradePolicy\":{\r\n    \"mode\":\"\"\r\n  },\r\n  \"virtualMachineProfile\":{\r\n    \"osProfile\":{\r\n      \"computerNamePrefix\":\"\",\r\n      \"adminUsername\":\"\",\r\n      \"adminPassword\":\"\",\r\n      \"customData\":\"\",\r\n      \"windowsConfiguration\":{\r\n        \"provisionVMAgent\":null,\r\n        \"enableAutomaticUpdates\":null,\r\n        \"timeZone\":\"\",\r\n        \"additionalUnattendContent\":[\r\n          {\r\n            \"passName\":\"\",\r\n            \"componentName\":\"\",\r\n            \"settingName\":\"\",\r\n            \"content\":\"\"\r\n          }\r\n        ],\r\n        \"winRM\":{\r\n          \"listeners\":[\r\n            {\r\n              \"protocol\":\"\",\r\n              \"certificateUrl\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"linuxConfiguration\":{\r\n        \"disablePasswordAuthentication\":null,\r\n        \"ssh\":{\r\n          \"publicKeys\":[\r\n            {\r\n              \"path\":\"\",\r\n              \"keyData\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      },\r\n      \"secrets\":[\r\n        {\r\n          \"sourceVault\":{\r\n            \"id\":\"\"\r\n          },\r\n          \"vaultCertificates\":[\r\n            {\r\n              \"certificateUrl\":\"\",\r\n              \"certificateStore\":\"\"\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    },\r\n    \"storageProfile\":{\r\n      \"imageReference\":{\r\n        \"publisher\":\"\",\r\n        \"offer\":\"\",\r\n        \"sku\":\"\",\r\n        \"version\":\"\"\r\n      },\r\n      \"osDisk\":{\r\n        \"name\":\"\",\r\n        \"caching\":\"\",\r\n        \"createOption\":\"\",\r\n        \"osType\":\"\",\r\n        \"image\":{\r\n          \"uri\":\"\"\r\n        },\r\n        \"vhdContainers\":[\r\n          \"\"\r\n        ]\r\n      }\r\n    },\r\n    \"networkProfile\":{\r\n      \"networkInterfaceConfigurations\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"primary\":null,\r\n          \"ipConfigurations\":[\r\n            {\r\n              \"name\":\"\",\r\n              \"subnet\":{\r\n                \"id\":\"\"\r\n              },\r\n              \"loadBalancerBackendAddressPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"loadBalancerInboundNatPools\":[\r\n                {\r\n                  \"id\":\"\"\r\n                }\r\n              ],\r\n              \"id\":\"\"\r\n            }\r\n          ],\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    },\r\n    \"extensionProfile\":{\r\n      \"extensions\":[\r\n        {\r\n          \"name\":\"\",\r\n          \"publisher\":\"\",\r\n          \"virtualMachineScaleSetExtensionType\":\"\",\r\n          \"typeHandlerVersion\":\"\",\r\n          \"autoUpgradeMinorVersion\":null,\r\n          \"settings\":{\r\n          },\r\n          \"protectedSettings\":{\r\n          },\r\n          \"provisioningState\":\"\",\r\n          \"id\":\"\"\r\n        }\r\n      ]\r\n    }\r\n  },\r\n  \"provisioningState\":\"\",\r\n  \"id\":null,\r\n  \"name\":null,\r\n  \"type\":null,\r\n  \"location\":\"\",\r\n  \"tags\":{\r\n  }\r\n}\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-scale-set add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11489,7 +11558,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Set virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"loadBalancerInboundNatPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11571,7 +11640,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Remove virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"loadBalancerInboundNatPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -11645,7 +11714,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Add virtual-machine-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"virtualMachineProfile\" : {\r\n             \"osProfile\":{\r\n               \"computerNamePrefix\":\"\",\r\n               \"adminUsername\":\"\",\r\n               \"adminPassword\":\"\",\r\n               \"customData\":\"\",\r\n               \"windowsConfiguration\":{\r\n                 \"provisionVMAgent\":null,\r\n                 \"enableAutomaticUpdates\":null,\r\n                 \"timeZone\":\"\",\r\n                 \"additionalUnattendContent\":[\r\n                   {\r\n                     \"passName\":\"\",\r\n                     \"componentName\":\"\",\r\n                     \"settingName\":\"\",\r\n                     \"content\":\"\"\r\n                   }\r\n                 ],\r\n                 \"winRM\":{\r\n                   \"listeners\":[\r\n                     {\r\n                       \"protocol\":\"\",\r\n                       \"certificateUrl\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"linuxConfiguration\":{\r\n                 \"disablePasswordAuthentication\":null,\r\n                 \"ssh\":{\r\n                   \"publicKeys\":[\r\n                     {\r\n                       \"path\":\"\",\r\n                       \"keyData\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               },\r\n               \"secrets\":[\r\n                 {\r\n                   \"sourceVault\":{\r\n                     \"id\":\"\"\r\n                   },\r\n                   \"vaultCertificates\":[\r\n                     {\r\n                       \"certificateUrl\":\"\",\r\n                       \"certificateStore\":\"\"\r\n                     }\r\n                   ]\r\n                 }\r\n               ]\r\n             },\r\n             \"storageProfile\":{\r\n               \"imageReference\":{\r\n                 \"publisher\":\"\",\r\n                 \"offer\":\"\",\r\n                 \"sku\":\"\",\r\n                 \"version\":\"\"\r\n               },\r\n               \"osDisk\":{\r\n                 \"name\":\"\",\r\n                 \"caching\":\"\",\r\n                 \"createOption\":\"\",\r\n                 \"osType\":\"\",\r\n                 \"image\":{\r\n                   \"uri\":\"\"\r\n                 },\r\n                 \"vhdContainers\":[\r\n                   \"\"\r\n                 ]\r\n               }\r\n             },\r\n             \"networkProfile\":{\r\n               \"networkInterfaceConfigurations\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"primary\":null,\r\n                   \"ipConfigurations\":[\r\n                     {\r\n                       \"name\":\"\",\r\n                       \"subnet\":{\r\n                         \"id\":\"\"\r\n                       },\r\n                       \"loadBalancerBackendAddressPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"loadBalancerInboundNatPools\":[\r\n                         {\r\n                           \"id\":\"\"\r\n                         }\r\n                       ],\r\n                       \"id\":\"\"\r\n                     }\r\n                   ],\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             },\r\n             \"extensionProfile\":{\r\n               \"extensions\":[\r\n                 {\r\n                   \"name\":\"\",\r\n                   \"publisher\":\"\",\r\n                   \"virtualMachineScaleSetExtensionType\":\"\",\r\n                   \"typeHandlerVersion\":\"\",\r\n                   \"autoUpgradeMinorVersion\":null,\r\n                   \"settings\":{\r\n                   },\r\n                   \"protectedSettings\":{\r\n                   },\r\n                   \"provisioningState\":\"\",\r\n                   \"id\":\"\"\r\n                 }\r\n               ]\r\n             }\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters virtual-machine-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15625,7 +15694,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Set network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"loadBalancerInboundNatPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-profile set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15683,7 +15752,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Remove network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"loadBalancerInboundNatPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-profile remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15733,7 +15802,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Add network-profile in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkProfile\" : {\r\n             \"networkInterfaceConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"primary\":null,\r\n                 \"ipConfigurations\":[\r\n                   {\r\n                     \"name\":\"\",\r\n                     \"subnet\":{\r\n                       \"id\":\"\"\r\n                     },\r\n                     \"loadBalancerBackendAddressPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"loadBalancerInboundNatPools\":[\r\n                       {\r\n                         \"id\":\"\"\r\n                       }\r\n                     ],\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ]\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-profile add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15817,7 +15886,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Set network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"loadBalancerInboundNatPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15915,7 +15984,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Remove network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"loadBalancerInboundNatPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -15997,7 +16066,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Add network-interface-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"networkInterfaceConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"primary\":null,\r\n             \"ipConfigurations\":[\r\n               {\r\n                 \"name\":\"\",\r\n                 \"subnet\":{\r\n                   \"id\":\"\"\r\n                 },\r\n                 \"loadBalancerBackendAddressPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"loadBalancerInboundNatPools\":[\r\n                   {\r\n                     \"id\":\"\"\r\n                   }\r\n                 ],\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters network-interface-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16105,7 +16174,7 @@
               "commands": [
                 {
                   "name": "set",
-                  "description": "Set ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Set ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"loadBalancerInboundNatPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters ip-configurations set",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16200,6 +16269,14 @@
                       "description": "Set the load-balancer-backend-address-pools value."
                     },
                     {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Set the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--id <id>",
                       "required": -6,
                       "optional": 0,
@@ -16211,7 +16288,7 @@
                 },
                 {
                   "name": "remove",
-                  "description": "Remove ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Remove ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"loadBalancerInboundNatPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters ip-configurations remove",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16290,6 +16367,14 @@
                       "description": "Remove the load-balancer-backend-address-pools value."
                     },
                     {
+                      "flags": "--load-balancer-inbound-nat-pools",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Remove the load-balancer-inbound-nat-pools value."
+                    },
+                    {
                       "flags": "--id",
                       "required": 0,
                       "optional": 0,
@@ -16301,7 +16386,7 @@
                 },
                 {
                   "name": "add",
-                  "description": "Add ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "description": "Add ip-configurations in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"ipConfigurations\" : {\r\n             \"name\":\"\",\r\n             \"subnet\":{\r\n               \"id\":\"\"\r\n             },\r\n             \"loadBalancerBackendAddressPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"loadBalancerInboundNatPools\":[\r\n               {\r\n                 \"id\":\"\"\r\n               }\r\n             ],\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters ip-configurations add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
@@ -16386,6 +16471,14 @@
                       "bool": true,
                       "long": "--load-balancer-backend-address-pools",
                       "description": "Add the load-balancer-backend-address-pools value."
+                    },
+                    {
+                      "flags": "--load-balancer-inbound-nat-pools <loadBalancerInboundNatPools>",
+                      "required": -35,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--load-balancer-inbound-nat-pools",
+                      "description": "Add the load-balancer-inbound-nat-pools value."
                     },
                     {
                       "flags": "--id <id>",
@@ -16799,6 +16892,254 @@
                   "name": "add",
                   "description": "Add load-balancer-backend-address-pools in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"loadBalancerBackendAddressPools\" : {\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
                   "fullName": "vmss create-or-update-parameters load-balancer-backend-address-pools add",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--key <key>",
+                      "required": -7,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--key",
+                      "description": "The JSON key."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The JSON value."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
+                    },
+                    {
+                      "flags": "--id <id>",
+                      "required": -6,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--id",
+                      "description": "Add the id value."
+                    }
+                  ]
+                }
+              ],
+              "categories": {}
+            },
+            "load-balancer-inbound-nat-pools": {
+              "name": "load-balancer-inbound-nat-pools",
+              "description": "Commands to set/remove/add load-balancer-inbound-nat-pools of virtual-machine-scale-sets in create-or-update-parameters file.",
+              "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools",
+              "usage": "[options] [command]",
+              "options": [],
+              "commands": [
+                {
+                  "name": "set",
+                  "description": "Set load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"loadBalancerInboundNatPools\" : {\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools set",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--index <index>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--index",
+                      "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--ip-configurations-index <ip-configurations-index>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations-index",
+                      "description": "Indexer: ip-configurations-index."
+                    },
+                    {
+                      "flags": "--network-interface-configurations-index <network-interface-configurations-index>",
+                      "required": -42,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations-index",
+                      "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--value <value>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--value",
+                      "description": "The input string value for the indexed item."
+                    },
+                    {
+                      "flags": "--parse",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parse",
+                      "description": "Parse the input value string to a JSON object."
+                    },
+                    {
+                      "flags": "--id <id>",
+                      "required": -6,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--id",
+                      "description": "Set the id value."
+                    }
+                  ]
+                },
+                {
+                  "name": "remove",
+                  "description": "Remove load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"loadBalancerInboundNatPools\" : {\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools remove",
+                  "usage": "[options]",
+                  "filePath": "commands/arm/compute/compute._js",
+                  "options": [
+                    {
+                      "flags": "-v, --verbose",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "short": "-v",
+                      "long": "--verbose",
+                      "description": "use verbose output"
+                    },
+                    {
+                      "flags": "-vv",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "-vv",
+                      "description": "more verbose with debug output"
+                    },
+                    {
+                      "flags": "--json",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--json",
+                      "description": "use json output"
+                    },
+                    {
+                      "flags": "--parameter-file <parameter-file>",
+                      "required": -18,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--parameter-file",
+                      "description": "The parameter file path."
+                    },
+                    {
+                      "flags": "--index <index>",
+                      "required": -9,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--index",
+                      "description": "Indexer: index."
+                    },
+                    {
+                      "flags": "--ip-configurations-index <ip-configurations-index>",
+                      "required": -27,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--ip-configurations-index",
+                      "description": "Indexer: ip-configurations-index."
+                    },
+                    {
+                      "flags": "--network-interface-configurations-index <network-interface-configurations-index>",
+                      "required": -42,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--network-interface-configurations-index",
+                      "description": "Indexer: network-interface-configurations-index."
+                    },
+                    {
+                      "flags": "--id",
+                      "required": 0,
+                      "optional": 0,
+                      "bool": true,
+                      "long": "--id",
+                      "description": "Remove the id value."
+                    }
+                  ]
+                },
+                {
+                  "name": "add",
+                  "description": "Add load-balancer-inbound-nat-pools in create-or-update-parameters string or files, e.g. \r\n         {\r\n           ...\r\n           \"loadBalancerInboundNatPools\" : {\r\n             \"id\":\"\"\r\n           }\r\n           ...\r\n         }\r\n\r\n         There are two sets of commands:\r\n           1) function commands that are used to manage Azure resources in the cloud, and \r\n           2) parameter commands that generate & edit input files for the other set of commands.\r\n         For example, 'vmss get/list/stop' are the function commands that call get, list and stop operations of \r\n         virtual machine scale set, whereas 'vmss create-or-update-parameters * generate/set/remove/add' commands \r\n         are used to configure the input parameter file. The 'vmss create-or-update' command takes a parameter \r\n         file as for the VM scale set configuration, and creates it online.",
+                  "fullName": "vmss create-or-update-parameters load-balancer-inbound-nat-pools add",
                   "usage": "[options]",
                   "filePath": "commands/arm/compute/compute._js",
                   "options": [
@@ -17868,6 +18209,84 @@
           "name": "power-off",
           "description": "Commands to manage your virtual machine scale set vm by the power-off method.",
           "fullName": "vmssvm power-off",
+          "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "short": "-g",
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "-n, --vm-scale-set-name <vm-scale-set-name>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "short": "-n",
+              "long": "--vm-scale-set-name",
+              "description": "vm-scale-set-name"
+            },
+            {
+              "flags": "-d, --instance-id <instance-id>",
+              "required": -19,
+              "optional": 0,
+              "bool": true,
+              "short": "-d",
+              "long": "--instance-id",
+              "description": "instance-id"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "reimage",
+          "description": "Commands to manage your virtual machine scale set vm by the reimage method.",
+          "fullName": "vmssvm reimage",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
           "options": [
