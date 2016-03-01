@@ -180,7 +180,7 @@ describe('arm', function() {
         vmTest.checkImagefile(function() {
           vmTest.createGroup(groupName, location, suite, function(result) {
             var cmd = util.format(
-              'vmss quick-create --resource-group-name %s --name %s --location %s --image-urn %s --admin-username %s --admin-password %s --json',
+              'vmss quick-create --resource-group-name %s --name %s --location %s --image-urn %s --admin-username %s --admin-password %s --capacity 5 --json',
               groupName, vmssPrefix2, location, imageUrn, username, password).split(' ');
             testUtils.executeCommand(suite, retry, cmd, function(result) {
               result.exitStatus.should.equal(0);

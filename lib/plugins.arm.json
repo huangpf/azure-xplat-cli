@@ -10539,7 +10539,7 @@
               "bool": true,
               "short": "-n",
               "long": "--name",
-              "description": "the virtual machine name"
+              "description": "the virtual machine name prefix"
             },
             {
               "flags": "-l, --location <location>",
@@ -10585,6 +10585,15 @@
               "short": "-z",
               "long": "--vm-size",
               "description": "the virtual machine size [Standard_D1]"
+            },
+            {
+              "flags": "-C, --capacity <capacity>",
+              "required": -16,
+              "optional": 0,
+              "bool": true,
+              "short": "-C",
+              "long": "--capacity",
+              "description": "the virtual machine scale set capacity, i.e. number of instances (5 by default)"
             },
             {
               "flags": "-M, --ssh-publickey-file <ssh-publickey-file>",
