@@ -9199,7 +9199,7 @@
       "commands": [
         {
           "name": "create-or-update",
-          "description": "Commands to manage your virtual machine scale sets by the create-or-update method.",
+          "description": "The operation to create or update a virtual machine scale set.",
           "fullName": "vmss create-or-update",
           "usage": "[options] <resource-group-name> <name> <parameters>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9277,7 +9277,7 @@
         },
         {
           "name": "deallocate",
-          "description": "Commands to manage your virtual machine scale sets by the deallocate method.",
+          "description": "The operation to deallocate virtual machines in a virtual machine scale set.",
           "fullName": "vmss deallocate",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9354,7 +9354,7 @@
         },
         {
           "name": "delete",
-          "description": "Commands to manage your virtual machine scale sets by the delete method.",
+          "description": "The operation to delete a virtual machine scale set.",
           "fullName": "vmss delete",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9423,7 +9423,7 @@
         },
         {
           "name": "delete-instances",
-          "description": "Commands to manage your virtual machine scale sets by the delete-instances method.",
+          "description": "The operation to delete virtual machines in a virtual machine scale set.",
           "fullName": "vmss delete-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9500,7 +9500,7 @@
         },
         {
           "name": "get",
-          "description": "Commands to manage your virtual machine scale sets by the get method.",
+          "description": "The operation to get a virtual machine scale set.",
           "fullName": "vmss get",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9569,7 +9569,7 @@
         },
         {
           "name": "get-instance-view",
-          "description": "Commands to manage your virtual machine scale sets by the get-instance-view method.",
+          "description": "The operation to get a virtual machine scale set instance view.",
           "fullName": "vmss get-instance-view",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9638,7 +9638,7 @@
         },
         {
           "name": "list",
-          "description": "Commands to manage your virtual machine scale sets by the list method.",
+          "description": "The operation to list virtual machine scale sets under a resource group.",
           "fullName": "vmss list",
           "usage": "[options] <resource-group-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9698,7 +9698,7 @@
         },
         {
           "name": "list-all",
-          "description": "Commands to manage your virtual machine scale sets by the list-all method.",
+          "description": "Gets the list of Virtual Machine Scale Sets in the subscription. Use nextLink property in the response to get the next page of Virtual Machine Scale Sets. Do this till nextLink is not null to fetch all the Virtual Machine Scale Sets.",
           "fullName": "vmss list-all",
           "usage": "[options]",
           "filePath": "commands/arm/compute/compute._js",
@@ -9749,7 +9749,7 @@
         },
         {
           "name": "list-skus",
-          "description": "Commands to manage your virtual machine scale sets by the list-skus method.",
+          "description": "The operation to list available skus for a virtual machine scale set.",
           "fullName": "vmss list-skus",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9818,7 +9818,7 @@
         },
         {
           "name": "power-off",
-          "description": "Commands to manage your virtual machine scale sets by the power-off method.",
+          "description": "The operation to power off (stop) virtual machines in a virtual machine scale set.",
           "fullName": "vmss power-off",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9895,7 +9895,7 @@
         },
         {
           "name": "reimage",
-          "description": "Commands to manage your virtual machine scale sets by the reimage method.",
+          "description": "The operation to re-image virtual machines in a virtual machine scale set.",
           "fullName": "vmss reimage",
           "usage": "[options] <resource-group-name> <vm-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -9964,7 +9964,7 @@
         },
         {
           "name": "restart",
-          "description": "Commands to manage your virtual machine scale sets by the restart method.",
+          "description": "The operation to restart virtual machines in a virtual machine scale set.",
           "fullName": "vmss restart",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10041,7 +10041,7 @@
         },
         {
           "name": "start",
-          "description": "Commands to manage your virtual machine scale sets by the start method.",
+          "description": "The operation to start virtual machines in a virtual machine scale set.",
           "fullName": "vmss start",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -10118,7 +10118,7 @@
         },
         {
           "name": "update-instances",
-          "description": "Commands to manage your virtual machine scale sets by the update-instances method.",
+          "description": "The operation to manually upgrade virtual machines in a virtual machine scale set.",
           "fullName": "vmss update-instances",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-ids>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17537,7 +17537,7 @@
       "commands": [
         {
           "name": "deallocate",
-          "description": "Commands to manage your virtual machine scale set vm by the deallocate method.",
+          "description": "The operation to deallocate a virtual machine scale set.",
           "fullName": "vmssvm deallocate",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17615,7 +17615,7 @@
         },
         {
           "name": "delete",
-          "description": "Commands to manage your virtual machine scale set vm by the delete method.",
+          "description": "The operation to delete a virtual machine scale set.",
           "fullName": "vmssvm delete",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17693,7 +17693,7 @@
         },
         {
           "name": "get",
-          "description": "Commands to manage your virtual machine scale set vm by the get method.",
+          "description": "The operation to get a virtual machine scale set virtual machine.",
           "fullName": "vmssvm get",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17771,7 +17771,7 @@
         },
         {
           "name": "get-instance-view",
-          "description": "Commands to manage your virtual machine scale set vm by the get-instance-view method.",
+          "description": "The operation to get a virtual machine scale set virtual machine.",
           "fullName": "vmssvm get-instance-view",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17849,7 +17849,7 @@
         },
         {
           "name": "list",
-          "description": "Commands to manage your virtual machine scale set vm by the list method.",
+          "description": "The operation to list virtual machine scale sets VMs.",
           "fullName": "vmssvm list",
           "usage": "[options] <resource-group-name> <virtual-machine-scale-set-name>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17918,7 +17918,7 @@
         },
         {
           "name": "power-off",
-          "description": "Commands to manage your virtual machine scale set vm by the power-off method.",
+          "description": "The operation to power off (stop) a virtual machine scale set.",
           "fullName": "vmssvm power-off",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -17996,7 +17996,7 @@
         },
         {
           "name": "reimage",
-          "description": "Commands to manage your virtual machine scale set vm by the reimage method.",
+          "description": "The operation to re-image a virtual machine scale set instance.",
           "fullName": "vmssvm reimage",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18074,7 +18074,7 @@
         },
         {
           "name": "restart",
-          "description": "Commands to manage your virtual machine scale set vm by the restart method.",
+          "description": "The operation to restart a virtual machine scale set.",
           "fullName": "vmssvm restart",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",
@@ -18152,7 +18152,7 @@
         },
         {
           "name": "start",
-          "description": "Commands to manage your virtual machine scale set vm by the start method.",
+          "description": "The operation to start a virtual machine scale set.",
           "fullName": "vmssvm start",
           "usage": "[options] <resource-group-name> <vm-scale-set-name> <instance-id>",
           "filePath": "commands/arm/compute/compute._js",

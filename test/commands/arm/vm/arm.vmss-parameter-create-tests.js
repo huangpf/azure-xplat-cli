@@ -259,11 +259,22 @@ describe('arm', function() {
         var cmd = util.format('vmss list-all').split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
+          result.text.should.containEql('ProvisioningState');
+          result.text.should.containEql('-----------------');
           var cmd = util.format('vmss list --resource-group-name %s', groupName).split(' ');
           testUtils.executeCommand(suite, retry, cmd, function(result) {
             result.exitStatus.should.equal(0);
             result.text.should.containEql(vmssPrefix5);
-            done();
+            result.text.should.containEql('ProvisioningState');
+            result.text.should.containEql('-----------------');
+            var cmd = util.format('vmss list --resource-group-name %s --json', groupName).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              result.text.should.containEql(vmssPrefix5);
+              result.text.should.containEql('provisioningState');
+              result.text.should.not.containEql('-----------------');
+              done();
+            });
           });
         });
       });
