@@ -54,7 +54,7 @@ var groupName,
   IaasDiagVersion,
   datafile = 'test/data/testdata.json',
   paramFileName = 'test/data/vmssParamTest5.json',
-  vmssCapacity = 100
+  vmssCapacity = 51
 
 describe('arm', function() {
   describe('compute', function() {
@@ -141,9 +141,9 @@ describe('arm', function() {
 
       it('create-or-update-parameter generate set and remove should pass', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
-        var makeCommandStr = function(operation, verb, file, others) {
+        var makeCommandStr = function(component, verb, file, others) {
           var cmdFormat = 'vmss create-or-update-parameters %s %s --parameter-file %s %s --json';
-          return util.format(cmdFormat, operation, verb, file, others ? others : '');
+          return util.format(cmdFormat, verb, component, file, others ? others : '');
         };
         
         var subscription = profile.current.getSubscription();
