@@ -10446,7 +10446,7 @@
           "categories": {
             "set": {
               "name": "set",
-              "description": "Commands to set/remove/add extensions of virtual-machine-scale-sets in create-or-update-parameters file.",
+              "description": "Commands to set components of virtual-machine-scale-sets in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters set",
               "usage": "[options] [command]",
               "options": [],
@@ -12760,7 +12760,7 @@
             },
             "remove": {
               "name": "remove",
-              "description": "Commands to set/remove/add extensions of virtual-machine-scale-sets in create-or-update-parameters file.",
+              "description": "Commands to remove components of virtual-machine-scale-sets in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters remove",
               "usage": "[options] [command]",
               "options": [],
@@ -14762,7 +14762,7 @@
             },
             "add": {
               "name": "add",
-              "description": "Commands to set/remove/add extensions of virtual-machine-scale-sets in create-or-update-parameters file.",
+              "description": "Commands to add components of virtual-machine-scale-sets in create-or-update-parameters file.",
               "fullName": "vmss create-or-update-parameters add",
               "usage": "[options] [command]",
               "options": [],
