@@ -142,13 +142,13 @@ describe('arm', function() {
       it('create-or-update-parameter generate set and remove should pass', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
         var makeCommandStr = function(component, verb, file, others) {
-          var cmdFormat = 'vmss create-or-update-parameters %s %s --parameter-file %s %s --json';
+          var cmdFormat = 'vmss config %s %s --parameter-file %s %s --json';
           return util.format(cmdFormat, verb, component, file, others ? others : '');
         };
         
         var subscription = profile.current.getSubscription();
         var subnetId = '/subscriptions/' + subscription.id + '/resourceGroups/' + groupName + '/providers/Microsoft.Network/VirtualNetworks/' + vNetPrefix + '/subnets/' + subnetName;
-        var cmd = util.format('vmss create-or-update-parameters generate --parameter-file %s', paramFileName).split(' ');
+        var cmd = util.format('vmss config generate --parameter-file %s', paramFileName).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
           var cmd = makeCommandStr('virtual-machine-scale-set', 'set', paramFileName, util.format('--name %s --location %s', vmssPrefix5, location)).split(' ');

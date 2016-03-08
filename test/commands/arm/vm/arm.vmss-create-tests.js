@@ -112,7 +112,7 @@ describe('arm', function() {
               testUtils.executeCommand(suite, retry, cmd, function(result) {
                 result.exitStatus.should.equal(0);
                 // Create the parameter file
-                cmd = util.format('vmss create-or-update-parameters generate --parameter-file %s --json', paramFileName).split(' ');
+                cmd = util.format('vmss config generate --parameter-file %s --json', paramFileName).split(' ');
                 testUtils.executeCommand(suite, retry, cmd, function(result) {
                   result.exitStatus.should.equal(0);
                   done();
