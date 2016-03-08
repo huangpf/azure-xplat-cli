@@ -143,7 +143,7 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge * 10);
         var makeCommandStr = function(component, verb, file, others) {
           var cmdFormat = 'vmss config %s %s --parameter-file %s %s --json';
-          return util.format(cmdFormat, verb, component, file, others ? others : '');
+          return util.format(cmdFormat, component, verb, file, others ? others : '');
         };
         
         var subscription = profile.current.getSubscription();
