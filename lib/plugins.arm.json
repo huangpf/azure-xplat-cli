@@ -10497,7 +10497,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--sku <sku>",
@@ -10743,7 +10743,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--name <name>",
@@ -10893,7 +10893,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--mode <mode>",
@@ -11011,7 +11011,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--os-profile <osProfile>",
@@ -11177,7 +11177,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--computer-name-prefix <computerNamePrefix>",
@@ -11391,7 +11391,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--provision-vm-agent <provisionVMAgent>",
@@ -11589,7 +11589,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--pass-name <passName>",
@@ -11763,7 +11763,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--listeners <listeners>",
@@ -11897,7 +11897,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--protocol <protocol>",
@@ -12039,7 +12039,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--disable-password-authentication <disablePasswordAuthentication>",
@@ -12173,7 +12173,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--public-keys <publicKeys>",
@@ -12307,7 +12307,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--path <path>",
@@ -12465,7 +12465,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--source-vault <sourceVault>",
@@ -12615,7 +12615,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--id <id>",
@@ -12765,7 +12765,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--certificate-url <certificateUrl>",
@@ -12915,7 +12915,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--image-reference <imageReference>",
@@ -13049,7 +13049,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--publisher <publisher>",
@@ -13215,7 +13215,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--name <name>",
@@ -13413,7 +13413,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--uri <uri>",
@@ -13547,7 +13547,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     }
                   ]
                 },
@@ -13657,7 +13657,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--network-interface-configurations <networkInterfaceConfigurations>",
@@ -13791,7 +13791,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--name <name>",
@@ -13989,7 +13989,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--name <name>",
@@ -14203,7 +14203,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--id <id>",
@@ -14369,7 +14369,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--id <id>",
@@ -14543,7 +14543,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--id <id>",
@@ -14685,7 +14685,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--extensions <extensions>",
@@ -14819,7 +14819,7 @@
                       "optional": 0,
                       "bool": true,
                       "long": "--parse",
-                      "description": "Parse the input value string to a JSON object."
+                      "description": "Parse the input string, i.e. str, for parameters to a JSON object, e.g. JSON.parse(str)."
                     },
                     {
                       "flags": "--name <name>",
