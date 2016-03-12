@@ -199,31 +199,19 @@ describe('arm', function() {
                                         var cmd = makeCommandStr('vhd-containers', 'delete', paramFileName, '--index 0').split(' ');
                                         testUtils.executeCommand(suite, retry, cmd, function(result) {
                                           result.exitStatus.should.equal(0);
-                                          var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test')).split(' ');
-                                          testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                          var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 0 --value https://%s.blob.core.windows.net/%s', storageAccount, storageCont)).split(' ');
+                                            testUtils.executeCommand(suite, retry, cmd, function(result) {
                                             result.exitStatus.should.equal(0);
-                                            var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test1')).split(' ');
-                                              testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                            var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 1 --value https://%s.blob.core.windows.net/%s', storageAccount2, storageCont2)).split(' ');
+                                            testUtils.executeCommand(suite, retry, cmd, function(result) {
                                               result.exitStatus.should.equal(0);
-                                              var cmd = makeCommandStr('vhd-containers', 'add', paramFileName, util.format('--value https://test.blob.core.windows.net/test2')).split(' ');
-                                                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                              var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 2 --value https://%s.blob.core.windows.net/%s', storageAccount3, storageCont3)).split(' ');
+                                              testUtils.executeCommand(suite, retry, cmd, function(result) {
                                                 result.exitStatus.should.equal(0);
-                                                var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 0 --value https://%s.blob.core.windows.net/%s', storageAccount, storageCont)).split(' ');
-                                                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                                                var cmd = util.format('vmss create-or-update -g %s -n %s --parameter-file %s --json', groupName, vmssPrefix5, paramFileName).split(' ');
+                                                testUtils.executeCommand(suite, retry, cmd, function(result) {
                                                   result.exitStatus.should.equal(0);
-                                                  var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 1 --value https://%s.blob.core.windows.net/%s', storageAccount2, storageCont2)).split(' ');
-                                                  testUtils.executeCommand(suite, retry, cmd, function(result) {
-                                                    result.exitStatus.should.equal(0);
-                                                    var cmd = makeCommandStr('vhd-containers', 'set', paramFileName, util.format('--index 2 --value https://%s.blob.core.windows.net/%s', storageAccount3, storageCont3)).split(' ');
-                                                    testUtils.executeCommand(suite, retry, cmd, function(result) {
-                                                      result.exitStatus.should.equal(0);
-                                                      var cmd = util.format('vmss create-or-update -g %s -n %s --parameter-file %s --json', groupName, vmssPrefix5, paramFileName).split(' ');
-                                                      testUtils.executeCommand(suite, retry, cmd, function(result) {
-                                                        result.exitStatus.should.equal(0);
-                                                        done();
-                                                      });
-                                                    });
-                                                  });
+                                                  done();
                                                 });
                                               });
                                             });
