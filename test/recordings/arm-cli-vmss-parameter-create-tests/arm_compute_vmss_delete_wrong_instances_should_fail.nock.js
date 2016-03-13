@@ -7,10 +7,6 @@ exports.getMockedProfile = function () {
 
   newProfile.addSubscription(new profile.Subscription({
     id: 'e33f361b-53c2-4cc7-b829-78906708387b',
-    managementCertificate: {
-      key: 'mockedKey',
-      cert: 'mockedCert'
-    },
     name: 'Microsoft Azure Internal Consumption',
     user: {
       name: 'user@domain.example',
@@ -33,39 +29,39 @@ exports.scopes = [[function (nock) {
 var result = 
 nock('http://management.azure.com:443')
   .filteringRequestBody(function (path) { return '*';})
-.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/delete?api-version=2015-06-15', '*')
+.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate4245/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/delete?api-version=2015-06-15', '*')
   .reply(400, "{\r\n  \"error\": {\r\n    \"code\": \"InvalidParameter\",\r\n    \"target\": \"instanceIds\",\r\n    \"message\": \"The provided instanceId 999 is not an active Virtual Machine Scale Set VM instanceId.\"\r\n  }\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
   'content-length': '190',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130979641115900750',
-  'x-ms-request-id': '7408cdb3-4ac9-4e01-8c0d-70ec490c841b',
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_131010277893354386',
+  'x-ms-request-id': 'f8ec07e2-6e28-45b0-bbf3-3a457bdc40f5',
   server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
   'x-ms-ratelimit-remaining-subscription-writes': '1199',
-  'x-ms-correlation-request-id': 'c7505e67-d078-4892-bd96-a6d463c62cca',
-  'x-ms-routing-request-id': 'CENTRALUS:20160226T000902Z:c7505e67-d078-4892-bd96-a6d463c62cca',
-  date: 'Fri, 26 Feb 2016 00:09:02 GMT',
+  'x-ms-correlation-request-id': '12c24db1-3f65-4bb2-8a3d-ae82e54e124d',
+  'x-ms-routing-request-id': 'WESTUS:20160313T031148Z:12c24db1-3f65-4bb2-8a3d-ae82e54e124d',
+  date: 'Sun, 13 Mar 2016 03:11:48 GMT',
   connection: 'close' });
  return result; },
 function (nock) { 
 var result = 
 nock('https://management.azure.com:443')
   .filteringRequestBody(function (path) { return '*';})
-.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate1878/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/delete?api-version=2015-06-15', '*')
+.post('/subscriptions/e33f361b-53c2-4cc7-b829-78906708387b/resourceGroups/xplatTstVmssGCreate4245/providers/Microsoft.Compute/virtualMachineScaleSets/xplattestvmss5/delete?api-version=2015-06-15', '*')
   .reply(400, "{\r\n  \"error\": {\r\n    \"code\": \"InvalidParameter\",\r\n    \"target\": \"instanceIds\",\r\n    \"message\": \"The provided instanceId 999 is not an active Virtual Machine Scale Set VM instanceId.\"\r\n  }\r\n}", { 'cache-control': 'no-cache',
   pragma: 'no-cache',
   'content-length': '190',
   'content-type': 'application/json; charset=utf-8',
   expires: '-1',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_130979641115900750',
-  'x-ms-request-id': '7408cdb3-4ac9-4e01-8c0d-70ec490c841b',
+  'x-ms-served-by': 'dce02487-9cda-4782-8138-773eb1573792_131010277893354386',
+  'x-ms-request-id': 'f8ec07e2-6e28-45b0-bbf3-3a457bdc40f5',
   server: 'Microsoft-HTTPAPI/2.0, Microsoft-HTTPAPI/2.0',
   'x-ms-ratelimit-remaining-subscription-writes': '1199',
-  'x-ms-correlation-request-id': 'c7505e67-d078-4892-bd96-a6d463c62cca',
-  'x-ms-routing-request-id': 'CENTRALUS:20160226T000902Z:c7505e67-d078-4892-bd96-a6d463c62cca',
-  date: 'Fri, 26 Feb 2016 00:09:02 GMT',
+  'x-ms-correlation-request-id': '12c24db1-3f65-4bb2-8a3d-ae82e54e124d',
+  'x-ms-routing-request-id': 'WESTUS:20160313T031148Z:12c24db1-3f65-4bb2-8a3d-ae82e54e124d',
+  date: 'Sun, 13 Mar 2016 03:11:48 GMT',
   connection: 'close' });
  return result; }]];
