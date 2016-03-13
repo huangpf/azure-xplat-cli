@@ -329,7 +329,7 @@ describe('arm', function() {
       });
 
       it('delete command should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge * 10);
+        this.timeout(vmTest.timeoutLarge * 20);
         var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix5).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
