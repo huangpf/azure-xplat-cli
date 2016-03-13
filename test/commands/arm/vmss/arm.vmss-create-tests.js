@@ -144,12 +144,44 @@ describe('arm', function() {
         });
       });
 
-      it('vmss get instance view should pass', function(done) {
-        this.timeout(vmTest.timeoutLarge);
-        var cmd = util.format('vmss get-instance-view --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix).split(' ');
+      it('vmssvm operations should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge * 10);
+        var id0 = '0';
+        var cmd = util.format('vmssvm get --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
         testUtils.executeCommand(suite, retry, cmd, function(result) {
           result.exitStatus.should.equal(0);
-          done();
+          result.text.should.containEql(vmssPrefix + '_' + id0);
+          var cmd = util.format('vmssvm power-off --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+          testUtils.executeCommand(suite, retry, cmd, function(result) {
+            result.exitStatus.should.equal(0);
+            var cmd = util.format('vmssvm get-instance-view --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+            testUtils.executeCommand(suite, retry, cmd, function(result) {
+              result.exitStatus.should.equal(0);
+              result.text.should.containEql('PowerState/stopped');
+              var cmd = util.format('vmssvm start --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+                testUtils.executeCommand(suite, retry, cmd, function(result) {
+                result.exitStatus.should.equal(0);
+                var cmd = util.format('vmssvm restart --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+                  testUtils.executeCommand(suite, retry, cmd, function(result) {
+                  result.exitStatus.should.equal(0);
+                  var cmd = util.format('vmssvm deallocate --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+                    testUtils.executeCommand(suite, retry, cmd, function(result) {
+                    result.exitStatus.should.equal(0);
+                    var cmd = util.format('vmssvm delete --resource-group-name %s --vm-scale-set-name %s --instance-id %s', groupName, vmssPrefix, id0).split(' ');
+                      testUtils.executeCommand(suite, retry, cmd, function(result) {
+                      result.exitStatus.should.equal(0);
+                      var cmd = util.format('vmssvm list --resource-group-name %s --virtual-machine-scale-set-name %s', groupName, vmssPrefix).split(' ');
+                        testUtils.executeCommand(suite, retry, cmd, function(result) {
+                        result.exitStatus.should.equal(0);
+                        result.text.should.not.containEql(vmssPrefix + '_' + id0);
+                        done();
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
         });
       });
 
@@ -190,6 +222,15 @@ describe('arm', function() {
         });
       });
 
+      it('vmss get instance view should pass', function(done) {
+        this.timeout(vmTest.timeoutLarge);
+        var cmd = util.format('vmss get-instance-view --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix2).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function(result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
+      
       it('vmss delete 2 should pass', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
         var cmd = util.format('vmss delete --resource-group-name %s --vm-scale-set-name %s --json', groupName, vmssPrefix2).split(' ');
