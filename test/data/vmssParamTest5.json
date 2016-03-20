@@ -50,6 +50,7 @@
       ]
     }
   },
+  "overProvision": null,
   "id": null,
   "name": "xplattestvmss5",
   "location": "southeastasia"
