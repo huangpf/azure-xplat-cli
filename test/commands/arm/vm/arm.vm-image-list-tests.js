@@ -18,6 +18,7 @@ var should = require('should');
 var util = require('util');
 var CLITest = require('../../../framework/arm-cli-test');
 var testUtils = require('../../../util/util');
+var VMTestUtil = require('../../../util/vmTestUtil');
 var testprefix = 'arm-cli-vm-image-list-tests';
 var canonicalPublisher = 'Canonical';
 var validPublisher = 'MicrosoftSQLServer';
@@ -32,6 +33,7 @@ var hasValue = false;
 describe('arm', function() {
   describe('compute', function() {
     var suite, retry = 5;
+    var vmTest = new VMTestUtil();
     testUtils.TIMEOUT_INTERVAL = 5000;
 
     before(function(done) {
