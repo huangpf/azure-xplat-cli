@@ -31,4 +31,4 @@ exports.setEnvironment = function() {
 
 exports.scopes = [];
 
- exports.randomTestIdsGenerated = function() { return ['xplatTestGAvailCreate340','xplatTestaAvail2921'];};
+ exports.randomTestIdsGenerated = function() { return ['xplatTestGAvailCreate7107','xplatTestaAvail9817'];};
