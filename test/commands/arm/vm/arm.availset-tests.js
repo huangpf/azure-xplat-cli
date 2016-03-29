@@ -96,15 +96,23 @@ describe('arm', function() {
         });
       });
 
+      it('list-available-sizes should list the available VM sizes in availability set', function (done) {
+        var cmd = util.format('availset list-available-sizes %s %s', groupName, availprefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function (result) {
+          result.exitStatus.should.equal(0);
+          result.text.should.containEql('Standard_A1');
+          result.text.should.containEql('Standard_D1');
+          done();
+        });
+      });
 
-      //Currently giving error :The api-version '2015-05-01-preview' is invalid.
-      // it('delete should delete the availability set', function (done) {
-      // var cmd = util.format('availset delete  %s %s --quiet --json', groupName,availprefix).split(' ');
-      // testUtils.executeCommand(suite, retry, cmd, function (result) {
-      // result.exitStatus.should.equal(0);
-      // done();
-      // });
-      // });
+      it('delete should delete the availability set', function (done) {
+        var cmd = util.format('availset delete %s %s --quiet --json', groupName, availprefix).split(' ');
+        testUtils.executeCommand(suite, retry, cmd, function (result) {
+          result.exitStatus.should.equal(0);
+          done();
+        });
+      });
 
     });
 
