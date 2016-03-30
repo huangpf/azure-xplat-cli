@@ -13314,7 +13314,7 @@
     },
     "availset": {
       "name": "availset",
-      "description": "Commands to manage your availablilty sets",
+      "description": "Commands to manage your availability sets.  ",
       "fullName": "availset",
       "usage": "[options] [command]",
       "options": [],
@@ -13395,6 +13395,24 @@
               "short": "-s",
               "long": "--subscription",
               "description": "the subscription identifier"
+            },
+            {
+              "flags": "-u, --platform-update-domain-count <platformUpdateDomainCount>",
+              "required": -36,
+              "optional": 0,
+              "bool": true,
+              "short": "-u",
+              "long": "--platform-update-domain-count",
+              "description": "Set the platform-update-domain-count value."
+            },
+            {
+              "flags": "-f, --platform-fault-domain-count <platformFaultDomainCount>",
+              "required": -35,
+              "optional": 0,
+              "bool": true,
+              "short": "-f",
+              "long": "--platform-fault-domain-count",
+              "description": "Set the platform-fault-domain-count value."
             }
           ]
         },
@@ -13578,6 +13596,74 @@
               "short": "-q",
               "long": "--quiet",
               "description": "quiet mode, do not ask for delete confirmation"
+            },
+            {
+              "flags": "-s, --subscription <subscription>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-s",
+              "long": "--subscription",
+              "description": "the subscription identifier"
+            }
+          ]
+        },
+        {
+          "name": "list-available-sizes",
+          "description": "Lists all available virtual machine sizes that can be used to create a new virtual machine in an existing availability set.",
+          "fullName": "availset list-available-sizes",
+          "usage": "[options] <resource-group-name> <availability-set-name>",
+          "filePath": "commands/arm/compute/compute._js",
+          "options": [
+            {
+              "flags": "-v, --verbose",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "short": "-v",
+              "long": "--verbose",
+              "description": "use verbose output"
+            },
+            {
+              "flags": "-vv",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "-vv",
+              "description": "more verbose with debug output"
+            },
+            {
+              "flags": "--json",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--json",
+              "description": "use json output"
+            },
+            {
+              "flags": "-g, --resource-group-name <resource-group-name>",
+              "required": -27,
+              "optional": 0,
+              "bool": true,
+              "short": "-g",
+              "long": "--resource-group-name",
+              "description": "resource-group-name"
+            },
+            {
+              "flags": "--availability-set-name <availability-set-name>",
+              "required": -25,
+              "optional": 0,
+              "bool": true,
+              "long": "--availability-set-name",
+              "description": "availability-set-name"
+            },
+            {
+              "flags": "--parameter-file <parameter-file>",
+              "required": -18,
+              "optional": 0,
+              "bool": true,
+              "long": "--parameter-file",
+              "description": "the input parameter file"
             },
             {
               "flags": "-s, --subscription <subscription>",
