@@ -124,7 +124,7 @@ describe('arm', function() {
         this.timeout(vmTest.timeoutLarge * 10);
         vmTest.checkImagefile(function() {
           var cmd = util.format(
-            'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -M %s --json',
+            'vmss quick-create -g %s -n %s -l %s -Q %s -u %s -M %s -z Standard_DS1 -C 5 --json',
             groupName, vmssPrefix1, location, linuxImageUrn, username, sshcert).split(' ');
           testUtils.executeCommand(suite, retry, cmd, function(result) {
             result.exitStatus.should.equal(0);
