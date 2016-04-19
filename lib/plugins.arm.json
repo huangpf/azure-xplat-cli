@@ -19569,7 +19569,7 @@
               "bool": true,
               "short": "-z",
               "long": "--vm-size",
-              "description": "the virtual machine size [Standard_D1]"
+              "description": "Optional, the virtual machine size, by default [Standard_DS1]"
             },
             {
               "flags": "-C, --capacity <capacity>",
@@ -19588,6 +19588,15 @@
               "short": "-M",
               "long": "--ssh-public-key-file",
               "description": "the path to public key file for SSH authentication,\n                                                 & this parameter is valid only when os-type is Linux."
+            },
+            {
+              "flags": "-a, --storage-type <storage-type>",
+              "required": -20,
+              "optional": 0,
+              "bool": true,
+              "short": "-a",
+              "long": "--storage-type",
+              "description": "Optional, the storage type, by default [Premium_LRS]"
             },
             {
               "flags": "-s, --subscription <subscription>",
@@ -25368,7 +25377,7 @@
               "bool": true,
               "short": "-z",
               "long": "--vm-size",
-              "description": "the virtual machine size [Standard_A1]"
+              "description": "the virtual machine size [Standard_DS1]"
             },
             {
               "flags": "-U, --public-ip-id <public-ip-id>",
@@ -25740,7 +25749,7 @@
               "bool": true,
               "short": "-z",
               "long": "--vm-size",
-              "description": "the virtual machine size [Standard_D1]"
+              "description": "the virtual machine size [Standard_DS1]"
             },
             {
               "flags": "-u, --admin-username <admin-username>",
