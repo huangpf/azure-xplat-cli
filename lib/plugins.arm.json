@@ -33264,6 +33264,14 @@
               "description": "the resource group name"
             },
             {
+              "flags": "--nowait",
+              "required": 0,
+              "optional": 0,
+              "bool": true,
+              "long": "--nowait",
+              "description": "does not wait for the delete operation to complete. Returns as soon as the intial request is received by the server."
+            },
+            {
               "flags": "-q, --quiet",
               "required": 0,
               "optional": 0,
@@ -57805,7 +57813,7 @@
           "name": "create",
           "description": "create a web app",
           "fullName": "webapp create",
-          "usage": "[options] [resource-group] [name] [location] [plan]",
+          "usage": "[options] <resource-group> <name> <location> <plan>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -57892,7 +57900,7 @@
           "name": "stop",
           "description": "Stop a web app",
           "fullName": "webapp stop",
-          "usage": "[options] [resource-group] [name]",
+          "usage": "[options] <resource-group> <name>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -57961,7 +57969,7 @@
           "name": "start",
           "description": "Start a web app",
           "fullName": "webapp start",
-          "usage": "[options] [resource-group] [name]",
+          "usage": "[options] <resource-group> <name>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -58030,7 +58038,7 @@
           "name": "restart",
           "description": "Stop and then start a web app",
           "fullName": "webapp restart",
-          "usage": "[options] [resource-group] [name]",
+          "usage": "[options] <resource-group> <name>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -58099,7 +58107,7 @@
           "name": "delete",
           "description": "Delete a webapp",
           "fullName": "webapp delete",
-          "usage": "[options] [resource-group] [name]",
+          "usage": "[options] <resource-group> <name>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -58177,7 +58185,7 @@
           "name": "list",
           "description": "List your webapps",
           "fullName": "webapp list",
-          "usage": "[options] [resource-group]",
+          "usage": "[options] <resource-group>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
@@ -58229,7 +58237,7 @@
           "name": "show",
           "description": "Get an available webapp",
           "fullName": "webapp show",
-          "usage": "[options] [resource-group] [name]",
+          "usage": "[options] <resource-group> <name>",
           "filePath": "commands/arm/webapp/webapp._js",
           "options": [
             {
