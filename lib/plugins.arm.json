@@ -15398,21 +15398,13 @@
               "description": "availability-set-name"
             },
             {
-              "flags": "--parameter-file <parameter-file>",
-              "required": -18,
-              "optional": 0,
-              "bool": true,
-              "long": "--parameter-file",
-              "description": "the input parameter file"
-            },
-            {
               "flags": "-s, --subscription <subscription>",
               "required": -20,
               "optional": 0,
               "bool": true,
               "short": "-s",
               "long": "--subscription",
-              "description": "the subscription identifier"
+              "description": "The subscription identifier"
             }
           ]
         }
