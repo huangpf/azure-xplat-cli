@@ -104,7 +104,7 @@ describe('arm', function() {
       it('create disk encryption vm should fail', function(done) {
         this.timeout(vmTest.timeoutLarge);
         vmTest.getVMSize(location, suite, function() {
-          vmSize = VMTestUtil.vmSize;
+          vmSize = 'Standard_A0';
           vmTest.createGroup(groupName, location, suite, function(result) {
             var cmd = util.format(
               'storage account create %s --resource-group %s --type %s --location %s --json',
