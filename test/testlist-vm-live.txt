@@ -12,4 +12,5 @@ commands/cli.vm.create_win_rdp-tests.js
 commands/cli.vm.disk.attachDetach-tests.js
 commands/cli.vm.disk.attachnew-tests.js
 commands/cli.vm.create_ssh-tests.js
+commands/cli.vm.compute.migration-tests.js
 # Live Only
