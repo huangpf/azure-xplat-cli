@@ -57,7 +57,7 @@ describe('arm', function() {
       suite.teardownTest(done);
     });
 
-    describe.only('vm', function() {
+    describe('vm', function() {
       it('image list-publishers ', function(done) {
         this.timeout(vmTest.timeoutLarge * 10);
         var cmd = util.format('vm image list-publishers %s --json', location).split(' ');
