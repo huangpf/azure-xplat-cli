@@ -433,6 +433,9 @@ _.extend(CLITest.prototype, {
         missing.join(', '));
     }
 
+    console.log('this.requiresCert = ' + this.requiresCert);
+    console.log('this.requiresToken = ' + this.requiresToken);
+    console.log('profile.current = ' + JSON.stringify(profile.current));
     if (this.requiresCert && this.requiresToken) {
       messages.push('This test is marked as requiring both a certificate and a token. This is impossible, please fix the test setup.');
     } else if (this.requiresCert && profile.current.currentSubscription.user) {
