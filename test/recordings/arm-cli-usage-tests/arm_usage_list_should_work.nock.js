@@ -7,10 +7,6 @@ exports.getMockedProfile = function () {
 
   newProfile.addSubscription(new profile.Subscription({
     id: 'e33f361b-53c2-4cc7-b829-78906708387b',
-    managementCertificate: {
-      key: 'mockedKey',
-      cert: 'mockedCert'
-    },
     name: 'Microsoft Azure Internal Consumption',
     user: {
       name: 'user@domain.example',
@@ -37,15 +33,15 @@ nock('http://management.azure.com:443')
   'content-length': '12',
   'content-type': 'application/json',
   expires: '-1',
-  'x-ms-request-id': 'bc07b993-889b-4db0-837c-910d5b7a942e',
+  'x-ms-request-id': 'edee1a50-5d2b-455d-83d8-917534a85ad5',
   server: 'Microsoft-IIS/8.0',
   'x-aspnet-version': '4.0.30319',
   'x-powered-by': 'ASP.NET',
-  'x-ms-ratelimit-remaining-subscription-reads': '14989',
-  'x-ms-correlation-request-id': '977d06d6-0598-4456-8672-a92ab9ea3cee',
-  'x-ms-routing-request-id': 'CENTRALUS:20160503T075703Z:977d06d6-0598-4456-8672-a92ab9ea3cee',
+  'x-ms-ratelimit-remaining-subscription-reads': '14999',
+  'x-ms-correlation-request-id': '477360bb-532b-4189-ad3e-ba8142d604e6',
+  'x-ms-routing-request-id': 'CENTRALUS:20160801T205306Z:477360bb-532b-4189-ad3e-ba8142d604e6',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Tue, 03 May 2016 07:57:03 GMT',
+  date: 'Mon, 01 Aug 2016 20:53:06 GMT',
   connection: 'close' });
  return result; },
 function (nock) { 
@@ -57,14 +53,14 @@ nock('https://management.azure.com:443')
   'content-length': '12',
   'content-type': 'application/json',
   expires: '-1',
-  'x-ms-request-id': 'bc07b993-889b-4db0-837c-910d5b7a942e',
+  'x-ms-request-id': 'edee1a50-5d2b-455d-83d8-917534a85ad5',
   server: 'Microsoft-IIS/8.0',
   'x-aspnet-version': '4.0.30319',
   'x-powered-by': 'ASP.NET',
-  'x-ms-ratelimit-remaining-subscription-reads': '14989',
-  'x-ms-correlation-request-id': '977d06d6-0598-4456-8672-a92ab9ea3cee',
-  'x-ms-routing-request-id': 'CENTRALUS:20160503T075703Z:977d06d6-0598-4456-8672-a92ab9ea3cee',
+  'x-ms-ratelimit-remaining-subscription-reads': '14999',
+  'x-ms-correlation-request-id': '477360bb-532b-4189-ad3e-ba8142d604e6',
+  'x-ms-routing-request-id': 'CENTRALUS:20160801T205306Z:477360bb-532b-4189-ad3e-ba8142d604e6',
   'strict-transport-security': 'max-age=31536000; includeSubDomains',
-  date: 'Tue, 03 May 2016 07:57:03 GMT',
+  date: 'Mon, 01 Aug 2016 20:53:06 GMT',
   connection: 'close' });
  return result; }]];

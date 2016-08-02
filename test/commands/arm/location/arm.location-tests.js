@@ -16,9 +16,12 @@
 'use strict';
 
 var should = require('should');
+var mc = require('map-canvas');
+var clib = require('drawille-canvas-blessed-contrib');
 
 var CLITest = require('../../../framework/arm-cli-test');
 var testprefix = 'arm-cli-location-tests';
+var locationMapFile = 'test/data/locationMap.txt';
 
 describe('arm', function () {
   describe('location', function () {
@@ -50,6 +53,61 @@ describe('arm', function () {
             return location.name === 'westus' && location.displayName === 'West US';
           }).should.be.true;
           done();
+        });
+      });
+    });
+    
+    describe('build map file', function () {
+      it('should work', function (done) {
+        suite.execute('location list', function (result) {
+            var text = result.text;
+          suite.execute('location list --json', function (result) {
+            result.exitStatus.should.equal(0);
+            var locations = JSON.parse(result.text);
+            // Draw
+            var Canvas = clib.Canvas
+            var Map = mc;
+
+            var size = {height: 280, width: 440} //7:11 => 700:1100
+            var canvas = new Canvas(size.width, size.height)
+            var ctx = canvas.getContext()
+            ctx.strokeStyle="green"
+            ctx.fillStyle="green"
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            var options = { excludeAntartica: true
+                          , disableBackground: true
+                          , disableMapBackground: true
+                          , disableGraticule: true
+                          , disableFill: true
+                          , height: size.height
+                          , width: size.width }
+
+            var map = new Map(options, canvas)
+            map.draw()
+            var count = 0;
+            for (var it in locations) {
+              var locItem = locations[it];
+              console.log('locItem = ' + JSON.stringify(locItem));
+              var ch = count.toString();
+              if (count >= 10) {
+                ch = String.fromCharCode(('A'.charCodeAt(0)) + (count - 10)); 
+              }
+              map.addMarker({"lat" : locItem.latitude, "lon" : locItem.longitude, char: ch });
+              count++;
+            }
+
+            var text1 = ctx._canvas.frame().toString("utf8");
+            text = text + "\r\nTotalCount = " + count + "\r\n" + text1.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '');
+            var fs = require('fs');
+            fs.writeFile(locationMapFile, text, 'utf8', function(err) {
+              if(err) {
+                return console.log(err);
+              }
+              console.log("The file was saved!");
+            });
+            done();
+          });
         });
       });
     });
